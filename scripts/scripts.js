@@ -8,6 +8,7 @@ function init() {
   addLogo();
   document.getElementById('logoImg').addEventListener('error', logoAlternative);
   createMenu();
+  $('#content').load('assets/intro/introduccion.html');
   createFooterText();
 }
 
@@ -32,59 +33,44 @@ function logoAlternative() {
 }
 
 function createMenu() {
-  let menuLateral = document.getElementById('menuLateral');
+  let menu = document.getElementById('menu');
 
   temasList.forEach((item, index ) => {
-    let accordionItem = document.createElement('div');
-    accordionItem.className='accordion-item';
+    let li = document.createElement('li');
+    li.className='nav-item dropdown';
 
-    // Cabecera acordeón
-    let accordionHeader = document.createElement('div');
-    accordionHeader.setAttribute('id', 'heading'+index)
-    accordionHeader.className= 'accordion-header';
-
-    // botón cabecera
-    let btn = document.createElement('button');
+    let a = document.createElement('a');
     let txt = document.createTextNode(item.tituloTema);
-    btn.append(txt);
-    btn.className = 'accordion-button';
-    btn.setAttribute('type', 'button');
-    btn.setAttribute('data-bs-toggle', 'collapse');
-    btn.setAttribute('data-bs-target', '#collapse'+index);
-    btn.setAttribute('aria-expanded', 'true');
-    btn.setAttribute('aria-controls', 'collapse'+index);
+    a.append(txt);
+    a.setAttribute('class', 'nav-link dropdown-toggle text-light');
+    a.setAttribute('href', '#');
+    a.setAttribute('role', 'button');
+    a.setAttribute('data-bs-toggle', 'dropdown');
+    a.setAttribute('aria-expanded', 'false');
 
-    accordionHeader.appendChild(btn)
+    li.appendChild(a)
 
-    // Cuerpo acordón
-    let collapse = document.createElement('div');
-    collapse.setAttribute('id', 'collapse'+index);
-    collapse.className= 'accordion-collapse collapse btn-group-vertical';
-    collapse.setAttribute('aria-labelledby', 'heading'+index);
-    collapse.setAttribute('data-bs-parent', '#menuLateral');
-    collapse.setAttribute('role', 'group');
+    let ul = document.createElement('ul');
+    ul.className='dropdown-menu';
 
     item.subtema.forEach(item2 => {
-      // Subtemas
-      let accordionBody = document.createElement('div');
-      accordionBody.className= 'accordion-body';
+      let li2 = document.createElement('li');
 
-      let a = document.createElement('a');
+      let a2 = document.createElement('a');
       let txt2 = document.createTextNode(item2.tituloSubtema);
-      a.append(txt2);
-      a.classList.add('btnTema');
-      a.setAttribute('data-url', item2.url);
-      accordionBody.appendChild(a);
-      collapse.appendChild(accordionBody);
+      a2.append(txt2);
+      a2.setAttribute('class', 'dropdown-item');
+      a2.setAttribute('data-url', item2.url);
+
+      li2.appendChild(a2);
+      ul.appendChild(li2);
     })
     // Añadir
-    accordionItem.appendChild(accordionHeader);
-    accordionItem.appendChild(collapse);
-    menuLateral.appendChild(accordionItem);
-    document.getElementById('collapse0').classList.add('show')
+    li.appendChild(ul);
+    menu.appendChild(li);
 
   });
-  $('.btnTema').on('click', function(event) {
+  $('.dropdown-item').on('click', function(event) {
     event.preventDefault();
     $.get({
         url: $(this).attr('data-url'),

@@ -12,17 +12,22 @@
   <title>Guía de Accesibilidad</title>
 </head>
 <body class="container-fluid">
-  <header class="row align-items-center py-2">
-    <div id="logo" class="col-3 text-center align-center"></div>
-    <div class="col-9 text-center">
-      <h1>Guía de accesibilidad</h1>
-    </div>
+  <header class="row">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <div id="logo" class="col-2 text-center align-center"></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul id="menu" class="navbar-nav">
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
-  <main class="row px-3 py-4">
-    <aside class="col-3">
-      <div id="menuLateral" class="accordion"></div>
-    </aside>
-    <section id="content" class="col-9 p-3"></section>
+  <main>
+    <div id="content" class="px-3 py-5"></div>
   </main>
   <footer id="footer" class="row p-2 text-center"></footer>
 
