@@ -5,8 +5,8 @@ const date = new Date();
 const year = date.getFullYear();
 
 function init() {
-  addLogo();
-  document.getElementById('logoImg').addEventListener('error', logoAlternative);
+  //addLogo();
+  //document.getElementById('logoImg').addEventListener('error', logoAlternative);
   createMenu();
   $('#content').load('assets/intro/introduccion.html');
   createFooterText();
