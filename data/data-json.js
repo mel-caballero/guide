@@ -1,11 +1,19 @@
 const temas =  {
   tema : [
     {
-      'tituloTema' : 'IT - UX',
+      'tituloTema' : 'Introducción',
       'subtema' : [
         {
           'tituloSubtema' : 'Introducción',
           'url' : 'assets/intro/introduccion.html'
+        },
+        {
+          'tituloSubtema' : 'Destinatarios',
+          'url' : 'assets/intro/destinatarios.html'
+        },
+        {
+          'tituloSubtema' : 'Consideraciones',
+          'url' : 'assets/intro/consideraciones.html'
         },
       ],
     },
