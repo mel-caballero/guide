@@ -5,10 +5,24 @@ const date = new Date();
 const year = date.getFullYear();
 
 $(document).ready(function() {
-  createMenu();
-  $('#content').load('assets/intro/introduccion.html');
-  createFooterText();
+  
+  let param = new URLSearchParams(window.location.search).get('param');
+  if (param) {
+    createMenu();
+    $('#content').load(param);
+    createFooterText();
+  } else {
+    createMenu();
+    $('#content').load('assets/intro/introduccion.html');
+    createFooterText();
+  }
 });
+
+window.onpopstate = function(event) {
+  let url = new URLSearchParams(window.location.search).get('param');
+  window.history.pushState('', '', '?param=' + url);
+  $('#content').load(url);
+};
 
 function addLogo() {
   let img = document.createElement('img');
@@ -76,7 +90,7 @@ function updateContent(event) {
   $.get({
       url: $(this).attr('href'),
       success: function(data) {
-          window.history.pushState('', '', event.target.href.split("/")[5]);
+          window.history.pushState('', '', '?param=' + $(this)[0].url);
           $(document).attr("title", event.target.innerHTML)
           $('#content').html(data);
       },
