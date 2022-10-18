@@ -4,13 +4,18 @@ const nameDisplay = 'Melanie Caballero';
 const date = new Date();
 const year = date.getFullYear();
 
-function init() {
-  //addLogo();
-  //document.getElementById('logoImg').addEventListener('error', logoAlternative);
-  createMenu();
-  $('#content').load('assets/intro/introduccion.html');
-  createFooterText();
-}
+$(document).ready(function() {
+  let url = window.location.href;
+  if (!url.split('/')[3]=='') {
+    console.log(url)
+  } else {
+    console.log(url)
+    createMenu();
+    $('#content').load('assets/intro/introduccion.html');
+    createFooterText();
+  }
+  
+});
 
 function addLogo() {
   let img = document.createElement('img');
@@ -35,58 +40,60 @@ function logoAlternative() {
 function createMenu() {
   let menu = document.getElementById('menu');
 
-  temasList.forEach((item, index ) => {
-    let li = document.createElement('li');
-    li.className='nav-item dropdown';
+  temasList.forEach((tema) => {
+    let liTemas = document.createElement('li');
+    liTemas.className='nav-item dropdown';
 
     let a = document.createElement('a');
-    let txt = document.createTextNode(item.tituloTema);
-    a.append(txt);
+    let txtTema = document.createTextNode(tema.tituloTema);
+    a.append(txtTema);
     a.setAttribute('class', 'nav-link dropdown-toggle text-light');
     a.setAttribute('href', '#');
     a.setAttribute('role', 'button');
     a.setAttribute('data-bs-toggle', 'dropdown');
     a.setAttribute('aria-expanded', 'false');
 
-    li.appendChild(a)
+    liTemas.appendChild(a)
 
     let ul = document.createElement('ul');
     ul.className='dropdown-menu';
 
-    item.subtema.forEach(item2 => {
-      let li2 = document.createElement('li');
+    tema.subtema.forEach(subtema => {
+      let liSub = document.createElement('li');
 
-      let a2 = document.createElement('a');
-      let txt2 = document.createTextNode(item2.tituloSubtema);
-      a2.append(txt2);
-      a2.setAttribute('class', 'dropdown-item');
-      a2.setAttribute('href', '#');
-      a2.setAttribute('data-url', item2.url);
+      let aSub = document.createElement('a');
+      let txtSub = document.createTextNode(subtema.tituloSubtema);
+      aSub.append(txtSub);
+      aSub.setAttribute('class', 'dropdown-item');
+      aSub.setAttribute('href', subtema.url);
 
-      li2.appendChild(a2);
-      ul.appendChild(li2);
+      liSub.appendChild(aSub);
+      ul.appendChild(liSub);
     })
-    // Añadir
-    li.appendChild(ul);
-    menu.appendChild(li);
+    liTemas.appendChild(ul);
+    menu.appendChild(liTemas);
 
   });
-  $('.dropdown-item').on('click', function(event) {
-    event.preventDefault();
-    var parent = $(this).parents('.dropdown').children('.dropdown-toggle');
-    $.get({
-        url: $(this).attr('data-url'),
-        success: function(data) {
-            $('#content').html(data);
-        },
-        error: function() {
-            $('#content').html('Error al cargar el contenido');
-        },
-        complete: function() {
-            parent.focus();         
-        }
-    })
-  });
+  $('.dropdown-item').on('click', updateContent);
+}
+
+function updateContent(event) {
+  event.preventDefault();
+  let parent = $(this).parents('.dropdown').children('.dropdown-toggle');
+  $.get({
+      url: $(this).attr('href'),
+      success: function(data) {
+          window.history.pushState('', '', event.target.href.split("/")[5]);
+          $(document).attr("title", event.target.innerHTML)
+          $('#content').html(data);
+      },
+      error: function() {
+          $('#content').html('Error al cargar el contenido');
+      },
+      complete: function() {
+          parent.focus();         
+      }
+  })
 }
 
 function createFooterText() {
@@ -96,4 +103,3 @@ function createFooterText() {
   let footer = document.getElementById('footer');
   footer.append(p);
 }
-init();
