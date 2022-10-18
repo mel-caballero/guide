@@ -60,6 +60,7 @@ function createMenu() {
       let txt2 = document.createTextNode(item2.tituloSubtema);
       a2.append(txt2);
       a2.setAttribute('class', 'dropdown-item');
+      a2.setAttribute('href', '#');
       a2.setAttribute('data-url', item2.url);
 
       li2.appendChild(a2);
@@ -72,6 +73,7 @@ function createMenu() {
   });
   $('.dropdown-item').on('click', function(event) {
     event.preventDefault();
+    var parent = $(this).parents('.dropdown').children('.dropdown-toggle');
     $.get({
         url: $(this).attr('data-url'),
         success: function(data) {
@@ -79,6 +81,9 @@ function createMenu() {
         },
         error: function() {
             $('#content').html('Error al cargar el contenido');
+        },
+        complete: function() {
+            parent.focus();         
         }
     })
   });
