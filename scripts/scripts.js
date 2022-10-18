@@ -5,16 +5,9 @@ const date = new Date();
 const year = date.getFullYear();
 
 $(document).ready(function() {
-  let url = window.location.href;
-  if (!url.split('/')[3]=='') {
-    console.log(url)
-  } else {
-    console.log(url)
-    createMenu();
-    $('#content').load('assets/intro/introduccion.html');
-    createFooterText();
-  }
-  
+  createMenu();
+  $('#content').load('assets/intro/introduccion.html');
+  createFooterText();
 });
 
 function addLogo() {
