@@ -5,15 +5,18 @@ const temas =  {
       'subtema' : [
         {
           'tituloSubtema' : 'Introducción',
-          'url' : 'assets/intro/introduccion.html'
+          'ruta' : 'assets/intro/',
+          'nombre' : 'introduccion',
         },
         {
           'tituloSubtema' : 'Destinatarios',
-          'url' : 'assets/intro/destinatarios.html'
+          'ruta' : 'assets/intro/',
+          'nombre' : 'destinatarios',
         },
         {
           'tituloSubtema' : 'Consideraciones',
-          'url' : 'assets/intro/consideraciones.html'
+          'ruta' : 'assets/intro/',
+          'nombre' : 'consideraciones',
         },
       ],
     },
@@ -22,43 +25,53 @@ const temas =  {
       'subtema' : [
         {
           'tituloSubtema' : 'Hazlo simple',
-          'url' : 'assets/principiosUX/hazloSimple.html'
+          'ruta' : 'assets/principiosUX/',
+          'nombre' : 'hazloSimple',
         },
         {
           'tituloSubtema' : 'Anticipa las necesidades',
-          'url' : 'assets/principiosUX/anticipaNecesidades.html'
+          'ruta' : 'assets/principiosUX/',
+          'nombre' : 'anticipaNecesidades',
         },
         {
           'tituloSubtema' : 'Somos eficaces',
-          'url' : 'assets/principiosUX/somosEficaces.html'
+          'ruta' : 'assets/principiosUX/',
+          'nombre' : 'somosEficaces',
         },
         {
           'tituloSubtema' : 'Facilidad de aprendizaje',
-          'url' : 'assets/principiosUX/facilidadAprendizaje.html'
+          'ruta' : 'assets/principiosUX/',
+          'nombre' : 'facilidadAprendizaje',
         },
         {
           'tituloSubtema' : 'Acceso para todos',
-          'url' : 'assets/principiosUX/accesoTodos.html'
+          'ruta' : 'assets/principiosUX/',
+          'nombre' : 'accesoTodos',
         },
         {
           'tituloSubtema' : 'Flexibilidad',
-          'url' : 'assets/principiosUX/flexibilidad.html'
+          'ruta' : 'assets/principiosUX/',
+          'nombre' : 'flexibilidad',
         },
         {
           'tituloSubtema' : 'Feedback',
-          'url' : 'assets/principiosUX/feedback.html'
+          'ruta' : 'assets/principiosUX/',
+          'nombre' : 'feedback',
         },
         {
           'tituloSubtema' : 'Adaptabilidad',
-          'url' : 'assets/principiosUX/adaptabilidad.html'
+          'ruta' : 'assets/principiosUX/',
+          'nombre' : 'adaptabilidad',
         },
         {
           'tituloSubtema' : 'Claridad visual',
-          'url' : 'assets/principiosUX/claridadVisual.html'
+          'ruta' : 'assets/principiosUX/',
+          'nombre' : 'claridadVisual',
         },
         {
           'tituloSubtema' : 'Prevención de errores',
-          'url' : 'assets/principiosUX/prevencionErrores.html'
+          'ruta' : 'assets/principiosUX/',
+          'nombre' : 'prevencionErrores',
         },
       ]
     },
@@ -67,59 +80,73 @@ const temas =  {
       'subtema' : [
         {
           'tituloSubtema' : 'Idioma',
-          'url' : 'assets/principiosA11Y/idioma.html'
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'idioma',
         },
         {
           'tituloSubtema' : 'Estructura',
-          'url' : 'assets/principiosA11Y/estructura.html'
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'estructura',
         },
         {
           'tituloSubtema' : 'Imágenes',
-          'url' : 'assets/principiosA11Y/imagenes.html'
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'imagenes',
         },
         {
           'tituloSubtema' : 'Características sensoriales',
-          'url' : 'assets/principiosA11Y/caracteristicasSensoriales.html'
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'caracteristicasSensoriales',
         },
         {
           'tituloSubtema' : 'Uso del color',
-          'url' : 'assets/principiosA11Y/usoColor.html'
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'usoColor',
         },
         {
           'tituloSubtema' : 'Contraste de color',
-          'url' : 'assets/principiosA11Y/contrasteColor.html'
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'contrasteColor',
         },
         {
           'tituloSubtema' : 'Configuración personalizada',
-          'url' : 'assets/principiosA11Y/configuracionPersonalizada.html'
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'configuracionPersonalizada',
         },
         {
           'tituloSubtema' : 'Orientación',
-          'url' : 'assets/principiosA11Y/orientacion.html'
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'orientacion',
         },
         {
           'tituloSubtema' : 'Navegación por teclado',
-          'url' : 'assets/principiosA11Y/navegacionTeclado.html'
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'navegacionTeclado',
         },
         {
           'tituloSubtema' : 'Gestos',
-          'url' : 'assets/principiosA11Y/gestos.html'
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'gestos',
         },
         {
           'tituloSubtema' : 'Hover y Focus',
-          'url' : 'assets/principiosA11Y/hoverFocus.html'
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'hoverFocus',
         },
         {
           'tituloSubtema' : 'Mensajes de estado',
-          'url' : 'assets/principiosA11Y/mensajesEstado.html'
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'mensajesEstado',
         },
         {
           'tituloSubtema' : 'Formularios',
-          'url' : 'assets/principiosA11Y/formularios.html'
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'formularios',
         },
         {
           'tituloSubtema' : 'Errores',
-          'url' : 'assets/principiosA11Y/errores.html'
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'errores',
         },
       ]
     },
@@ -128,15 +155,18 @@ const temas =  {
       'subtema' : [
         {
           'tituloSubtema' : 'Color',
-          'url' : 'assets/estilosUI/color.html'
+          'ruta' : 'assets/estilosUI/',
+          'nombre' : 'color',
         },
         {
           'tituloSubtema' : 'Iconos',
-          'url' : 'assets/estilosUI/iconos.html'
+          'ruta' : 'assets/estilosUI/',
+          'nombre' : 'iconos',
         },
         {
           'tituloSubtema' : 'Tipografía',
-          'url' : 'assets/estilosUI/tipografia.html'
+          'ruta' : 'assets/estilosUI/',
+          'nombre' : 'tipografia',
         }
       ]
     },
@@ -145,43 +175,53 @@ const temas =  {
       'subtema' : [
         {
           'tituloSubtema' : 'Acordeón',
-          'url' : 'assets/componentes/accordion.html'
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'accordion',
         },
         {
           'tituloSubtema' : 'Botones',
-          'url' : 'assets/componentes/button.html'
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'button',
         },
         {
           'tituloSubtema' : 'Cabecera',
-          'url' : 'assets/componentes/header.html'
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'header',
         },
         {
           'tituloSubtema' : 'Enlaces',
-          'url' : 'assets/componentes/link.html'
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'link',
         },
         {
           'tituloSubtema' : 'Enlaces salto contenido',
-          'url' : 'assets/componentes/skipContent.html'
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'skipContent',
         },
         {
           'tituloSubtema' : 'Formulario',
-          'url' : 'assets/componentes/form.html'
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'form',
         },
         {
           'tituloSubtema' : 'Lista',
-          'url' : 'assets/componentes/list.html'
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'list',
         },
         {
           'tituloSubtema' : 'Modal',
-          'url' : 'assets/componentes/modal.html'
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'modal',
         },
         {
           'tituloSubtema' : 'Pie de página',
-          'url' : 'assets/componentes/footer.html'
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'footer',
         },
         {
           'tituloSubtema' : 'Tabla',
-          'url' : 'assets/componentes/table.html'
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'table',
         },
       ]
     },

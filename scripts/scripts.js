@@ -72,7 +72,8 @@ function createMenu() {
       let txtSub = document.createTextNode(subtema.tituloSubtema);
       aSub.append(txtSub);
       aSub.setAttribute('class', 'dropdown-item');
-      aSub.setAttribute('href', subtema.url);
+      aSub.setAttribute('href', subtema.ruta + subtema.nombre + '.html');
+      aSub.setAttribute('data-href', subtema.nombre);
 
       liSub.appendChild(aSub);
       ul.appendChild(liSub);
@@ -90,7 +91,7 @@ function updateContent(event) {
   $.get({
       url: $(this).attr('href'),
       success: function(data) {
-          window.history.pushState('', '', '?param=' + $(this)[0].url);
+          window.history.pushState('', '', '?param=' + event.target.attributes['data-href'].value);
           $(document).attr("title", event.target.innerHTML)
           $('#content').html(data);
       },
