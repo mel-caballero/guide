@@ -5,24 +5,33 @@ const date = new Date();
 const year = date.getFullYear();
 
 $(document).ready(function() {
-  
+  createMenu();
+  createFooterText();
   let param = new URLSearchParams(window.location.search).get('param');
-  if (param) {
-    createMenu();
-    $('#content').load(param);
-    createFooterText();
-  } else {
-    createMenu();
-    $('#content').load('assets/intro/introduccion.html');
-    createFooterText();
-  }
+  refreshContent(param);
 });
 
 window.onpopstate = function(event) {
-  let url = new URLSearchParams(window.location.search).get('param');
-  window.history.pushState('', '', '?param=' + url);
-  $('#content').load(url);
+  let param = new URLSearchParams(window.location.search).get('param');
+  window.history.pushState('', '', '?param=' + param);
+  refreshContent();
 };
+
+function refreshContent(param) {
+  if (param) {
+    temasList.forEach(tema => {
+      tema.subtema.forEach(subtema => {
+        if (subtema.nombre == param) {
+          $('#content').load(subtema.ruta + subtema.nombre + '.html');
+        } else {
+          $('#content').html('Error al cargar el contenido');
+        }
+      })
+    })
+  } else {
+    $('#content').load('assets/intro/introduccion.html');
+  }
+}
 
 function addLogo() {
   let img = document.createElement('img');

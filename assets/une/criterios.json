@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "criterio": "5.2. Características de accesibilidad",
+      "tipoEv" : "Inspección",
+      "precondicion": "El sitio web tiene características de accesibilidad documentadas",
+      "procedimiento": "<ol><li>(Inspección) Para cada característica documentada Ci, identificar las necesidades que satisface del apartado 4.1 (Nij)</li><li>(Inspección) Para cada característica documentada Ci, identificar los métodos de activación de la característica Mik</li><li>(Test) Para cada necesidad asociada Nij, comprobar que hay un método Mik compatible con la necesidad</li></ol>",
+      "resultado": "<ul><li>No superado: alguna comprobación 3 es falsa</li><li>Superado: todas las comprobaciones 3 son ciertas</li><li>No aplicable: el sitio web no tiene características de accesibilidad documentadas</li></ul>",
+      "beneficia": "<ul><li>4.2.1 Uso sin visión</li><li>4.2.2 Uso con visión limitada</li><li>4.2.3 Uso sin percepción del color</li><li>4.2.4 Uso sin audición</li><li>4.2.5 Uso con audición limitada</li><li>4.2.7 Uso con manipulación o fuerza limitadas</li></ul>"
+    },
+    {
+      "criterio": "",
+      "tipoEv" : "",
+      "precondicion": "",
+      "procedimiento": "<ol><li></li><li></li></ol>",
+      "resultado": "<ul><li></li></ul>",
+      "beneficia": "<ul><li></li></ul>"
+    }
+  ]
+}

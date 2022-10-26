@@ -76,6 +76,26 @@ const temas =  {
       ]
     },
     {
+      'tituloTema' : 'Estilos UI',
+      'subtema' : [
+        {
+          'tituloSubtema' : 'Color',
+          'ruta' : 'assets/estilosUI/',
+          'nombre' : 'color',
+        },
+        {
+          'tituloSubtema' : 'Iconos',
+          'ruta' : 'assets/estilosUI/',
+          'nombre' : 'iconos',
+        },
+        {
+          'tituloSubtema' : 'Tipografía',
+          'ruta' : 'assets/estilosUI/',
+          'nombre' : 'tipografia',
+        }
+      ]
+    },
+    {
       'tituloTema' : 'Principios Accesibilidad',
       'subtema' : [
         {
@@ -151,26 +171,6 @@ const temas =  {
       ]
     },
     {
-      'tituloTema' : 'Estilos UI',
-      'subtema' : [
-        {
-          'tituloSubtema' : 'Color',
-          'ruta' : 'assets/estilosUI/',
-          'nombre' : 'color',
-        },
-        {
-          'tituloSubtema' : 'Iconos',
-          'ruta' : 'assets/estilosUI/',
-          'nombre' : 'iconos',
-        },
-        {
-          'tituloSubtema' : 'Tipografía',
-          'ruta' : 'assets/estilosUI/',
-          'nombre' : 'tipografia',
-        }
-      ]
-    },
-    {
       'tituloTema' : 'Componentes',
       'subtema' : [
         {
@@ -223,6 +223,26 @@ const temas =  {
           'ruta' : 'assets/componentes/',
           'nombre' : 'table',
         },
+      ]
+    },
+    {
+      'tituloTema' : 'UNE',
+      'subtema' : [
+        {
+          'tituloSubtema' : 'Criterios',
+          'ruta' : 'assets/une/',
+          'nombre' : 'criterios',
+        },
+        {
+          'tituloSubtema' : 'Árbol de decisiones',
+          'ruta' : 'assets/une/',
+          'nombre' : 'arboldecisiones',
+        },
+        {
+          'tituloSubtema' : 'Anexo B - FPS',
+          'ruta' : 'assets/une/',
+          'nombre' : 'anexob',
+        }
       ]
     },
   ]
