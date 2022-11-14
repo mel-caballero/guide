@@ -79,3 +79,7 @@ footer {
 .hide {
   display: none;
 }
+
+.collapsed {
+  display: none;
+}

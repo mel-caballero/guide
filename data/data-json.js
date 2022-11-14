@@ -99,6 +99,11 @@ const temas =  {
       'tituloTema' : 'Principios Accesibilidad',
       'subtema' : [
         {
+          'tituloSubtema' : 'WCAG 2.1.',
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'wcag',
+        },
+        {
           'tituloSubtema' : 'Idioma',
           'ruta' : 'assets/principiosA11Y/',
           'nombre' : 'idioma',
@@ -167,6 +172,11 @@ const temas =  {
           'tituloSubtema' : 'Errores',
           'ruta' : 'assets/principiosA11Y/',
           'nombre' : 'errores',
+        },
+        {
+          'tituloSubtema' : 'Subtítulos',
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'subtitulos',
         },
       ]
     },
