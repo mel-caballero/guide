@@ -366,28 +366,6 @@
     },
 
     { 
-      "criteria" : "2.4.11 Aspecto de Focus (mínimo)", 
-      "link" : "https://www.w3.org/TR/WCAG22/#focus-appearance-minimum", 
-      "level" : "AA",
-      "goal" : "Cuando los componentes de la interfaz de usuario reciben el foco del teclado, todo lo siguiente es verdadero:<ul><li>Área de contraste: hay un área del indicador de enfoque que tiene una relación de contraste de al menos 3:1 entre los colores en los estados enfocado y desenfocado.</li><li>Área mínima: El área de contraste es al menos tan grande como:<ul><li>Contorno: el área de un perímetro de 1 píxel CSS de espesor del componente desenfocado, o</li><li>Forma: el área de una línea de 4 píxeles CSS de grosor a lo largo del lado más corto de un cuadro delimitador mínimo del componente desenfocado, y no más delgada que 2 píxeles CSS.</li></ul></li><li>Contraste adyacente: el área de contraste también tiene una relación de contraste de al menos 3:1 frente a los colores adyacentes en el componente enfocado, o el área de contraste tiene un grosor de al menos 2 píxeles CSS.</li><li>No completamente oculto: el elemento que tiene el foco no está completamente oculto por el contenido creado por el autor.</li></ul>"
-    },
-    
-    { 
-      "criteria" : "2.4.12 Aspecto de Focus (mejorado)",
-      "link" : "https://www.w3.org/TR/WCAG22/#focus-appearance-enhanced", 
-      "level" : "AAA",
-      "version" : "2.2", 
-      "goal" : "Cuando los componentes de la interfaz de usuario tienen el foco del teclado, todo lo siguiente es cierto:<ul><li>Área de contraste: hay un área del indicador de enfoque que tiene una relación de contraste de al menos 4,5:1 entre los colores en los estados enfocado y desenfocado.</li><li>Área mínima: el área de contraste es al menos el doble del área de un perímetro de 1 píxel CSS del componente desenfocado;</li><li>No oscurecido: el contenido creado por el autor no oculta ninguna parte del indicador de enfoque.</li></ul>"
-    },
-    
-    { 
-      "criteria" : "2.4.13 Navegación de salto de página", 
-      "link" : "https://www.w3.org/TR/WCAG22/#page-break-navigation", 
-      "level" : "A",
-      "goal" : "Para el contenido web con localizadores de saltos de página, hay un mecanismo disponible para navegar a cada localizador."
-    },
-
-    { 
       "criteria" : "2.5.1 Gestos de puntero",
       "link" : "https://www.w3.org/TR/WCAG21/#pointer-gestures", 
       "level" : "A",
@@ -429,20 +407,6 @@
       "goal" : "El contenido web no restringe el uso de las modalidades de entrada disponibles en una plataforma, excepto cuando la restricción sea esencial, necesaria para garantizar la seguridad del contenido o necesaria para respetar la configuración del usuario."
     },
     
-    { 
-      "criteria" : "2.5.7 Movimientos de arrastre", 
-      "link" : "https://www.w3.org/TR/WCAG22/#dragging-movements", 
-      "level" : "AA",
-      "goal" : "Toda la funcionalidad que utiliza un movimiento de arrastre para la operación se puede lograr con un solo puntero sin arrastrar, a menos que arrastrar sea esencial."
-    },
-
-    { 
-      "criteria" : "2.5.8 Tamaño del objetivo (mínimo)", 
-      "link" : "https://www.w3.org/TR/WCAG22/#target-size-minimum", 
-      "level" : "AA",
-      "goal" : "Los objetivos tienen un área de al menos 24 por 24 píxeles CSS, excepto donde:<ul><li>Espaciado: el desplazamiento del objetivo es de al menos 24 píxeles CSS para cada objetivo adyacente;</li><li>En línea: el objetivo está en una oración o bloque de texto;</li><li>Esencial: una presentación particular del objetivo es esencial para la información que se transmite.</li></ul>"
-    },
-
     { 
       "criteria" : "3.1.1 Idioma de la página", 
       "link" : "https://www.w3.org/TR/WCAG21/#language-of-page", 
@@ -560,13 +524,6 @@
       "link" : "https://www.w3.org/TR/WCAG21/#error-prevention-all", 
       "level" : "AAA",
       "goal" : "Para las páginas web que requieren que el usuario envíe información, al menos uno de los siguientes es verdadero:<ul><li>Reversible: Las presentaciones son reversibles.</li><li>Verificado: los datos ingresados por el usuario se verifican en busca de errores de entrada y el usuario tiene la oportunidad de corregirlos.</li><li>Confirmado: hay un mecanismo disponible para revisar, confirmar y corregir la información antes de finalizar el envío.</li></ul>"
-    },
-    
-    { 
-      "criteria" : "3.3.7 Autenticación accesible", 
-      "link" : "https://www.w3.org/TR/WCAG22/#accessible-authentication", 
-      "level" : "A",
-      "goal" : "Para cada paso en un proceso de autenticación que se basa en una prueba de función cognitiva, hay al menos otro método de autenticación disponible que no se basa en una prueba de función cognitiva, o hay un mecanismo disponible para ayudar al usuario a completar la prueba de función cognitiva."
     },
 
     { 
