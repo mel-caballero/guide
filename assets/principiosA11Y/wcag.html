@@ -1,0 +1,64 @@
+<div id="card" class="card">
+  <div class="card-header text-center">
+    <h2>WCAG 2.1.</h2>
+  </div>
+  <div class="card-body">
+    <div id="filtro2" class="btn-group p-3" role="group">
+      <div class="input-group-text" id="filtroNivel">Nivel :</div>
+
+      <input type="checkbox" class="btn-check" data-column="11" id="A" aria-describedby="filtroNivel" autocomplete="off">
+      <label class="btn btn-secondary" for="A">A</label>
+
+      <input type="checkbox" class="btn-check" data-column="11" id="AA" aria-describedby="filtroNivel" autocomplete="off">
+      <label class="btn btn-secondary" for="AA">AA</label>
+
+      <input type="checkbox" class="btn-check" data-column="11" id="AAA" aria-describedby="filtroNivel" autocomplete="off">
+      <label class="btn btn-secondary" for="AAA">AAA</label>
+    </div>
+    <table id="table" class="table table-light table-striped-columns pt-5">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Criterio</th>
+          <th scope="col">Nivel</th>
+          <th scope="col">Objetivo</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+      <tfoot class="table-dark">
+        <tr>
+          <th>Criterio</th>
+          <th>Nivel</th>
+          <th>Objetivo</th>
+        </tr>
+      </tfoot>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    let table = $('#table').DataTable({
+      info: true,
+      paging: true,
+      ordering: true,
+      searching: true,
+      language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
+      ajax: './assets/principiosA11Y/wcag.json',
+      columns: [
+          { data: 'criteria',
+            render: function (data, type, row, meta) {
+              return '<a href="' + row.link + '">' + data + '</a>';
+            }, 
+          },
+          { data: 'level' },
+          { data: 'goal' },
+      ],
+    });
+
+    $('#filtro2 input').on('click', function () {
+      table
+        .columns(1)
+        .search(this.id)
+        .draw();
+    });
+  });
+</script>
