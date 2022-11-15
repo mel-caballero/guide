@@ -83,3 +83,19 @@ footer {
 .collapsed {
   display: none;
 }
+
+#table_length label {
+  display: inline-flex;
+}
+
+#table_length select {
+  margin: 0 10px;
+}
+
+#table_filter label {
+  display: inline-flex;
+}
+
+#table_filter input {
+  margin: 0 10px;
+}
