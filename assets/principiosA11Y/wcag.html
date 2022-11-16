@@ -46,7 +46,7 @@
       searching: true,
       dom : '<"row py-3"<"col-sm-12 col-md-6"l><"col-sm-12 col-md-6"f>>' +
         '<"row py-3"<"col-sm-12 col-md-6"i><"col-sm-12 col-md-6"p>>' +
-        '<"row"<"col-sm-12"tr>>' +
+        '<"row"<"col-sm-12"t>>' +
         '<"row"<"col-sm-12 col-md-12"p>>',
       language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
       ajax: './assets/principiosA11Y/wcag.json',
@@ -70,7 +70,7 @@
       } else {
         table
         .columns(1)
-        .search(this.id)
+        .search('^' + this.id + '$', true, true, false)
         .draw();
       }
     });
