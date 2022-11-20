@@ -47,36 +47,38 @@
             </div>
           </div>
         </fieldset>
-      </div>
-      <div id="ques3true">
-        <fieldset class="q4 row mb-3">
-          <legend class="col-form-label col-8">¿Requiere atención inmediata?</legend>
-          <div class="col-4">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="q4" id="q4true" value="true">
-              <label class="form-check-label" for="q4true">Sí</label>
+      
+        <div id="ques3true">
+          <fieldset class="q4 row mb-3">
+            <legend class="col-form-label col-8">¿Requiere atención inmediata?</legend>
+            <div class="col-4">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="q4" id="q4true" value="true">
+                <label class="form-check-label" for="q4true">Sí</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="q4" id="q4false" value="false">
+                <label class="form-check-label" for="q4false">No</label>
+              </div>
             </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="q4" id="q4false" value="false">
-              <label class="form-check-label" for="q4false">No</label>
-            </div>
+          </fieldset>
+          <div id="ques4false">
+            <fieldset class="q5 row mb-3">
+              <legend class="col-form-label col-8">¿Se puede descartar el error?</legend>
+              <div class="col-4">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q5" id="q5true" value="true">
+                  <label class="form-check-label" for="q5true">Sí</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="q5" id="q5false" value="false">
+                  <label class="form-check-label" for="q5false">No</label>
+                </div>
+              </div>
+            </fieldset>
           </div>
-        </fieldset>
-      </div>
-      <div id="ques4false">
-        <fieldset class="q5 row mb-3">
-          <legend class="col-form-label col-8">¿Se puede descartar el error?</legend>
-          <div class="col-4">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="q5" id="q5true" value="true">
-              <label class="form-check-label" for="q5true">Sí</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="q5" id="q5false" value="false">
-              <label class="form-check-label" for="q5false">No</label>
-            </div>
-          </div>
-        </fieldset>
+        </div>
+        
       </div>
     </div>
     <div id="resultado">
@@ -123,10 +125,9 @@
     </div>
     <script>
       $(document).ready(function() {
-        $('#ques1true').hide();
-        $('#ques1false').hide();
-        $('#ques3true').hide();
-        $('#ques4false').hide();
+        for (i=1; i<=6; i++) {
+          $("[id^='ques" + i + "']").hide();
+        }
 
         $('#resultado').children().hide();
 
@@ -178,6 +179,7 @@
 
           if (q1 == 'false' && q3 == 'true') {
             $('#empty').hide();
+            $('#ques4false').hide();
           } else if (q1 == 'false' && q3 == 'false') {
             $('#empty').show();
             $('#ques4false').hide();
