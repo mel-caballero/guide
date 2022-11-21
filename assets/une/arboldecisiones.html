@@ -6,80 +6,97 @@
     <p>El objetivo del árbol de decisión es reducir en gran medida el número inicial de 239 preguntas que serían necesarias para conocer qué requisitos se aplican a cada caso concreto.</p>
     <p>En el árbol de decisión, la respuesta de cada pregunta permite identificar si se aplican o no grupos de dos o más requisitos. Y una vez contestada cada pregunta, la respuesta dada permite saber cuál es la siguiente pregunta que debe hacerse.</p>
     <hr>
-    <!-- Q.1. -->
-    <fieldset class="q1 row mb-3">
-      <legend class="col-form-label col-8"><strong>Q.1. ¿Tiene el sistema TIC funcionalidad cerrada?</strong><br/>Si el sistema no es compatible con productos de apoyo.</legend>
+    <!-- [Q1] -->
+    <fieldset id="ques1" class="row mb-3">
+      <legend class="col-form-label col-8">
+        <strong>Q.1. ¿Tiene el sistema TIC funcionalidad cerrada?</strong><br/>
+        Si el sistema no es compatible con productos de apoyo.
+      </legend>
       <div class="col-4">
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="q1" id="q1t" value="q2,q6">
+          <input class="form-check-input" type="radio" name="q1" id="q1t" value="true">
           <label class="form-check-label" for="q1t">Sí</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="q1" id="q1f" value="q2,q6">
+          <input class="form-check-input" type="radio" name="q1" id="q1f" value="false">
           <label class="form-check-label" for="q1f">No</label>
         </div>
       </div>
     </fieldset>
-    <!-- Q.2. Q.1.1-->
-    <fieldset class="q2 row mb-3 hide">
-      <legend class="col-form-label col-9"><strong>Q.1.1. ¿Se necesita utilizar información visual para usar las funciones del sistema TIC que no son compatibles con lectores de pantalla?</strong><br/>El Sistema TIC presenta información visual que el usuario debe utilizar, y esa información visual no es accesible para los lectores de pantalla (que usan las personas ciegas para acceder a información visual del sistema). Si la respuesta a Q1.1
-        es negativa, entonces se salta a la pregunta Q1.2</legend>
+    <!-- [Q2] Q.1.1-->
+    <fieldset id="ques2" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>Q.1.1. ¿Se necesita utilizar información visual para usar las funciones del sistema TIC que no son compatibles con lectores de pantalla?</strong><br/>
+        El Sistema TIC presenta información visual que el usuario debe utilizar, y esa información visual no es accesible para los lectores de pantalla (que usan las personas ciegas para acceder a información visual del sistema). Si la respuesta a Q1.1
+        es negativa, entonces se salta a la pregunta Q1.2
+      </legend>
       <div class="col-3">
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="q2" id="q2t" value="q3">
+          <input class="form-check-input" type="radio" name="q2" id="q2t" value="true">
           <label class="form-check-label" for="q2t">Sí</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="q2" id="q2f" value="q3">
+          <input class="form-check-input" type="radio" name="q2" id="q2f" value="false">
           <label class="form-check-label" for="q2f">No</label>
         </div>
       </div>
     </fieldset>
-    <!-- Q.3. Q.1.1.1. -->
-    <fieldset class="q3 row mb-3 hide">
-      <legend class="col-form-label col-9"><strong>Q.1.1.1 ¿Se proporciona salida sonora para facilitar el acceso no visual?</strong><br/>Se puede  proporcionar acceso no visual de varias formas, pero lo más habitual es utilizar salida sonora (sonidos, notas musicales o voz). En ese caso se aplican los requisitos siguientes y se plantea la pregunta Q1.1.1.1. Si la respuesta a Q1.1.1 es negativa, se salta a la pregunta Q1.2.</legend>
+    <!-- [Q3] Q.1.1.1. -->
+    <fieldset id="ques3" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>Q.1.1.1 ¿Se proporciona salida sonora para facilitar el acceso no visual?</strong><br/>
+        Se puede  proporcionar acceso no visual de varias formas, pero lo más habitual es utilizar salida sonora (sonidos, notas musicales o voz). En ese caso se aplican los requisitos siguientes y se plantea la pregunta Q1.1.1.1. Si la respuesta a Q1.1.1 es negativa, se salta a la pregunta Q1.2.
+      </legend>
       <div class="col-3">
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="q3" id="q3t" value="q4">
+          <input class="form-check-input" type="radio" name="q3" id="q3t" value="true">
           <label class="form-check-label" for="q3t">Sí</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="q3" id="q3f" value="q4">
+          <input class="form-check-input" type="radio" name="q3" id="q3f" value="false">
           <label class="form-check-label" for="q3f">No</label>
         </div>
       </div>
     </fieldset>
-    <!-- Q.4. Q.1.1.1.1. -->
-    <fieldset class="q4 row mb-3 hide">
-      <legend class="col-form-label col-9"><strong>Q.1.1.1.1 ¿Se muestra información en pantalla?</strong><br/></legend>
+    <!-- [Q4] Q.1.1.1.1. -->
+    <fieldset id="ques4" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>Q.1.1.1.1 ¿Se muestra información en pantalla?</strong>
+      </legend>
       <div class="col-3">
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="q4" id="q4t" value="q5">
+          <input class="form-check-input" type="radio" name="q4" id="q4t" value="true">
           <label class="form-check-label" for="q4t">Sí</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="q4" id="q4f" value="q5">
+          <input class="form-check-input" type="radio" name="q4" id="q4f" value="false">
           <label class="form-check-label" for="q4f">No</label>
         </div>
       </div>
     </fieldset>
-    <!-- Q.5. Q.1.1.1.1.1. -->
-    <fieldset class="q5 row mb-3 hide">
-      <legend class="col-form-label col-9"><strong>Q.1.1.1.1.1. ¿Se proporciona salida de voz para facilitar el acceso no visual?</strong><br/>Normalmente la salida sonora que permite el acceso sin visión es voz, bien grabada o bien sintetizada. En caso de que se use voz, se aplican los requisitos siguientes. Y la siguiente pregunta será Q1.2, sea cual sea la respuesta a la pregunta Q1.1.1.1.</legend>
+    <!-- [Q5] Q.1.1.1.1.1. -->
+    <fieldset id="ques5" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>Q.1.1.1.1.1. ¿Se proporciona salida de voz para facilitar el acceso no visual?</strong><br/>
+        Normalmente la salida sonora que permite el acceso sin visión es voz, bien grabada o bien sintetizada. En caso de que se use voz, se aplican los requisitos siguientes. Y la siguiente pregunta será Q1.2, sea cual sea la respuesta a la pregunta Q1.1.1.1.
+      </legend>
       <div class="col-3">
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="q5" id="q5t" value="true">
           <label class="form-check-label" for="q5t">Sí</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="q5" id="inlineRadio2" value="false">
-          <label class="form-check-label" for="inlineRadio2">No</label>
+          <input class="form-check-input" type="radio" name="q5" id="q5f" value="false">
+          <label class="form-check-label" for="q5f">No</label>
         </div>
       </div>
     </fieldset>
-    <!-- Q.6. Q.1.2. -->
-    <fieldset class="q6 row mb-3 hide">
-      <legend class="col-form-label col-9"><strong>Q.1.2. ¿La funcionalidad del sistema TIC está cerrada al acceso por teclado?</strong><br/>Si el sistema no permite conectar teclados (o dispositivos equivalentes), entonces se aplican dos requisitos más de EN 301 549. Y la siguiente pregunta será Q2, sea cual sea la respuesta a Q1.2.</legend>
+    <!-- [Q6] Q.1.2. -->
+    <fieldset id="ques6" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>Q.1.2. ¿La funcionalidad del sistema TIC está cerrada al acceso por teclado?</strong><br/>
+        Si el sistema no permite conectar teclados (o dispositivos equivalentes), entonces se aplican dos requisitos más de EN 301 549. Y la siguiente pregunta será Q2, sea cual sea la respuesta a Q1.2.
+      </legend>
       <div class="col-3">
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="q6" id="q6t" value="true">
@@ -91,496 +108,497 @@
         </div>
       </div>
     </fieldset>
-
-    <fieldset class="row mb-3">
-      <legend class="col-form-label col-8"><strong>Q.2. ¿Tiene el sistema TIC elementos accionables? (botones, pulsadores, ...)</strong><br/>Esto será así si el sistema tiene controles físicos o lógicos de cualquier tipo (botones, pulsadores, palancas, etc.). Si es así se aplican los requisitos siguientes. La siguiente pregunta será la pregunta Q3 en cualquier caso.</legend>
+    <!-- [Q7] Q.2.1. -->
+    <fieldset id="ques7" class="row mb-3">
+      <legend class="col-form-label col-8">
+        <strong>Q.2. ¿Tiene el sistema TIC elementos accionables? (botones, pulsadores, ...)</strong><br/>
+        Esto será así si el sistema tiene controles físicos o lógicos de cualquier tipo (botones, pulsadores, palancas, etc.). Si es así se aplican los requisitos siguientes. La siguiente pregunta será la pregunta Q3 en cualquier caso.
+      </legend>
       <div class="col-4">
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="bloque2" id="bloque2t" value="true">
-          <label class="form-check-label" for="bloque2t">Sí</label>
+          <input class="form-check-input" type="radio" name="q7" id="q7t" value="true">
+          <label class="form-check-label" for="q7t">Sí</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="bloque2" id="bloque2f" value="false">
-          <label class="form-check-label" for="bloque2f">No</label>
+          <input class="form-check-input" type="radio" name="q7" id="q7f" value="false">
+          <label class="form-check-label" for="q7f">No</label>
         </div>
       </div>
     </fieldset>
-    <div class="bloque2 px-3 hide">
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>Q.2.1. ¿Tiene el sistema TIC controles de bloqueo o conmutación?</strong><br/>La pregunta se
-          refiere a controles cuyo estado permanece estable, como por ejemplo la tecla de
-          bloqueo de mayúsculas o los botones de dos estados que se utilizan en las interfaces
-          de usuario de configuración. Si es así, entonces se aplican dos requisitos más. La
-          siguiente pregunta será la pregunta Q4 en cualquier caso</legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q8" id="q8t" value="true">
-            <label class="form-check-label" for="q8t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q8" id="q8f" value="false">
-            <label class="form-check-label" for="q8f">No</label>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-
-    <fieldset class="row mb-3">
-      <legend class="col-form-label col-8"><strong>Q.3. ¿Proporciona el sistema TIC comunicación bidireccional por voz?</strong><br/>. La pregunta se
-        refiere a si el sistema TIC facilita la comunicación oral entre dos personas. En caso
-        afirmativo se aplican varios requisitos de los capítulos 6 y 13 de EN 301 549 y la
-        siguiente pregunta será la Q4.1. En caso negativo se pasa a la pregunta Q5.</legend>
-      <div class="col-4">
+    <!-- [Q8] Q.2. -->
+    <fieldset id="ques8" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>Q.2.1. ¿Tiene el sistema TIC controles de bloqueo o conmutación?</strong><br/>
+        La pregunta se refiere a controles cuyo estado permanece estable, como por ejemplo la tecla de bloqueo de mayúsculas o los botones de dos estados que se utilizan en las interfaces de usuario de configuración. Si es así, entonces se aplican dos requisitos más. La siguiente pregunta será la pregunta Q4 en cualquier caso.
+      </legend>
+      <div class="col-3">
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="bloque3" id="bloque3t" value="true">
-          <label class="form-check-label" for="bloque3t">Sí</label>
+          <input class="form-check-input" type="radio" name="q8" id="q8t" value="true">
+          <label class="form-check-label" for="q8t">Sí</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="bloque3" id="bloque3f" value="false">
-          <label class="form-check-label" for="bloque3f">No</label>
+          <input class="form-check-input" type="radio" name="q8" id="q8f" value="false">
+          <label class="form-check-label" for="q8f">No</label>
         </div>
       </div>
     </fieldset>
-    <div class="bloque3 px-3 hide">
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>Q.3.1. ¿Proporciona el sistema TIC funcionalidad RTT?</strong><br/>. Si el sistema ofrece
-          funciones de comunicación de texto en tiempo real (RTT, del inglés real-time
-          text) entonces tiene que cumplir con unos criterios de calidad sobre este tipo
-          de comunicación. Si la respuesta a Q4.1 es afirmativa la siguiente pregunta es
-          Q4.1.1. En caso contrario la siguiente pregunta es Q4.2.</legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q10" id="q10t" value="true">
-            <label class="form-check-label" for="q10t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q10" id="q10f" value="false">
-            <label class="form-check-label" for="q10f">No</label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>Q.3.1.1. ¿Tiene el sistema capacidad para enviar y recibir RTT?</strong><br/></legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q11" id="q11t" value="true">
-            <label class="form-check-label" for="q11t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q11" id="q11f" value="false">
-            <label class="form-check-label" for="q11f">No</label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>Q.3.1.1.1. ¿Proporciona el sistema TIC información sobre quién está hablando?</strong><br/></legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q12" id="q12t" value="true">
-            <label class="form-check-label" for="q12t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q12" id="q12f" value="false">
-            <label class="form-check-label" for="q12f">No</label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>Q.3.2 ¿Permite el sistema TIC comunicación bidireccional de vídeo?</strong><br/>Si el
-          sistema, además de comunicación por voz, también permite comunicación de
-          vídeo, entonces tendrá que cumplir con requisitos de calidad de vídeo que
-          faciliten la comunicación por lengua de signos o la lectura labial. Sea cual sea
-          la respuesta a esta pregunta, la siguiente pregunta será Q5</legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q13" id="q13t" value="true">
-            <label class="form-check-label" for="q13t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q13" id="q13f" value="false">
-            <label class="form-check-label" for="q13f">No</label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>Q.3.2.1. ¿Proporciona el sistema TIC información sobre quién está hablando?</strong><br/></legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q12" id="q12t" value="true">
-            <label class="form-check-label" for="q12t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q12" id="q12f" value="false">
-            <label class="form-check-label" for="q12f">No</label>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-
-    <fieldset class="row mb-3">
-      <legend class="col-form-label col-8"><strong>[Q14] ¿Tiene el sistema TIC capacidades de vídeo? (Reproducir, grabar, ...)</strong><br/>. Si la respuesta es afirmativa se
-        aplican los requisitos siguientes. La siguiente pregunta será Q6 en cualquier caso.</legend>
+    <!-- [Q9] Q.3. -->
+    <fieldset id="ques9" class="row mb-3">
+      <legend class="col-form-label col-8">
+        <strong>Q.3. ¿Proporciona el sistema TIC comunicación bidireccional por voz?</strong><br/>
+        La pregunta se refiere a si el sistema TIC facilita la comunicación oral entre dos personas. En caso afirmativo se aplican varios requisitos de los capítulos 6 y 13 de EN 301 549 y la siguiente pregunta será la Q4.1. En caso negativo se pasa a la pregunta Q5.
+      </legend>
       <div class="col-4">
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="bloque4" id="bloque4t" value="true">
-          <label class="form-check-label" for="bloque4t">Sí</label>
+          <input class="form-check-input" type="radio" name="q9" id="q9t" value="true">
+          <label class="form-check-label" for="q9t">Sí</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="bloque4" id="bloque4f" value="false">
-          <label class="form-check-label" for="bloque4f">No</label>
+          <input class="form-check-input" type="radio" name="q9" id="q9f" value="false">
+          <label class="form-check-label" for="q9f">No</label>
         </div>
       </div>
     </fieldset>
-    <div class="bloque4 px-3 hide">
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q15] ¿Reproduce el sistema TIC vídeo con audio sincronizado?</strong><br/></legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q15" id="q15t" value="true">
-            <label class="form-check-label" for="q15t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q15" id="q15f" value="false">
-            <label class="form-check-label" for="q15f">No</label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q16] ¿Muestra el sistema TIC subtítulos?</strong><br/></legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q16" id="q16t" value="true">
-            <label class="form-check-label" for="q16t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q16" id="q16f" value="false">
-            <label class="form-check-label" for="q16f">No</label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q17] ¿El sistema TIC transmite, convierte o graba vídeo con audio sincronizado?</strong><br/></legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q17" id="q17t" value="true">
-            <label class="form-check-label" for="q17t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q17" id="q17f" value="false">
-            <label class="form-check-label" for="q17f">No</label>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-    
-    <fieldset class="row mb-3">
-      <legend class="col-form-label col-8"><strong>[Q18] ¿El sistema TIC es hardware o tiene componentes hardware?</strong><br/>Si se trata de un
-        producto hardware o de un servicio TIC que incluye productos hardware, entonces se
-        aplican algunos requisitos generales de software y se plantea la pregunta Q6.1. En
-        caso contrario se salta a la pregunta Q7.</legend>
-      <div class="col-4">
+    <fieldset id="ques10" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>Q.3.1. ¿Proporciona el sistema TIC funcionalidad RTT?</strong><br/>
+        Si el sistema ofrece funciones de comunicación de texto en tiempo real (RTT, del inglés real-time text) entonces tiene que cumplir con unos criterios de calidad sobre este tipo de comunicación. Si la respuesta a Q4.1 es afirmativa la siguiente pregunta es Q4.1.1. En caso contrario la siguiente pregunta es Q4.2.
+      </legend>
+      <div class="col-3">
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="bloque5" id="bloque5t" value="true">
-          <label class="form-check-label" for="bloque5t">Sí</label>
+          <input class="form-check-input" type="radio" name="q10" id="q10t" value="true">
+          <label class="form-check-label" for="q10t">Sí</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="bloque5" id="bloque5f" value="false">
-          <label class="form-check-label" for="bloque5f">No</label>
+          <input class="form-check-input" type="radio" name="q10" id="q10f" value="false">
+          <label class="form-check-label" for="q10f">No</label>
         </div>
       </div>
     </fieldset>
-    <div class="bloque5 px-3 hide">
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q19] ¿El sistema TIC reproduce voz?</strong><br/>Si el sistema tiene altavoces que
-          reproducen voz (por ejemplo, un teléfono), entonces se aplican requisitos
-          relacionados con la calidad del sonido. La siguiente pregunta será Q6.2 en
-          cualquier caso.</legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q19" id="q19t" value="true">
-            <label class="form-check-label" for="q19t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q19" id="q19f" value="false">
-            <label class="form-check-label" for="q19f">No</label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q20] ¿Se sujeta normalmente el sistema TIC cerca del oído?</strong><br/></legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q20" id="q20t" value="true">
-            <label class="form-check-label" for="q20t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q20" id="q20f" value="false">
-            <label class="form-check-label" for="q20f">No</label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q21] ¿Se trata de un sistema TIC estacionario?</strong><br/></legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q21" id="q21t" value="true">
-            <label class="form-check-label" for="q21t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q21" id="q21f" value="false">
-            <label class="form-check-label" for="q21f">No</label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q22] ¿Ninguna parte del sistema TIC estacionario obstruye el acceso frontal?</strong><br/></legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q22" id="q22t" value="true">
-            <label class="form-check-label" for="q22t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q22" id="q22f" value="false">
-            <label class="form-check-label" for="q22f">No</label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q23] ¿Hay una obstrucción que es parte integral del sistema TIC estacionario?</strong><br/></legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q23" id="q23t" value="true">
-            <label class="form-check-label" for="q23t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q23" id="q23f" value="false">
-            <label class="form-check-label" for="q23f">No</label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q24] ¿Hay un obstáculo que sea parte integral del sistema TIC estacionario?</strong><br/></legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q24" id="q24t" value="true">
-            <label class="form-check-label" for="q24t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q24" id="q24f" value="false">
-            <label class="form-check-label" for="q24f">No</label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q25] ¿El alcance lateral no tiene obstrucción, o tiene una obstrucción que es parte integral del sistema TIC estacionario?</strong><br/></legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q25" id="q25t" value="true">
-            <label class="form-check-label" for="q25t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q25" id="q25f" value="false">
-            <label class="form-check-label" for="q25f">No</label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q26] ¿Es la obstrucción (que es parte integral del sistema TIC integrado) menor de 255 milímetros?</strong><br/></legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q26" id="q26t" value="true">
-            <label class="form-check-label" for="q26t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q26" id="q26f" value="false">
-            <label class="form-check-label" for="q26f">No</label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q27] ¿Tiene el sistema TIC elementos accionables de forma mecánica?</strong><br/>. Si la
-          parte hardware del producto TIC tiene botones o teclas mecánicas (que se
-          desplazan físicamente al ser pulsados), entonces se aplican requisitos sobre
-          esos botones o teclas. La siguiente pregunta será Q7 en cualquier caso.</legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q27" id="q27t" value="true">
-            <label class="form-check-label" for="q27t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q27" id="q27f" value="false">
-            <label class="form-check-label" for="q27f">No</label>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-
-    <fieldset class="row mb-3">
-      <legend class="col-form-label col-8"><strong>[Q28] ¿El sistema TIC es una página web o contiene páginas web?</strong><br/>Las páginas web
-        tienen que cumplir con los requisitos de EN 301 549 que equivalen al nivel AA de
-        conformidad de WCAG 2. La siguiente pregunta sería Q8 en cualquier caso</legend>
-      <div class="col-4">
+    <fieldset id="ques11" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>Q.3.1.1. ¿Tiene el sistema capacidad para enviar y recibir RTT?</strong>
+      </legend>
+      <div class="col-3">
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="bloque6" id="bloque6t" value="true">
-          <label class="form-check-label" for="bloque6t">Sí</label>
+          <input class="form-check-input" type="radio" name="q11" id="q11t" value="true">
+          <label class="form-check-label" for="q11t">Sí</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="bloque6" id="bloque6f" value="false">
-          <label class="form-check-label" for="bloque6f">No</label>
+          <input class="form-check-input" type="radio" name="q11" id="q11f" value="false">
+          <label class="form-check-label" for="q11f">No</label>
         </div>
       </div>
     </fieldset>
-    <div class="bloque6 px-3 hide">
-    </div>
-
-    <fieldset class="row mb-3">
-      <legend class="col-form-label col-8"><strong>[Q29] ¿El sistema TIC es un documento no web o contiene documentos no web?</strong><br/>Los
-        documentos no web tienen que cumplir con los requisitos de EN 301 549 que
-        equivalen (con alguna excepción) al nivel AA de conformidad de WCAG 2. Además hay
-        dos recomendaciones específicas para documentos no web. La siguiente pregunta
-        sería Q9 en cualquier caso.</legend>
-      <div class="col-4">
+    <fieldset id="ques13" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>Q.3.2 ¿Permite el sistema TIC comunicación bidireccional de vídeo?</strong><br/>
+        Si el sistema, además de comunicación por voz, también permite comunicación de vídeo, entonces tendrá que cumplir con requisitos de calidad de vídeo que faciliten la comunicación por lengua de signos o la lectura labial. Sea cual sea la respuesta a esta pregunta, la siguiente pregunta será Q5
+      </legend>
+      <div class="col-3">
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="bloque7" id="bloque7t" value="true">
-          <label class="form-check-label" for="bloque7t">Sí</label>
+          <input class="form-check-input" type="radio" name="q13" id="q13t" value="true">
+          <label class="form-check-label" for="q13t">Sí</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="bloque7" id="bloque7f" value="false">
-          <label class="form-check-label" for="bloque7f">No</label>
+          <input class="form-check-input" type="radio" name="q13" id="q13f" value="false">
+          <label class="form-check-label" for="q13f">No</label>
         </div>
       </div>
     </fieldset>
-    <div class="bloque7 px-3 hide">
-      
-    </div>
-
-    <fieldset class="row mb-3">
-      <legend class="col-form-label col-8"><strong>[Q30] ¿El sistema TIC es software o contiene software?</strong><br/>Si el sistema TIC incluye
-        software de plataforma (sistema operativo), software que proporciona una interfaz de
-        usuario, software que es una herramienta de autor o software que opera como
-        producto de apoyo se aplican unos requisitos y la pregunta siguiente será Q9.1. En
-        otro caso la pregunta siguiente será Q10.</legend>
-      <div class="col-4">
+    <fieldset id="ques12" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>Q.3.2.1. ¿Proporciona el sistema TIC información sobre quién está hablando?</strong>
+      </legend>
+      <div class="col-3">
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="bloque8" id="bloque8t" value="true">
-          <label class="form-check-label" for="bloque8t">Sí</label>
+          <input class="form-check-input" type="radio" name="q12" id="q12t" value="true">
+          <label class="form-check-label" for="q12t">Sí</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="bloque8" id="bloque8f" value="false">
-          <label class="form-check-label" for="bloque8f">No</label>
+          <input class="form-check-input" type="radio" name="q12" id="q12f" value="false">
+          <label class="form-check-label" for="q12f">No</label>
         </div>
       </div>
     </fieldset>
-    <div class="bloque8 px-3 hide">
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q31] ¿Se trata de software que proporciona una interfaz de usuario?</strong><br/></legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q31" id="q31t" value="true">
-            <label class="form-check-label" for="q31t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q31" id="q31f" value="false">
-            <label class="form-check-label" for="q31f">No</label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q32] ¿Es software no web o contiene software no web?</strong><br/></legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q32" id="q32t" value="true">
-            <label class="form-check-label" for="q32t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q32" id="q32f" value="false">
-            <label class="form-check-label" for="q32f">No</label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q33] ¿Es software de plataforma?</strong><br/>Si el sistema TIC incluye software de
-          plataforma (sistemas operativos, software controlador como drivers…)
-          entonces tiene que cumplir tres requisitos específicos. La siguiente pregunta
-          será Q9.3 en cualquier caso.</legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q33" id="q33t" value="true">
-            <label class="form-check-label" for="q33t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q33" id="q33f" value="false">
-            <label class="form-check-label" for="q33f">No</label>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q34] ¿Es una herramienta de autor?</strong><br/>Si el software permite
-          editar y gestionar contenidos entonces se considera que es una herramienta
-          de autor y se aplican requisitos específicos de accesibilidad. La siguiente
-          pregunta será Q10 en cualquier caso.</legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q34" id="q34t" value="true">
-            <label class="form-check-label" for="q34t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q34" id="q34f" value="false">
-            <label class="form-check-label" for="q34f">No</label>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-
-    <fieldset class="row mb-3">
-      <legend class="col-form-label col-8"><strong>[Q35] ¿Incluye el sistema TIC documentación del producto?</strong><br/> Si el sistema incluye
-        documentación, ésta tendrá que cubrir las características de accesibilidad y deberá ser
-        accesible. La siguiente pregunta será Q11 en cualquier caso</legend>
+    <!-- Q.4. -->
+    <fieldset id="ques14" class="row mb-3">
+      <legend class="col-form-label col-8">
+        <strong>[Q14] ¿Tiene el sistema TIC capacidades de vídeo? (Reproducir, grabar, ...)</strong><br/>
+        Si la respuesta es afirmativa se aplican los requisitos siguientes. La siguiente pregunta será Q6 en cualquier caso.
+      </legend>
       <div class="col-4">
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="bloque9" id="bloque9t" value="true">
-          <label class="form-check-label" for="bloque9t">Sí</label>
+          <input class="form-check-input" type="radio" name="q14" id="q14t" value="true">
+          <label class="form-check-label" for="q14t">Sí</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="bloque9" id="bloque9f" value="false">
-          <label class="form-check-label" for="bloque9f">No</label>
+          <input class="form-check-input" type="radio" name="q14" id="q14f" value="false">
+          <label class="form-check-label" for="q14f">No</label>
         </div>
       </div>
     </fieldset>
-    <div class="bloque9 px-3 hide">
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q36] ¿Se incluyen servicios de apoyo?</strong><br/>Si el sistema TIC incluye servicios de apoyo
-          como pueden ser los servicios de atención al cliente, entonces esos servicios tienen
-          que cumplir tres requisitos de accesibilidad. La siguiente pregunta será Q12 en
-          cualquier caso.</legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q36" id="q36t" value="true">
-            <label class="form-check-label" for="q36t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q36" id="q36f" value="false">
-            <label class="form-check-label" for="q36f">No</label>
-          </div>
+    <fieldset id="ques15" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q15] ¿Reproduce el sistema TIC vídeo con audio sincronizado?</strong>
+      </legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q15" id="q15t" value="true">
+          <label class="form-check-label" for="q15t">Sí</label>
         </div>
-      </fieldset>
-      <fieldset class="row mb-3">
-        <legend class="col-form-label col-9"><strong>[Q37] ¿El sistema TIC proporciona servicios de intermediación?</strong><br/>Si el sistema TIC está
-          diseñado para proporcionar servicios de intermediación, deberá cumplir con una serie
-          de requisitos sobre la calidad de esos servicios. Ésta es la última pregunta del árbol de
-          decisión</legend>
-        <div class="col-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q37" id="q37t" value="true">
-            <label class="form-check-label" for="q37t">Sí</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="q37" id="q37f" value="false">
-            <label class="form-check-label" for="q37f">No</label>
-          </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q15" id="q15f" value="false">
+          <label class="form-check-label" for="q15f">No</label>
         </div>
-      </fieldset>
-    </div>
+      </div>
+    </fieldset>
+    <fieldset id="ques16" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q16] ¿Muestra el sistema TIC subtítulos?</strong>
+      </legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q16" id="q16t" value="true">
+          <label class="form-check-label" for="q16t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q16" id="q16f" value="false">
+          <label class="form-check-label" for="q16f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset id="ques17" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q17] ¿El sistema TIC transmite, convierte o graba vídeo con audio sincronizado?</strong>
+      </legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q17" id="q17t" value="true">
+          <label class="form-check-label" for="q17t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q17" id="q17f" value="false">
+          <label class="form-check-label" for="q17f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <!-- Q.5. -->
+    <fieldset id="ques18" class="row mb-3">
+      <legend class="col-form-label col-8">
+        <strong>[Q18] ¿El sistema TIC es hardware o tiene componentes hardware?</strong><br/>
+        Si se trata de un producto hardware o de un servicio TIC que incluye productos hardware, entonces se aplican algunos requisitos generales de software y se plantea la pregunta Q6.1. En caso contrario se salta a la pregunta Q7.
+      </legend>
+      <div class="col-4">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q18" id="q18t" value="true">
+          <label class="form-check-label" for="q18t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q18" id="q18f" value="false">
+          <label class="form-check-label" for="q18f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset id="ques19" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q19] ¿El sistema TIC reproduce voz?</strong><br/>
+        Si el sistema tiene altavoces que reproducen voz (por ejemplo, un teléfono), entonces se aplican requisitos relacionados con la calidad del sonido. La siguiente pregunta será Q6.2 en cualquier caso.
+      </legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q19" id="q19t" value="true">
+          <label class="form-check-label" for="q19t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q19" id="q19f" value="false">
+          <label class="form-check-label" for="q19f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset id="ques20" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q20] ¿Se sujeta normalmente el sistema TIC cerca del oído?</strong>
+      </legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q20" id="q20t" value="true">
+          <label class="form-check-label" for="q20t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q20" id="q20f" value="false">
+          <label class="form-check-label" for="q20f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset id="ques21" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q21] ¿Se trata de un sistema TIC estacionario?</strong>
+      </legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q21" id="q21t" value="true">
+          <label class="form-check-label" for="q21t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q21" id="q21f" value="false">
+          <label class="form-check-label" for="q21f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset id="ques22" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q22] ¿Ninguna parte del sistema TIC estacionario obstruye el acceso frontal?</strong>
+      </legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q22" id="q22t" value="true">
+          <label class="form-check-label" for="q22t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q22" id="q22f" value="false">
+          <label class="form-check-label" for="q22f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset id="ques23" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q23] ¿Hay una obstrucción que es parte integral del sistema TIC estacionario?</strong>
+      </legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q23" id="q23t" value="true">
+          <label class="form-check-label" for="q23t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q23" id="q23f" value="false">
+          <label class="form-check-label" for="q23f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset id="ques24" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q24] ¿Hay un obstáculo que sea parte integral del sistema TIC estacionario?</strong>
+      </legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q24" id="q24t" value="true">
+          <label class="form-check-label" for="q24t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q24" id="q24f" value="false">
+          <label class="form-check-label" for="q24f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset id="ques25" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q25] ¿El alcance lateral no tiene obstrucción, o tiene una obstrucción que es parte integral del sistema TIC estacionario?</strong>
+      </legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q25" id="q25t" value="true">
+          <label class="form-check-label" for="q25t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q25" id="q25f" value="false">
+          <label class="form-check-label" for="q25f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset id="ques26" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q26] ¿Es la obstrucción (que es parte integral del sistema TIC integrado) menor de 255 milímetros?</strong>
+      </legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q26" id="q26t" value="true">
+          <label class="form-check-label" for="q26t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q26" id="q26f" value="false">
+          <label class="form-check-label" for="q26f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset id="ques27" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q27] ¿Tiene el sistema TIC elementos accionables de forma mecánica?</strong><br/>
+        Si la parte hardware del producto TIC tiene botones o teclas mecánicas (que se desplazan físicamente al ser pulsados), entonces se aplican requisitos sobre esos botones o teclas. La siguiente pregunta será Q7 en cualquier caso.
+      </legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q27" id="q27t" value="true">
+          <label class="form-check-label" for="q27t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q27" id="q27f" value="false">
+          <label class="form-check-label" for="q27f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <!-- Q.6. -->
+    <fieldset id="ques28" class="row mb-3">
+      <legend class="col-form-label col-8">
+        <strong>[Q28] ¿El sistema TIC es una página web o contiene páginas web?</strong><br/>
+        Las páginas web tienen que cumplir con los requisitos de EN 301 549 que equivalen al nivel AA de conformidad de WCAG 2. La siguiente pregunta sería Q8 en cualquier caso.
+      </legend>
+      <div class="col-4">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q28" id="q28t" value="true">
+          <label class="form-check-label" for="q28t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q28" id="q28f" value="false">
+          <label class="form-check-label" for="q28f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <!-- Q.7. -->
+    <fieldset id="ques29" class="row mb-3">
+      <legend class="col-form-label col-8">
+        <strong>[Q29] ¿El sistema TIC es un documento no web o contiene documentos no web?</strong><br/>
+        Los documentos no web tienen que cumplir con los requisitos de EN 301 549 que equivalen (con alguna excepción) al nivel AA de conformidad de WCAG 2. Además hay dos recomendaciones específicas para documentos no web. La siguiente pregunta sería Q9 en cualquier caso.
+      </legend>
+      <div class="col-4">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q29" id="q29t" value="true">
+          <label class="form-check-label" for="q29t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q29" id="q29f" value="false">
+          <label class="form-check-label" for="q29f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <!-- Q.8. -->
+    <fieldset id="ques30" class="row mb-3">
+      <legend class="col-form-label col-8">
+        <strong>[Q30] ¿El sistema TIC es software o contiene software?</strong><br/>
+        Si el sistema TIC incluye software de plataforma (sistema operativo), software que proporciona una interfaz de usuario, software que es una herramienta de autor o software que opera como producto de apoyo se aplican unos requisitos y la pregunta siguiente será Q9.1. En otro caso la pregunta siguiente será Q10.
+      </legend>
+      <div class="col-4">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q30" id="q30t" value="true">
+          <label class="form-check-label" for="q30t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q30" id="q30f" value="false">
+          <label class="form-check-label" for="q30f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset id="ques31" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q31] ¿Se trata de software que proporciona una interfaz de usuario?</strong>
+      </legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q31" id="q31t" value="true">
+          <label class="form-check-label" for="q31t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q31" id="q31f" value="false">
+          <label class="form-check-label" for="q31f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset id="ques32" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q32] ¿Es software no web o contiene software no web?</strong>
+      </legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q32" id="q32t" value="true">
+          <label class="form-check-label" for="q32t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q32" id="q32f" value="false">
+          <label class="form-check-label" for="q32f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset id="ques33" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q33] ¿Es software de plataforma?</strong><br/>
+        Si el sistema TIC incluye software de plataforma (sistemas operativos, software controlador como drivers…) entonces tiene que cumplir tres requisitos específicos. La siguiente pregunta será Q9.3 en cualquier caso.</legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q33" id="q33t" value="true">
+          <label class="form-check-label" for="q33t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q33" id="q33f" value="false">
+          <label class="form-check-label" for="q33f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset id="ques34" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q34] ¿Es una herramienta de autor?</strong><br/>
+        Si el software permite editar y gestionar contenidos entonces se considera que es una herramienta de autor y se aplican requisitos específicos de accesibilidad. La siguiente pregunta será Q10 en cualquier caso.</legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q34" id="q34t" value="true">
+          <label class="form-check-label" for="q34t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q34" id="q34f" value="false">
+          <label class="form-check-label" for="q34f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <!-- Q.9. -->
+    <fieldset id="ques35" class="row mb-3">
+      <legend class="col-form-label col-8">
+        <strong>[Q35] ¿Incluye el sistema TIC documentación del producto?</strong><br/>
+        Si el sistema incluye documentación, ésta tendrá que cubrir las características de accesibilidad y deberá ser accesible. La siguiente pregunta será Q11 en cualquier caso.
+      </legend>
+      <div class="col-4">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q35" id="q35t" value="true">
+          <label class="form-check-label" for="q35t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q35" id="q35f" value="false">
+          <label class="form-check-label" for="q35f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <!-- Q.10. -->
+    <fieldset id="ques36" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q36] ¿Se incluyen servicios de apoyo?</strong><br/>
+        Si el sistema TIC incluye servicios de apoyo como pueden ser los servicios de atención al cliente, entonces esos servicios tienen que cumplir tres requisitos de accesibilidad. La siguiente pregunta será Q12 en cualquier caso.
+      </legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q36" id="q36t" value="true">
+          <label class="form-check-label" for="q36t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q36" id="q36f" value="false">
+          <label class="form-check-label" for="q36f">No</label>
+        </div>
+      </div>
+    </fieldset>
+    <!-- Q.11. -->
+    <fieldset id="ques37" class="row mb-3">
+      <legend class="col-form-label col-9">
+        <strong>[Q37] ¿El sistema TIC proporciona servicios de intermediación?</strong><br/>
+        Si el sistema TIC está diseñado para proporcionar servicios de intermediación, deberá cumplir con una serie de requisitos sobre la calidad de esos servicios. Ésta es la última pregunta del árbol de decisión.
+      </legend>
+      <div class="col-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q37" id="q37t" value="true">
+          <label class="form-check-label" for="q37t">Sí</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q37" id="q37f" value="false">
+          <label class="form-check-label" for="q37f">No</label>
+        </div>
+      </div>
+    </fieldset>
   </div>
   
   <div class="card-footer">
@@ -916,7 +934,7 @@
     - Q15
       - Q16
     - Q17
-  - Q18
+  - Q18 - 5
     - Q19
       - Q20
     - Q21
@@ -926,9 +944,9 @@
       - Q25
         - Q26
     - Q27
-  - Q28
-  - Q29
-  - Q30
+  - Q28 - 6
+  - Q29 - 7
+  - Q30 - 8
     - Q1
     - Q31
       - Q32
@@ -937,16 +955,108 @@
           - Q4
     - Q33
     - Q34
-  - Q35
-  - Q36
-  - Q37
+  - Q35 - 9
+  - Q36 - 10
+  - Q37 - 11
 -->
+
 <script>
   $(document).ready(function() {
+    $(':input[value = false]').attr('checked', 'true')
+
+    for (i=2; i<=37; i++) {
+      $('#ques' + i ).hide();
+    }
+    $('#ques7').show();
+    $('#ques9').show();
+    $('#ques14').show();
+    $('#ques18').show();
+
+    $('#resultado').children().hide();
+
+    $('input[type=radio]').on('change', function() {
+      let inputs = [''];
+
+      for (i=1; i<=37; i++) {
+        inputs.push($('input[name=q' + i + ']:checked').attr('value'));
+      }
+      
+
+      inputs[1] == 'true' ? $('#ques2').show() : $('#ques2').hide();
+      if (inputs[2] == 'true') {
+        $('#ques3').show();
+        $('#ques6').show();
+      } else {
+        $('#ques3').hide();
+        $('#ques6').hide();
+      }
+      inputs[3] == 'true' ? $('#ques4').show() : $('#ques4').hide();
+      inputs[4] == 'true' ? $('#ques5').show() : $('#ques5').hide();
+
+      /*
+      let comodin = this.name.slice(1);
+      
+      for (i=1; i<=6; i++) {
+        if (comodin < i) {
+          $('input[name=q' + i + ']').attr('checked', 'true')
+          $("[id^='ques" + i + "']").hide();
+        }
+      }
+
+      if (q1 == 'true') {
+        $('#q1true').show();
+        $('#q1false').hide();
+      } else if (q1 =='false') {
+        $('#q1true').hide();
+        $('#q1false').show();
+      }
+      
+      if (q3 == 'false') {
+        $('#q3false').show();
+      } else if (q3 == 'true') {
+        $('#q3false').hide();
+      }
+      
+      if (q4 == '1') {
+        $('#q4uno').show();
+        $('#q4doscinco').hide();
+      } else if (q4 == '2-5') {
+        $('#q4doscinco').show();
+        $('#q4uno').hide();
+      } else if (q4 == '+5') {
+        $('#q4uno').hide();
+        $('#q4doscinco').hide();
+      }
+
+      $('#resultado').children().hide();
+      
+      if (q1 == 'true' && q2 == 'true') {
+        $('#toggle').show();
+      } else if (q1 == 'true' && q2 == 'false') {
+        $('#checkbox').show();
+      } else if (q1 == 'false' && q3 == 'true') {
+        $('#tabs').show();
+      } else if (q1 == 'false' && q3 == 'false' && q4 == '+5') {
+        $('#dropdown').show();
+      } else if (q1 == 'false' && q3 == 'false' && q4 == '1' && q5 == 'true') {
+        $('#check').show();
+      } else if (q1 == 'false' && q3 == 'false' && q4 == '1' && q5 == 'false') {
+        $('#switch').show();
+      } else if (q1 == 'false' && q3 == 'false' && q4 == '2-5' && q6 == 'true') {
+        $('#segment').show();
+      } else if (q1 == 'false' && q3 == 'false' && q4 == '2-5' && q6 == 'false') {
+        $('#radio').show();
+      }*/
+    })
+  });
+</script>
+
+<script>
+   /* $(document).ready(function() {
     $('input:radio[value=false]').prop('checked', true);
     
   });
-  /*
+ 
   $('input').click(function() {
     if (this.value == 'true') {
       $('.' + this.name).removeClass('hide');
@@ -967,7 +1077,7 @@
     - Q2 - 1.1.
       - Q3 - 1.1.1.
         -Q4 - 1.1.1.1.
-          -Q5 - 1.1.1.1.1.*/
+          -Q5 - 1.1.1.1.1.
   $('input').click(function() {
     if (this.value == 'true') {
       $('.' + this.name).removeClass('hide');
@@ -984,5 +1094,5 @@
       $('.' + this.name).removeClass('hide');
       $('#' + this.name + 'true').removeClass('hide');
     }
-  });
+  });*/
 </script>
