@@ -3,16 +3,19 @@
     <h2>WCAG 2.1.</h2>
   </div>
   <div class="card-body">
-    <div id="filtro2" class="btn-group p-3" role="group">
+    <div id="filtro2" class="btn-group" role="group">
       <div class="input-group-text" id="filtroNivel">Nivel :</div>
 
-      <input type="checkbox" class="btn-check" data-column="11" id="A" aria-describedby="filtroNivel" autocomplete="off">
+      <input id="all" type="radio" name="filtroNivel" class="btn-check">
+      <label class="btn btn-secondary" for="all">Todos</label>
+
+      <input id="A" type="radio" name="filtroNivel" class="btn-check">
       <label class="btn btn-secondary" for="A">A</label>
 
-      <input type="checkbox" class="btn-check" data-column="11" id="AA" aria-describedby="filtroNivel" autocomplete="off">
+      <input id="AA" type="radio" name="filtroNivel" class="btn-check">
       <label class="btn btn-secondary" for="AA">AA</label>
 
-      <input type="checkbox" class="btn-check" data-column="11" id="AAA" aria-describedby="filtroNivel" autocomplete="off">
+      <input id="AAA" type="radio" name="filtroNivel" class="btn-check">
       <label class="btn btn-secondary" for="AAA">AAA</label>
     </div>
     <table id="table" class="table table-light table-striped-columns pt-5">
@@ -41,6 +44,10 @@
       paging: true,
       ordering: true,
       searching: true,
+      dom : '<"row py-3"<"col-sm-12 col-md-6"l><"col-sm-12 col-md-6"f>>' +
+        '<"row py-3"<"col-sm-12 col-md-6"i><"col-sm-12 col-md-6"p>>' +
+        '<"row"<"col-sm-12"t>>' +
+        '<"row"<"col-sm-12 col-md-12"p>>',
       language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
       ajax: './assets/principiosA11Y/wcag.json',
       columns: [
@@ -55,10 +62,17 @@
     });
 
     $('#filtro2 input').on('click', function () {
-      table
-        .columns(1)
-        .search(this.id)
+      if (this.id == 'all') {
+        table
+        .columns()
+        .search('')
         .draw();
+      } else {
+        table
+        .columns(1)
+        .search('^' + this.id + '$', true, true, false)
+        .draw();
+      }
     });
   });
 </script>
