@@ -4,147 +4,147 @@
       "criteria" : "1.1.1 Contenido no textual",
       "link" : "https://www.w3.org/TR/WCAG21/#non-text-content", 
       "level" : "A",
-      "goal" : "Proporcione alternativas de texto para cualquier contenido que no sea de texto para que se pueda cambiar a otras formas que las personas necesiten, como letra grande, braille, habla, símbolos o un lenguaje más simple."
+      "goal" : "Hacer que la información transmitida mediante contenido no textual sea accesible a través de alternativas textuales."
     },
     
     { 
-      "criteria" : "1.2.1 Solo audio y solo video (pregrabado)",
+      "criteria" : "1.2.1 Sólo audio y sólo vídeo (Grabado)",
       "link" : "https://www.w3.org/TR/WCAG21/#audio-only-and-video-only-prerecorded", 
       "level" : "A",
-      "goal" : "Se proporcionan subtítulos para todo el contenido de audio pregrabado en medios sincronizados, excepto cuando el medio es una alternativa de medios para el texto y está claramente etiquetado como tal."
+      "goal" : "Hacer que la información proporcionada por el contenido pregrabado (sólo audio o sólo vídeo) esté disponible para todos los usuarios."
     },
     
     { 
-      "criteria" : "1.2.2 Subtítulos (pregrabados)", 
+      "criteria" : "1.2.2 Subtítulos (Grabado)", 
       "link" : "https://www.w3.org/TR/WCAG21/#captions-prerecorded",
       "level" : "A",
-      "goal" : "Se proporcionan subtítulos para todo el contenido de audio pregrabado en medios sincronizados, excepto cuando el medio es una alternativa de medios para el texto y está claramente etiquetado como tal."
+      "goal" : "Permitir a las personas con discapacidades auditivas ver la presentación multimedia original sin perder información."
     },
     
     { 
-      "criteria" : "1.2.3 Descripción de audio o medios alternativos (pregrabados)", 
+      "criteria" : "1.2.3 Audiodescripción o medio alternativo (Grabado)", 
       "link" : "https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded", 
       "level" : "A",
-      "goal" : "Se proporciona una alternativa para los medios basados en el tiempo o la descripción de audio del contenido de video pregrabado para los medios sincronizados, excepto cuando los medios son una alternativa de medios para el texto y están claramente etiquetados como tales."
+      "goal" : "Permitir a las personas con discapacidades visuales acceder a la presentación multimedia sin perder información o, al menos, que dispongan de una transcripción textual completa."
     },
     
     { 
-      "criteria" : "1.2.4 Subtítulos (en vivo)", 
+      "criteria" : "1.2.4 Subtítulos (Directo)", 
       "link" : "https://www.w3.org/TR/WCAG21/#captions-live", 
       "level" : "AA",
-      "goal" : "Se proporcionan subtítulos para todo el contenido de audio en vivo en medios sincronizados."
+      "goal" : "Permitir a las personas con discapacidades auditivas ver presentaciones en directo sin perder información."
     },
     
     { 
-      "criteria" : "1.2.5 Descripción de audio (pregrabado)", 
+      "criteria" : "1.2.5 Audiodescripción (Grabado)", 
       "link" : "https://www.w3.org/TR/WCAG21/#audio-description-prerecorded", 
       "level" : "AA",
-      "goal" : "Se proporciona descripción de audio para todo el contenido de video pregrabado en medios sincronizados."
+      "goal" : "Permitir a las personas con discapacidades visuales acceder a la presentación multimedia sin perder información."
     },
     
     { 
-      "criteria" : "1.2.6 Lenguaje de señas (pregrabado)",
+      "criteria" : "1.2.6 Lengua de signos (Grabado)",
       "link" : "https://www.w3.org/TR/WCAG21/#sign-language-prerecorded", 
       "level" : "AAA",
-      "goal" : "Se proporciona interpretación en lengua de signos para todo el contenido de audio pregrabado en medios sincronizados."
+      "goal" : "Proporcionar interpretación en lengua de signos para todo el contenido de audio pregrabado en medios sincronizados."
     },
     
     { 
-      "criteria" : "1.2.7 Descripción de audio ampliada (pregrabada)", 
+      "criteria" : "1.2.7 Descripción de audio ampliada (Grabado)", 
       "link" : "https://www.w3.org/TR/WCAG21/#extended-audio-description-prerecorded", 
       "level" : "AAA",
       "goal" : "Cuando las pausas en el audio de primer plano son insuficientes para permitir que las descripciones de audio transmitan el sentido del video, se proporciona una descripción de audio extendida para todo el contenido de video pregrabado en medios sincronizados."
     },
     
     { 
-      "criteria" : "1.2.8 Medios alternativos (pregrabados)",
+      "criteria" : "1.2.8 Medios alternativos (Grabados)",
       "link" : "https://www.w3.org/TR/WCAG21/#media-alternative-prerecorded", 
       "level" : "AAA",
-      "goal" : "Se proporciona una alternativa para los medios basados en el tiempo para todos los medios sincronizados pregrabados y para todos los medios solo de video pregrabados."
+      "goal" : "Proporcionar una alternativa para los medios basados en el tiempo para todos los medios sincronizados pregrabados y para todos los medios solo de video pregrabados."
     },
     
     { 
-      "criteria" : "1.2.9 Solo audio (en vivo)", 
+      "criteria" : "1.2.9 Solo audio (Directo)", 
       "link" : "https://www.w3.org/TR/WCAG21/#audio-only-live", 
       "level" : "AAA",
-      "goal" : "Se proporciona una alternativa para los medios basados ​​en el tiempo que presenta información equivalente al contenido de solo audio en vivo."
+      "goal" : "Proporcionar una alternativa para los medios basados en el tiempo que presenta información equivalente al contenido de solo audio en vivo."
     },
     
     { 
       "criteria" : "1.3.1 Información y relaciones", 
       "link" : "https://www.w3.org/TR/WCAG21/#info-and-relationships", 
       "level" : "A",
-      "goal" : "Cuando la secuencia en la que se presenta el contenido afecta su significado, se puede determinar mediante programación una secuencia de lectura correcta."
+      "goal" : "Asegurar que la información y las relaciones existentes en el contenido transmitidas a través de la presentación también están disponibles cuando se cambie el formato de presentación (por ejemplo, cuando se accede con un lector de pantalla o cuando se sustituyen las hojas de estilo del sitio por hojas de estilo de los usuarios)."
     },
     
     { 
       "criteria" : "1.3.2 Secuencia significativa", 
       "link" : "https://www.w3.org/TR/WCAG21/#meaningful-sequence", 
       "level" : "A",
-      "goal" : "Cuando la secuencia en la que se presenta el contenido afecta su significado, se puede determinar mediante programación una secuencia de lectura correcta."
+      "goal" : "Lograr que los agentes de usuario puedan proporcionar presentaciones alternativas del contenido manteniendo el orden de lectura correcto para su comprensión."
     },
     
     { 
       "criteria" : "1.3.3 Características sensoriales", 
       "link" : "https://www.w3.org/TR/WCAG21/#sensory-characteristics", 
       "level" : "A",
-      "goal" : "Las instrucciones proporcionadas para comprender y operar el contenido no se basan únicamente en las características sensoriales de los componentes, como la forma, el color, el tamaño, la ubicación visual, la orientación o el sonido."
+      "goal" : "Asegurar que todos los usuarios pueden acceder al contenido y comprender las instrucciones para usarlo, incluso cuando no puedan percibir la forma, color, tamaño, localización espacial, orientación o sonido."
     },
     
     { 
       "criteria" : "1.3.4 Orientación", 
       "link" : "https://www.w3.org/TR/WCAG21/#orientation", 
       "level" : "AA",
-      "goal" : "El contenido no restringe su visualización y funcionamiento a una única orientación de visualización, como vertical u horizontal, a menos que sea esencial una orientación de visualización específica."
+      "goal" : "Lograr que se pueda visualizar y operar con todos los contenidos en cualquier tipo de orientación de la pantalla (p.ej. en vertical o en horizontal), excepto si se considera como esencial una orientación específica."
     },
     
     { 
-      "criteria" : "1.3.5 Identificar el propósito de entrada", 
+      "criteria" : "1.3.5 Identificar el propósito de la entrada", 
       "link" : "https://www.w3.org/TR/WCAG21/#identify-input-purpose", 
       "level" : "AA",
       "goal" : "El propósito de cada campo de entrada que recopila información sobre el usuario se puede determinar mediante programación cuando:<ul><li>El campo de entrada tiene un propósito identificado en la sección Propósitos de entrada para los componentes de la interfaz de usuario; y</li><li>El contenido se implementa utilizando tecnologías con soporte para identificar el significado esperado para los datos de entrada del formulario.</li></ul>"
     },
     
     { 
-      "criteria" : "1.3.6 Identificar Propósito", 
+      "criteria" : "1.3.6 Identificar propósito", 
       "link" : "https://www.w3.org/TR/WCAG21/#identify-purpose", 
       "level" : "AAA",
-      "goal" : "En el contenido implementado mediante lenguajes de marcado, el propósito de los componentes, iconos y regiones de la interfaz de usuario se puede determinar mediante programación."
+      "goal" : "Identificar el propósito de los campos de introducción de datos de forma que se pueda determinar automáticamente la finalidad de aquellos que solicitan información acerca de las personas."
     },
     
     { 
       "criteria" : "1.4.1 Uso del color", 
       "link" : "https://www.w3.org/TR/WCAG21/#use-of-color", 
       "level" : "A",
-      "goal" : "El color no se utiliza como el único medio visual para transmitir información, indicar una acción, provocar una respuesta o distinguir un elemento visual."
+      "goal" : "Asegurar que todos los usuarios pueden acceder a la información que se transmite por el color."
     },
     
     { 
-      "criteria" : "1.4.2 Audio Control", 
+      "criteria" : "1.4.2 Control del audio", 
       "link" : "https://www.w3.org/TR/WCAG21/#audio-control", 
       "level" : "A",
-      "goal" : "Si cualquier audio en una página web se reproduce automáticamente durante más de 3 segundos, hay un mecanismo disponible para pausar o detener el audio, o hay un mecanismo disponible para controlar el volumen de audio independientemente del nivel de volumen general del sistema."
+      "goal" : "Evitar interferencias entre el sonido de la página y la lectura por parte del lector de pantalla."
     },
     
     { 
-      "criteria" : "1.4.3 Contraste (Mínimo)", 
+      "criteria" : "1.4.3 Contraste (mínimo)", 
       "link" : "https://www.w3.org/TR/WCAG21/#contrast-minimum", 
       "level" : "AA",
-      "goal" : "La presentación visual de texto e imágenes de texto tiene una relación de contraste de al menos 4,5:1, excepto por lo siguiente:<ul><li>Texto grande: el texto a gran escala y las imágenes de texto a gran escala tienen una relación de contraste de al menos 3:1;</li><li>Incidental: texto o imágenes de texto que forman parte de un componente de interfaz de usuario inactivo, que son pura decoración, que no son visibles para nadie o que forman parte de una imagen que contiene otro contenido visual significativo, no tienen requisitos de contraste.</li><li>Logotipos: el texto que forma parte de un logotipo o marca no tiene requisitos de contraste.</li></ul>"
+      "goal" : "Proporcionar el suficiente contraste entre el primer plano y el fondo para que las personas con baja visión puedan leer el contenido."
     },
     
     { 
-      "criteria" : "1.4.4 Cambiar el tamaño del texto", 
+      "criteria" : "1.4.4 Cambio del tamaño del texto", 
       "link" : "https://www.w3.org/TR/WCAG21/#resize-text", 
       "level" : "AA",
-      "goal" : "A excepción de los subtítulos y las imágenes de texto, el texto se puede cambiar de tamaño sin tecnología de asistencia hasta en un 200 por ciento sin pérdida de contenido o funcionalidad."
+      "goal" : "Asegurar que el texto renderizado visualmente, incluidos los controles basados en texto se pueden redimensionar de forma que puedan ser leídos por personas con problemas de visión sin necesidad del uso de ayudas técnicas como magnificadores de pantalla."
     },
     
     { 
       "criteria" : "1.4.5 Imágenes de texto", 
       "link" : "https://www.w3.org/TR/WCAG21/#images-of-text", 
       "level" : "AA",
-      "goal" : "Si las tecnologías que se utilizan pueden lograr la presentación visual, se utiliza texto para transmitir información en lugar de imágenes de texto, excepto por lo siguiente:<ul><li>Personalizable: la imagen del texto se puede personalizar visualmente según los requisitos del usuario;</li><li>Esencial: una presentación particular del texto es esencial para la información que se transmite.</li></ul>"
+      "goal" : "Asegurar que la personas que necesitan una determinada presentación para el texto la puedan ajustar a sus necesidades."
     },
     
     { 
@@ -169,38 +169,38 @@
     },
     
     { 
-      "criteria" : "1.4.9 Imágenes de texto (sin excepción", 
+      "criteria" : "1.4.9 Imágenes de texto (sin excepción)", 
       "link" : "https://www.w3.org/TR/WCAG21/#images-of-text-no-exception", 
       "level" : "AAA",
       "goal" : "Las imágenes de texto solo se utilizan para decoración pura o cuando una presentación particular del texto es esencial para la información que se transmite."
     },
     
     { 
-      "criteria" : "1.4.10 Reflujo", 
+      "criteria" : "1.4.10 Reflow", 
       "link" : "https://www.w3.org/TR/WCAG21/#reflow", 
       "level" : "AA",
-      "goal" : "El contenido se puede presentar sin pérdida de información o funcionalidad, y sin necesidad de desplazarse en dos dimensiones para:<ul><li>Contenido de desplazamiento vertical con un ancho equivalente a 320 píxeles CSS;</li><li>Contenido de desplazamiento horizontal a una altura equivalente a 256 píxeles CSS.</li></ul>Excepto por partes del contenido que requieren un diseño bidimensional para su uso o significado."
+      "goal" : "Asegurar que no es necesario realizar scroll en dos dimensiones en áreas de visualización reducidas, mejorando así la experiencia de las personas con baja visión."
     },
     
     { 
-      "criteria" : "1.4.11 Contraste sin texto", 
+      "criteria" : "1.4.11 Contraste de contenido no textual", 
       "link" : "https://www.w3.org/TR/WCAG21/#non-text-contrast", 
       "level" : "AA",
-      "goal" : "La presentación visual de lo siguiente tiene una relación de contraste de al menos 3:1 frente a los colores adyacentes:<ul><li>Componentes de la interfaz de usuario: información visual necesaria para identificar los componentes y estados de la interfaz de usuario, excepto los componentes inactivos o cuando la apariencia del componente la determina el agente de usuario y el autor no la modifica;</li><li>Objetos gráficos: Partes de gráficos necesarios para comprender el contenido, excepto cuando una presentación particular de gráficos es esencial para la información que se transmite.</li></ul>"
+      "goal" : "Proporcionar el suficiente contraste entre el primer plano y el fondo en los componentes de interfaz de usuario y objetos gráficos para que las personas con baja visión puedan leer el contenido."
     },
     
     { 
-      "criteria" : "1.4.12 Espaciado de texto", 
+      "criteria" : "1.4.12 Espaciado del texto", 
       "link" : "https://www.w3.org/TR/WCAG21/#text-spacing", 
       "level" : "AA",
-      "goal" : "En el contenido implementado mediante lenguajes de marcado que admiten las siguientes propiedades de estilo de texto, no se produce pérdida de contenido o funcionalidad al configurar todo lo siguiente y no cambiar ninguna otra propiedad de estilo:<ul><li>Altura de línea (interlineado) a al menos 1,5 veces el tamaño de fuente;</li><li>Espaciar los siguientes párrafos al menos 2 veces el tamaño de la fuente;</li><li>Espaciado entre letras (seguimiento) de al menos 0,12 veces el tamaño de la fuente;</li><li>Espaciado entre palabras de al menos 0,16 veces el tamaño de la fuente.</li></ul>Excepción: los lenguajes humanos y las escrituras que no usan una o más de estas propiedades de estilo de texto en el texto escrito pueden conformarse usando solo las propiedades que existen para esa combinación de lenguaje y escritura."
+      "goal" : "Asegurar que los usuarios puedan modificar algunas de las características del texto para adaptar el contenido a sus necesidades."
     },
     
     { 
       "criteria" : "1.4.13 Contenido en Hover o Focus", 
       "link" : "https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus", 
       "level" : "AA",
-      "goal" : "Donde recibir y luego quitar el puntero o el foco del teclado desencadena contenido adicional para que se vuelva visible y luego se oculte, lo siguiente es cierto:<ul><li>Desechable: hay un mecanismo disponible para descartar el contenido adicional sin mover el puntero o el foco del teclado, a menos que el contenido adicional comunique un error de entrada o no oculte o reemplace otro contenido;</li><li>Hoverable: si el puntero puede activar el contenido adicional, entonces el puntero se puede mover sobre el contenido adicional sin que desaparezca el contenido adicional;</li><li>Persistente: el contenido adicional permanece visible hasta que se elimina el disparador de desplazamiento o enfoque, el usuario lo descarta o su información ya no es válida.</li></ul>Excepción: la presentación visual del contenido adicional está controlada por el agente de usuario y no es modificada por el autor."
+      "goal" : "Asegurar que los contenidos que se muestran u ocultan cuando un elemento recibe o pierde el puntero o el foco del teclado pueden ser percibidos y descartados por los usuarios, sin que perjudique la experiencia de uso."
     },
     
     { 
@@ -208,14 +208,14 @@
       "link" : "https://www.w3.org/TR/WCAG21/#keyboard", 
       "level" : "A",
       "version" : "2.0", 
-      "goal" : "Toda la funcionalidad del contenido se puede operar a través de una interfaz de teclado sin requerir tiempos específicos para pulsaciones de teclas individuales, excepto cuando la función subyacente requiere una entrada que depende de la ruta de movimiento del usuario y no solo de los puntos finales."
+      "goal" : "Asegurar que, siempre que sea posible, se pueda operar el contenido a través de teclado."
     },
     
     { 
-      "criteria" : "2.1.2 Sin trampa de teclado", 
+      "criteria" : "2.1.2 Sin trampas para el foco del teclado", 
       "link" : "https://www.w3.org/TR/WCAG21/#no-keyboard-trap", 
       "level" : "A",
-      "goal" : "Si el foco del teclado se puede mover a un componente de la página usando una interfaz de teclado, entonces el foco se puede alejar de ese componente usando solo una interfaz de teclado y, si requiere más que teclas de flecha o de tabulación sin modificar u otros métodos de salida estándar, se informa al usuario del método para alejar el foco."
+      "goal" : "Asegurar que la navegación mediante el tabulador no queda atrapada en parte del contenido de la página."
     },
     
     { 
@@ -226,28 +226,28 @@
     },
     
     { 
-      "criteria" : "2.1.4 Accesos directos de teclas de caracteres", 
+      "criteria" : "2.1.4 Atajos con teclas de caracteres", 
       "link" : "https://www.w3.org/TR/WCAG21/#character-key-shortcuts", 
       "level" : "A",
-      "goal" : "Si se implementa un atajo de teclado en el contenido usando solo letras (incluidas letras mayúsculas y minúsculas), signos de puntuación, números o símbolos, entonces al menos uno de los siguientes es verdadero:<ul><li>Desactivar: Hay un mecanismo disponible para desactivar el atajo;</li><li>Reasignación: hay un mecanismo disponible para reasignar el atajo para usar uno o más caracteres de teclado no imprimibles (por ejemplo, Ctrl, Alt, etc.);</li><li>Activo solo en el foco: el método abreviado de teclado para un componente de la interfaz de usuario solo está activo cuando ese componente tiene el foco.</li></ul>"
+      "goal" : "Evitar que las personas que interactúan mediante entradas de voz activen los elementos de interacción de forma accidental."
     },
     
     { 
-      "criteria" : "2.2.1 Temporización ajustable", 
+      "criteria" : "2.2.1 Tiempo ajustable", 
       "link" : "https://www.w3.org/TR/WCAG21/#timing-adjustable", 
       "level" : "A",
-      "goal" : "Para cada límite de tiempo establecido por el contenido, al menos uno de los siguientes es verdadero:<ul><li>Desactivar: el usuario puede desactivar el límite de tiempo antes de encontrarlo; o</li><li>Ajustar: el usuario puede ajustar el límite de tiempo antes de encontrarlo en un amplio rango que es al menos diez veces la duración de la configuración predeterminada; o</li><li>Extender: se advierte al usuario antes de que expire el tiempo y se le otorgan al menos 20 segundos para extender el límite de tiempo con una simple acción (por ejemplo, 'presionar la barra espaciadora'), y el usuario puede extender el límite de tiempo al menos diez veces ; o</li><li>Excepción en tiempo real: el límite de tiempo es una parte requerida de un evento en tiempo real (por ejemplo, una subasta), y no es posible ninguna alternativa al límite de tiempo; o</li><li>Excepción Esencial: El límite de tiempo es esencial y ampliarlo invalidaría la actividad; o</li><li>Excepción de 20 horas: el límite de tiempo es superior a 20 horas.</li></ul>"
+      "goal" : "Asegurar que los usuarios con discapacidad tienen el tiempo suficiente para interactuar con la página web siempre que sea posible."
     },
 
     { 
-      "criteria" : "2.2.2 Pausa Detener Ocultar", 
+      "criteria" : "2.2.2 Pausar, detener, ocultar", 
       "link" : "https://www.w3.org/TR/WCAG21/#pause-stop-hide", 
       "level" : "A",
-      "goal" : "Para información en movimiento, parpadeo, desplazamiento o actualización automática, todo lo siguiente es verdadero:<ul><li>Movimiento, parpadeo, desplazamiento: para cualquier información en movimiento, parpadeo o desplazamiento que (1) se inicie automáticamente, (2) dure más de cinco segundos y (3) se presente en paralelo con otro contenido, existe un mecanismo para que el usuario pausarlo, detenerlo u ocultarlo a menos que el movimiento, parpadeo o desplazamiento sea parte de una actividad en la que sea esencial; y</li><li>Actualización automática: para cualquier información de actualización automática que (1) se inicie automáticamente y (2) se presente en paralelo con otro contenido, existe un mecanismo para que el usuario la pause, la detenga, la oculte o controle la frecuencia de la actualizar a menos que la actualización automática sea parte de una actividad donde sea esencial.</li></ul>"
+      "goal" : "Evitar que se distraigan los usuarios mientras interactúan con la página."
     },
-    
+
     { 
-      "criteria" : "2.3.2 Tres destellos", 
+      "criteria" : "2.2.3 Sin tiempo", 
       "link" : "https://www.w3.org/TR/WCAG21/#no-timing", 
       "level" : "AAA",
       "goal" : "El tiempo no es una parte esencial del evento o actividad presentado por el contenido, a excepción de los medios sincronizados no interactivos y los eventos en tiempo real."
@@ -275,17 +275,17 @@
     },
     
     { 
-      "criteria" : "2.3.1 Tres destellos o por debajo del umbral", 
+      "criteria" : "2.3.1 Umbral de tres destellos o menos", 
       "link" : "https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold", 
       "level" : "A",
-      "goal" : "Las páginas web no contienen nada que parpadee más de tres veces en cualquier período de un segundo, o el parpadeo está por debajo de los umbrales de parpadeo general y parpadeo rojo."
+      "goal" : "Permitir que los usuarios accedan a todo el contenido sin que este les cause ataques fotosensitivos."
     },
     
     { 
       "criteria" : "2.3.2 Tres destellos", 
       "link" : "https://www.w3.org/TR/WCAG21/#three-flashes", 
       "level" : "AAA",
-      "goal" : "Las páginas web no contienen nada que parpadee más de tres veces en cualquier período de un segundo."
+      "goal" : "El tiempo no es una parte esencial del evento o actividad presentado por el contenido, a excepción de los medios sincronizados no interactivos y los eventos en tiempo real."
     },
     
     { 
@@ -296,52 +296,52 @@
     },
     
     { 
-      "criteria" : "2.4.1 Bloques de derivación", 
+      "criteria" : "2.4.1 Evitar bloques", 
       "link" : "https://www.w3.org/TR/WCAG21/#bypass-blocks", 
       "level" : "A",
-      "goal" : "Hay un mecanismo disponible para eludir bloques de contenido que se repiten en varias páginas web."
+      "goal" : "Permitir a quienes naveguen de forma secuencial acceder directamente al contenido principal."
     },
     
     { 
-      "criteria" : "2.4.2 Página titulada", 
+      "criteria" : "2.4.2 Titulado de páginas", 
       "link" : "https://www.w3.org/TR/WCAG21/#page-titled", 
       "level" : "A",
-      "goal" : "Las páginas web tienen títulos que describen el tema o el propósito."
+      "goal" : "Ayudar a los usuarios a encontrar el contenido y orientarse asegurándonos que cada página tiene un título descriptivo."
     },
     
     { 
-      "criteria" : "2.4.3 Orden de Focus",
+      "criteria" : "2.4.3 Orden del foco",
       "link" : "https://www.w3.org/TR/WCAG21/#focus-order", 
       "level" : "A",
-      "goal" : "Si se puede navegar secuencialmente por una página web y las secuencias de navegación afectan el significado o la operación, los componentes enfocables reciben el enfoque en un orden que preserva el significado y la operabilidad."
+      "goal" : "Asegurar que los usuarios pueden interactuar mediante el teclado, navegar secuencialmente por el contenido y encontrar la información en el orden correcto."
     },
     
     { 
-      "criteria" : "2.4.4 Propósito del enlace (en contexto)", 
+      "criteria" : "2.4.4 Propósito de los enlaces (en contexto)", 
       "link" : "https://www.w3.org/TR/WCAG21/#link-purpose-in-context", 
       "level" : "A",
-      "goal" : "El propósito de cada enlace se puede determinar a partir del texto del enlace solo o del texto del enlace junto con su contexto de enlace determinado mediante programación, excepto cuando el propósito del enlace sea ambiguo para los usuarios en general."
+      "goal" : "Ayudar a los usuarios a comprender el propósito de cada enlace de forma que puedan decidir seguir el enlace o no."
     },
     
     { 
-      "criteria" : "2.4.5 Múltiples formas", 
+      "criteria" : "2.4.5 Múltiples vías", 
       "link" : "https://www.w3.org/TR/WCAG21/#multiple-ways", 
       "level" : "AA",
-      "goal" : "Hay más de una manera disponible para ubicar una página web dentro de un conjunto de páginas web, excepto cuando la página web es el resultado o un paso en un proceso."
+      "goal" : "Asegurar que los usuarios puedan localizar el contenido de la forma que mejor satisfaga sus necesidades."
     },
     
     { 
-      "criteria" : "2.4.6 Encabezados y Etiquetas", 
+      "criteria" : "2.4.6 Encabezados y etiquetas", 
       "link" : "https://www.w3.org/TR/WCAG21/#headings-and-labels", 
       "level" : "AA",
-      "goal" : "Los encabezados y las etiquetas describen el tema o el propósito."
+      "goal" : "Ayudar a los usuarios a comprender qué información está contenida en la página web y cómo se organiza dicha información."
     },
     
     { 
-      "criteria" : "2.4.7 Focus visible", 
+      "criteria" : "2.4.7 Foco visible", 
       "link" : "https://www.w3.org/TR/WCAG21/#focus-visible", 
       "level" : "AA",
-      "goal" : "Cualquier interfaz de usuario operable por teclado tiene un modo de operación donde el indicador de enfoque del teclado es visible."
+      "goal" : "Asegurar que el indicador del foco del teclado se puede localizar visualmente."
     },
     
     { 
@@ -366,31 +366,31 @@
     },
 
     { 
-      "criteria" : "2.5.1 Gestos de puntero",
+      "criteria" : "2.5.1 Gestos del puntero",
       "link" : "https://www.w3.org/TR/WCAG21/#pointer-gestures", 
       "level" : "A",
-      "goal" : "Toda la funcionalidad que utiliza gestos multipunto o basados en rutas para la operación se puede operar con un solo puntero sin un gesto basado en rutas, a menos que sea esencial un gesto multipunto o basado en rutas."
+      "goal" : "Asegurar que el contenido se puede operar desde un gran número de dispositivos de entrada sencillos de forma que las personas con problemas de movilidad puedan interactuar de manera fácil."
     },
     
     { 
-      "criteria" : "2.5.2 Cancelación de puntero", 
+      "criteria" : "2.5.2 Cancelación del puntero", 
       "link" : "https://www.w3.org/TR/WCAG21/#pointer-cancellation", 
       "level" : "A",
-      "goal" : "Para la funcionalidad que se puede operar usando un solo puntero, al menos uno de los siguientes es verdadero:<ul><li>Sin evento descendente: el evento descendente del puntero no se utiliza para ejecutar ninguna parte de la función;</li><li>Cancelar o deshacer: la finalización de la función está en el evento ascendente y hay un mecanismo disponible para cancelar la función antes de completarla o para deshacer la función después de completarla;</li><li>Up Reversal: El evento up invierte cualquier resultado del evento down anterior;</li><li>Esencial: Completar la función en el evento down es esencial.</li></ul>"
+      "goal" : "Prevenir interacciones accidentales por parte de los usuarios al pulsar sobre algún componente de manera involuntaria."
     },
     
     { 
-      "criteria" : "2.5.3 Etiqueta en Nombre",
+      "criteria" : "2.5.3 Etiqueta en el nombre",
       "link" : "https://www.w3.org/TR/WCAG21/#label-in-name", 
       "level" : "A",
-      "goal" : "Para los componentes de la interfaz de usuario con etiquetas que incluyen texto o imágenes de texto, el nombre contiene el texto que se presenta visualmente."
+      "goal" : "Favorecer que las personas que dependan de las etiquetas visuales de los componentes del interfaz de usuario también puedan emplear los nombres accesibles."
     },
     
     { 
-      "criteria" : "2.5.4 Actuación de movimiento",
+      "criteria" : "2.5.4 Activación mediante movimiento",
       "link" : "https://www.w3.org/TR/WCAG21/#motion-actuation", 
       "level" : "A",
-      "goal" : "La funcionalidad que puede ser operada por el movimiento del dispositivo o el movimiento del usuario también puede ser operada por los componentes de la interfaz de usuario y la respuesta al movimiento puede desactivarse para evitar la activación accidental, excepto cuando:<ul><li>Interfaz compatible: el movimiento se utiliza para operar la funcionalidad a través de una interfaz compatible con la accesibilidad;</li><li>Esencial: el movimiento es esencial para la función y hacerlo invalidaría la actividad.</li></ul>"
+      "goal" : "Asegurar que existen medios alternativos para activar todas las funcionalidades de la página que dependan del movimiento del dispositivo."
     },
     
     { 
@@ -411,14 +411,14 @@
       "criteria" : "3.1.1 Idioma de la página", 
       "link" : "https://www.w3.org/TR/WCAG21/#language-of-page", 
       "level" : "A",
-      "goal" : "El idioma humano predeterminado de cada página web se puede determinar mediante programación."
+      "goal" : "Proporcionar la información necesaria para que los agentes de usuario puedan presentar el texto y otro contenido lingüístico de forma correcta."
     },
     
     { 
       "criteria" : "3.1.2 Idioma de las partes", 
       "link" : "https://www.w3.org/TR/WCAG21/#language-of-parts", 
       "level" : "AA",
-      "goal" : "El lenguaje humano de cada pasaje o frase en el contenido se puede determinar programáticamente a excepción de los nombres propios, términos técnicos, palabras de lenguaje indeterminado y palabras o frases que se han convertido en parte de la lengua vernácula del texto circundante inmediato."
+      "goal" : "Asegurar que los agentes de usuario y productos de apoyo presentan correctamente el contenido en múltiples idiomas."
     },
     
     { 
@@ -450,31 +450,31 @@
     },
     
     { 
-      "criteria" : "3.2.1 En Focus", 
+      "criteria" : "3.2.1 Al recibir el foco", 
       "link" : "https://www.w3.org/TR/WCAG21/#on-focus", 
       "level" : "A",
-      "goal" : "Cuando cualquier componente de la interfaz de usuario recibe el foco, no inicia un cambio de contexto."
+      "goal" : "Asegurar que la funcionalidad es predecible cuando se navega por los documentos."
     },
     
     { 
-      "criteria" : "3.2.2 En la entrada", 
+      "criteria" : "3.2.2 Al recibir entradas", 
       "link" : "https://www.w3.org/TR/WCAG21/#on-input", 
       "level" : "A",
-      "goal" : "Cambiar la configuración de cualquier componente de la interfaz de usuario no provoca automáticamente un cambio de contexto a menos que se haya informado al usuario sobre el comportamiento antes de usar el componente."
+      "goal" : "Asegurar que introducir datos o seleccionar un control tiene efectos predecibles."
     },
     
     { 
-      "criteria" : "3.2.3 Navegación consistente", 
+      "criteria" : "3.2.3 Navegación coherente", 
       "link" : "https://www.w3.org/TR/WCAG21/#consistent-navigation", 
       "level" : "AA",
-      "goal" : "Los mecanismos de navegación que se repiten en varias páginas web dentro de un conjunto de páginas web ocurren en el mismo orden relativo cada vez que se repiten, a menos que el usuario inicie un cambio."
+      "goal" : "Asegurar que la presentación y la maquetación son consistentes a lo largo de todo el sitio web."
     },
     
     { 
-      "criteria" : "3.2.4 Identificación consistente", 
+      "criteria" : "3.2.4 Identificación coherente", 
       "link" : "https://www.w3.org/TR/WCAG21/#consistent-identification", 
       "level" : "AA",
-      "goal" : "Los componentes que tienen la misma funcionalidad dentro de un conjunto de páginas web se identifican de forma coherente."
+      "goal" : "Identificar de forma consistente funcionalidades que se repiten en un conjunto de páginas web."
     },
     
     { 
@@ -488,28 +488,28 @@
       "criteria" : "3.3.1 Identificación de errores", 
       "link" : "https://www.w3.org/TR/WCAG21/#error-identification", 
       "level" : "A",
-      "goal" : "Si se detecta automáticamente un error de entrada, se identifica el elemento que tiene el error y se describe el error al usuario en texto."
+      "goal" : "Asegurar que los usuarios se percatan de que se ha producido un error y dónde."
     },
     
     { 
       "criteria" : "3.3.2 Etiquetas o instrucciones", 
       "link" : "https://www.w3.org/TR/WCAG21/#labels-or-instructions", 
       "level" : "A",
-      "goal" : "Se proporcionan etiquetas o instrucciones cuando el contenido requiere la intervención del usuario."
+      "goal" : "Evitar que se produzcan errores al introducir datos."
     },
     
     { 
-      "criteria" : "3.3.3 Sugerencia de error",
+      "criteria" : "3.3.3 Sugerencias ante errores",
       "link" : "https://www.w3.org/TR/WCAG21/#error-suggestion", 
       "level" : "AA",
-      "goal" : "Si se detecta automáticamente un error de entrada y se conocen sugerencias para su corrección, estas sugerencias se proporcionan al usuario, a menos que pongan en peligro la seguridad o el propósito del contenido."
+      "goal" : "Asegurar, siempre que sea posible, que los usuarios reciben sugerencias adecuadas para corregir errores al introducir datos."
     },
     
     { 
-      "criteria" : "3.3.4 Prevención de errores (datos financieros legales)", 
+      "criteria" : "3.3.4 Prevención de errores (legales, financieros, datos)", 
       "link" : "https://www.w3.org/TR/WCAG21/#error-prevention-legal-financial-data", 
       "level" : "AA",
-      "goal" : "Para las páginas web que generan compromisos legales o transacciones financieras para el usuario, que modifican o eliminan datos controlables por el usuario en los sistemas de almacenamiento de datos, o que envían respuestas de prueba del usuario, al menos uno de los siguientes es verdadero:<ul><li>Reversible: Las presentaciones son reversibles.</li><li>Verificado: los datos ingresados por el usuario se verifican en busca de errores de entrada y el usuario tiene la oportunidad de corregirlos.</li><li>Confirmado: hay un mecanismo disponible para revisar, confirmar y corregir la información antes de finalizar el envío.</li></ul>"
+      "goal" : "Evitar graves consecuencias como resultado de un error al realizar una acción que no se puede deshacer."
     },
     
     { 
@@ -527,24 +527,24 @@
     },
 
     { 
-      "criteria" : "4.1.1 Análisis", 
+      "criteria" : "4.1.1 Procesamiento", 
       "link" : "https://www.w3.org/TR/WCAG21/#parsing", 
       "level" : "A",
-      "goal" : "En el contenido implementado mediante lenguajes de marcado, los elementos tienen etiquetas de inicio y finalización completas, los elementos se anidan de acuerdo con sus especificaciones, los elementos no contienen atributos duplicados y cualquier ID es único, excepto donde las especificaciones permitan estas características."
+      "goal" : "Asegurar que los agentes de usuario y productos de apoyo puedan interpretar correctamente y procesar (parsear) el contenido."
     },
     
     { 
-      "criteria" : "4.1.2 Nombre Rol Valor", 
+      "criteria" : "4.1.2 Nombre, función, valor", 
       "link" : "https://www.w3.org/TR/WCAG21/#name-role-value", 
       "level" : "A",
-      "goal" : "Para todos los componentes de la interfaz de usuario (incluidos, entre otros: elementos de formulario, enlaces y componentes generados por scripts), el nombre y la función se pueden determinar mediante programación; los estados, las propiedades y los valores que puede establecer el usuario se pueden establecer mediante programación; y la notificación de cambios en estos elementos está disponible para los agentes de usuario, incluidas las tecnologías de asistencia."
+      "goal" : "Asegurar que los productos de apoyo puedan obtener información, interactuar y estar al corriente del estado de los controles de interfaz de usuario."
     },
     
     { 
       "criteria" : "4.1.3 Mensajes de estado", 
       "link" : "https://www.w3.org/TR/WCAG21/#status-messages", 
       "level" : "AA",
-      "goal" : "En el contenido implementado mediante lenguajes de marcado, los mensajes de estado se pueden determinar mediante programación a través del rol o las propiedades, de modo que se puedan presentar al usuario mediante tecnologías de asistencia sin recibir atención."
+      "goal" : "Informar a los usuarios acerca de cambios importantes en el contenido (que no tengan el foco), de manera que no interrumpa innecesariamente su trabajo."
     }
   ]
 }

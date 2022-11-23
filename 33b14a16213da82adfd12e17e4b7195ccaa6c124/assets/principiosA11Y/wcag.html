@@ -18,7 +18,7 @@
       <input id="AAA" type="radio" name="filtroNivel" class="btn-check">
       <label class="btn btn-secondary" for="AAA">AAA</label>
     </div>
-    <table id="table" class="table table-light table-striped-columns pt-5">
+    <table id="table" class="table table-responsive table-light table-striped-columns pt-5">
       <thead class="table-dark">
         <tr>
           <th scope="col">Criterio</th>
@@ -62,7 +62,7 @@
     });
 
     $('#filtro2 input').on('click', function () {
-      if (this.id == 'all') {
+      if (this.id == 'all') {
         table
         .columns()
         .search('')
