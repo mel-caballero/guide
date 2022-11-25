@@ -1,0 +1,28 @@
+{
+  "data": [
+    { 
+      "nombre" : "HABI Diseño Accesible",
+      "descripcion" : "",
+      "web" : "https://habiaccesible.com/",
+      "linkedin" : "https://www.linkedin.com/company/habiaccesible/",
+      "correo" : "",
+      "twitter" : "https://twitter.com/HABIACCESIBLE",
+      "instagram" : "https://www.instagram.com/habiaccesible/",
+      "youtube" : "",
+      "ubicacion" : "Málaga",
+      "telefono" : "623 175 475"
+    },
+    { 
+      "nombre" : "Puntodis - Accessible Solutions in Sign-Writting",
+      "descripcion" : "",
+      "web" : "https://puntodis.com/",
+      "linkedin" : "https://www.linkedin.com/company/puntodis/?originalSubdomain=es",
+      "correo" : "",
+      "twitter" : "https://twitter.com/puntodis_",
+      "instagram" : "",
+      "youtube" : "https://www.youtube.com/user/PUNTODIS",
+      "ubicacion" : "Bizkaia",
+      "telefono" : "946 766 959"
+    }
+  ]
+}  

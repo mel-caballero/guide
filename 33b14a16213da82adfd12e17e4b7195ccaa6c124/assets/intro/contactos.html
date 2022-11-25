@@ -1,0 +1,106 @@
+<div id="card" class="card">
+  <div class="card-header text-center">
+    <h2>Contactos</h2>
+  </div>
+  <div class="card-body">
+    <div class="col-12 btn-group p-3" role="group">
+			<div class="input-group-text" id="btnGroupAddon">Mostrar u ocultar :</div>
+			<input type="checkbox" class="btn-check" data-column="1" id="web" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label class="btn btn-secondary" for="web">Web</label>
+
+			<input type="checkbox" class="btn-check" data-column="2" id="linkedin" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label class="btn btn-secondary" for="linkedin">Linkedin</label>
+
+			<input type="checkbox" class="btn-check" data-column="3" id="correo" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label class="btn btn-secondary" for="correo">e-mail</label>
+
+			<input type="checkbox" class="btn-check" data-column="4" id="twitter" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label class="btn btn-secondary" for="twitter">Twitter</label>
+
+			<input type="checkbox" class="btn-check" data-column="5" id="instagram" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label class="btn btn-secondary" for="instagram">Instagram</label>
+
+			<input type="checkbox" class="btn-check" data-column="6" id="youtube" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label class="btn btn-secondary" for="youtube">Youtube</label>
+
+			<input type="checkbox" class="btn-check" data-column="7" id="ubicacion" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label class="btn btn-secondary" for="ubicacion">Ubicación</label>
+
+			<input type="checkbox" class="btn-check" data-column="8" id="telefono" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label class="btn btn-secondary" for="telefono">Teléfono</label>
+    </div>
+
+    <table id="table" class="table table-responsive table-light table-striped-columns pt-5">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Contacto</th>
+          <th scope="col">Ubicación</th>
+          <th scope="col">Teléfono</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+
+    let table = $('#table').DataTable({
+      info: true,
+      paging: true,
+      ordering: true,
+      searching: true,
+      dom : '<"row py-3"<"col-sm-12 col-md-6"l><"col-sm-12 col-md-6"f>>' +
+        '<"row py-3"<"col-sm-12 col-md-6"i><"col-sm-12 col-md-6"p>>' +
+        '<"row"<"col-sm-12"t>>' +
+        '<"row"<"col-sm-12 col-md-12"p>>',
+      language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
+      ajax: './assets/intro/contactos.json',
+      columns: [
+        { data: 'nombre' },
+        { data: 'descripcion' },
+        { data: 'web',
+          render: function (data, type, row, meta) {
+            let enlaces = '';
+            if (data != '') {
+              enlaces += '<a href="' + data + '" title="Se abrirá una nueva ventana">Web</a> ';
+            } 
+            
+            if (row.linkedin != '') {
+              enlaces += '<a href="' + row.linkedin + '" title="Se abrirá una nueva ventana">Linkedin</a> ';
+            }
+
+            if (row.correo != '') {
+              enlaces +=  '<a href="mailto:' + row.correo + '" title="Se abrirá una nueva ventana">e-mail</a> ';
+            }
+
+            if (row.twitter != '') {
+              enlaces +=  '<a href="' + row.twitter + '" title="Se abrirá una nueva ventana">Twitter</a> ';
+            }
+            
+            if (row.instagram != '') {
+              enlaces +=  '<a href="' + row.instagram + '" title="Se abrirá una nueva ventana">Instagram</a> ';
+            }
+            
+            if (row.youtube != '') {
+              enlaces +=  '<a href="' + row.youtube + '" title="Se abrirá una nueva ventana">Youtube</a> ';
+            }
+
+            return enlaces;
+          }, 
+        },
+        { data: 'ubicacion' },
+        { data: 'telefono' },
+      ],
+    });
+
+    $('input.btn-check').on('click', function () {
+      var column = table.column($(this).attr('data-column'));
+      column.visible(!column.visible());
+    });
+  });
+</script>
