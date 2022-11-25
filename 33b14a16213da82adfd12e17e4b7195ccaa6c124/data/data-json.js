@@ -18,6 +18,11 @@ const temas =  {
           'ruta' : 'assets/intro/',
           'nombre' : 'consideraciones',
         },
+        {
+          'tituloSubtema' : 'Contactos',
+          'ruta' : 'assets/intro/',
+          'nombre' : 'contactos',
+        },
       ],
     },
     {
@@ -98,16 +103,6 @@ const temas =  {
     {
       'tituloTema' : 'Principios Accesibilidad',
       'subtema' : [
-        {
-          'tituloSubtema' : 'WCAG Principios',
-          'ruta' : 'assets/principiosA11Y/',
-          'nombre' : 'wcag-principios',
-        },
-        {
-          'tituloSubtema' : 'WCAG 2.1.',
-          'ruta' : 'assets/principiosA11Y/',
-          'nombre' : 'wcag',
-        },
         {
           'tituloSubtema' : 'Idioma',
           'ruta' : 'assets/principiosA11Y/',
@@ -237,6 +232,31 @@ const temas =  {
           'tituloSubtema' : 'Tabla',
           'ruta' : 'assets/componentes/',
           'nombre' : 'table',
+        },
+      ]
+    },
+    {
+      'tituloTema' : 'WCAG',
+      'subtema' : [
+        {
+          'tituloSubtema' : 'WCAG Principios',
+          'ruta' : 'assets/wcag/',
+          'nombre' : 'wcag-principios',
+        },
+        {
+          'tituloSubtema' : 'WCAG 2.1.',
+          'ruta' : 'assets/wcag/',
+          'nombre' : 'wcag21',
+        },
+        {
+          'tituloSubtema' : 'WCAG 2.2.',
+          'ruta' : 'assets/wcag/',
+          'nombre' : 'wcag22',
+        },
+        {
+          'tituloSubtema' : 'WCAG 3.0',
+          'ruta' : 'assets/wcag/',
+          'nombre' : 'wcag30',
         },
       ]
     },
