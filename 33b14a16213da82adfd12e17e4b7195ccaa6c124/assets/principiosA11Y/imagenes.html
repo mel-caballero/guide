@@ -24,5 +24,13 @@
     <p>Las imágenes que tienen alguna funcionalidad como enlaces, áreas activas de mapas de imagen o botones de tipo imagen en los formularios, deben tener un texto alternativo que identifica su propósito.</p>
     <h3>Imágenes agrupadas</h3>
     <p>En el caso de tener un grupo de imágenes que transmiten una única información, se debe proporcionar el texto alternativo en una sola de las imágenes y describir a todo el grupo, quedando el resto de imágenes como decorativas.</p>
+    <h3>SVG</h3>
+    <p>
+      SVGs receive focus by default in Internet Explorer and Edge Legacy. When embedding your SVGs, add focusable="false" to the &lt;svg&gt; element. Learn more on Stack Overflow.
+
+        When using SVGs with &lt;img&gt; elements, screen readers may not announce them as images, or skip the image completely. Include an additional role="img" on the &lt;img&gt; element to avoid any issues. See this article for details.
+        
+        External SVG sprites may not function correctly in Internet Explorer. Use the svg4everybody polyfill as needed.
+    </p>
   </div>
 </div>
