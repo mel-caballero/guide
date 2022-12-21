@@ -26,81 +26,6 @@ const temas =  {
       ],
     },
     {
-      'tituloTema' : 'Principios UX',
-      'subtema' : [
-        {
-          'tituloSubtema' : 'Hazlo simple',
-          'ruta' : 'assets/principiosUX/',
-          'nombre' : 'hazloSimple',
-        },
-        {
-          'tituloSubtema' : 'Anticipa las necesidades',
-          'ruta' : 'assets/principiosUX/',
-          'nombre' : 'anticipaNecesidades',
-        },
-        {
-          'tituloSubtema' : 'Somos eficaces',
-          'ruta' : 'assets/principiosUX/',
-          'nombre' : 'somosEficaces',
-        },
-        {
-          'tituloSubtema' : 'Facilidad de aprendizaje',
-          'ruta' : 'assets/principiosUX/',
-          'nombre' : 'facilidadAprendizaje',
-        },
-        {
-          'tituloSubtema' : 'Acceso para todos',
-          'ruta' : 'assets/principiosUX/',
-          'nombre' : 'accesoTodos',
-        },
-        {
-          'tituloSubtema' : 'Flexibilidad',
-          'ruta' : 'assets/principiosUX/',
-          'nombre' : 'flexibilidad',
-        },
-        {
-          'tituloSubtema' : 'Feedback',
-          'ruta' : 'assets/principiosUX/',
-          'nombre' : 'feedback',
-        },
-        {
-          'tituloSubtema' : 'Adaptabilidad',
-          'ruta' : 'assets/principiosUX/',
-          'nombre' : 'adaptabilidad',
-        },
-        {
-          'tituloSubtema' : 'Claridad visual',
-          'ruta' : 'assets/principiosUX/',
-          'nombre' : 'claridadVisual',
-        },
-        {
-          'tituloSubtema' : 'Prevención de errores',
-          'ruta' : 'assets/principiosUX/',
-          'nombre' : 'prevencionErrores',
-        },
-      ]
-    },
-    {
-      'tituloTema' : 'Estilos UI',
-      'subtema' : [
-        {
-          'tituloSubtema' : 'Color',
-          'ruta' : 'assets/estilosUI/',
-          'nombre' : 'color',
-        },
-        {
-          'tituloSubtema' : 'Iconos',
-          'ruta' : 'assets/estilosUI/',
-          'nombre' : 'iconos',
-        },
-        {
-          'tituloSubtema' : 'Tipografía',
-          'ruta' : 'assets/estilosUI/',
-          'nombre' : 'tipografia',
-        }
-      ]
-    },
-    {
       'tituloTema' : 'Principios Accesibilidad',
       'subtema' : [
         {
@@ -183,61 +108,6 @@ const temas =  {
     {
       'tituloTema' : 'Componentes',
       'subtema' : [
-        {
-          'tituloSubtema' : 'Acordeón',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'accordion',
-        },
-        {
-          'tituloSubtema' : 'Botones',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'button',
-        },
-        {
-          'tituloSubtema' : 'Cabecera',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'header',
-        },
-        {
-          'tituloSubtema' : 'Enlaces',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'link',
-        },
-        {
-          'tituloSubtema' : 'Enlaces salto contenido',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'skipContent',
-        },
-        {
-          'tituloSubtema' : 'Formulario',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'form',
-        },
-        {
-          'tituloSubtema' : 'Lista',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'list',
-        },
-        {
-          'tituloSubtema' : 'Migas de pan',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'breadcrumb',
-        },
-        {
-          'tituloSubtema' : 'Modal',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'modal',
-        },
-        {
-          'tituloSubtema' : 'Pie de página',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'footer',
-        },
-        {
-          'tituloSubtema' : 'Tabla',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'table',
-        },
       ]
     },
     {
@@ -253,26 +123,11 @@ const temas =  {
           'ruta' : 'assets/wcag/',
           'nombre' : 'wcag21',
         },
-        {
-          'tituloSubtema' : 'WCAG 2.2.',
-          'ruta' : 'assets/wcag/',
-          'nombre' : 'wcag22',
-        },
-        {
-          'tituloSubtema' : 'WCAG 3.0',
-          'ruta' : 'assets/wcag/',
-          'nombre' : 'wcag30',
-        },
       ]
     },
     {
       'tituloTema' : 'UNE',
       'subtema' : [
-        {
-          'tituloSubtema' : 'Criterios',
-          'ruta' : 'assets/une/',
-          'nombre' : 'criterios',
-        },
         {
           'tituloSubtema' : 'Árbol de decisiones',
           'ruta' : 'assets/une/',
