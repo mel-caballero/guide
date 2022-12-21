@@ -219,6 +219,11 @@ const temas =  {
           'nombre' : 'list',
         },
         {
+          'tituloSubtema' : 'Migas de pan',
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'breadcrumb',
+        },
+        {
           'tituloSubtema' : 'Modal',
           'ruta' : 'assets/componentes/',
           'nombre' : 'modal',
