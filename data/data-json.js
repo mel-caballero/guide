@@ -103,6 +103,11 @@ const temas =  {
           'ruta' : 'assets/principiosA11Y/',
           'nombre' : 'subtitulos',
         },
+        {
+          'tituloSubtema' : 'Enlaces de interés',
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'enlacesA11y',
+        }
       ]
     },
     {
@@ -137,6 +142,16 @@ const temas =  {
           'tituloSubtema' : 'Anexo B - FPS',
           'ruta' : 'assets/une/',
           'nombre' : 'anexob',
+        }
+      ]
+    },
+    {
+      'tituloTema' : 'Testing',
+      'subtema' : [
+        {
+          'tituloSubtema' : 'Enlaces de interés',
+          'ruta' : 'assets/testing/',
+          'nombre' : 'enlacesTesting',
         }
       ]
     },

@@ -1,0 +1,44 @@
+{
+  "data": [
+    { 
+      "nombre" : "Learn Accessibility",
+      "enlace" : "https://web.dev/learn/accessibility/"
+    },
+    { 
+      "nombre" : "Aplicación del árbol de decisión de la norma EN 301 549 sobre app eBiblio (1ª parte)",
+      "enlace" : "https://www.youtube.com/watch?v=A3KhydAL7vI&ab_channel=UNEDCursosMOOC"
+    },
+    { 
+      "nombre" : "Ejemplos de aplicación de la norma EN 301 549",
+      "enlace" : "https://www.youtube.com/watch?v=EJnq9JRChrE&ab_channel=UNEDCursosMOOC"
+    },
+    { 
+      "nombre" : "Historia y ámbito de la norma europea de compras públicas",
+      "enlace" : "https://www.youtube.com/watch?v=-OUfaR6myMg&ab_channel=UNEDCursosMOOC"
+    },
+    { 
+      "nombre" : "Árbol de decisión de la norma EN 301 549",
+      "enlace" : "https://www.youtube.com/watch?v=utjCXLuo7eQ&ab_channel=UNEDCursosMOOC"
+    },
+    { 
+      "nombre" : "Respondiendo a las preguntas del árbol de decisión, para un e-reader",
+      "enlace" : "https://www.youtube.com/watch?v=1am6vuTEzhg&ab_channel=UNEDCursosMOOC"
+    },
+    { 
+      "nombre" : "Curso de Autoformación Lectura fácil. Introducción a la adaptación",
+      "enlace" : "https://www.plenainclusion.org/formacion/cursos/curso-de-autoformacion-lectura-facil-introduccion-a-la-adaptacion/"
+    },
+    { 
+      "nombre" : "Seminario online 'Accesibilidad cognitiva: entornos físicos, webs y apps' | Plena inclusión",
+      "enlace" : "https://www.youtube.com/watch?v=nkC4uP8B_94&ab_channel=Plenainclusi%C3%B3n"
+    },
+    { 
+      "nombre" : "",
+      "enlace" : ""
+    },
+    { 
+      "nombre" : "",
+      "enlace" : ""
+    }
+  ]
+}  
