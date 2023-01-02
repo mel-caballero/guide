@@ -3,38 +3,66 @@
     <h2>WCAG 2.1.</h2>
   </div>
   <div class="card-body">
-    <div id="filtro2" class="btn-group" role="group">
+    <div id="filtro1" class="btn-group" role="group">
       <div class="input-group-text" id="filtroNivel">Nivel :</div>
 
       <input id="all" type="radio" name="filtroNivel" class="btn-check">
-      <label class="btn btn-secondary" for="all">Todos</label>
+      <label for="all" class="btn btn-secondary">Todos</label>
 
       <input id="A" type="radio" name="filtroNivel" class="btn-check">
-      <label class="btn btn-secondary" for="A">A</label>
+      <label for="A" class="btn btn-secondary">A</label>
 
       <input id="AA" type="radio" name="filtroNivel" class="btn-check">
-      <label class="btn btn-secondary" for="AA">AA</label>
+      <label for="AA" class="btn btn-secondary">AA</label>
 
       <input id="AAA" type="radio" name="filtroNivel" class="btn-check">
-      <label class="btn btn-secondary" for="AAA">AAA</label>
+      <label for="AAA" class="btn btn-secondary">AAA</label>
     </div>
-    <table id="table" class="table table-responsive table-light table-striped-columns pt-5">
+
+    <div id="filtro2" class="col-12 btn-group py-3" role="group">
+			<div class="input-group-text" id="btnGroupAddon">Mostrar u ocultar :</div>
+
+			<input id="nivel" type="checkbox" class="btn-check" data-column="2" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label for="nivel" class="btn btn-secondary">Nivel</label>
+      
+			<input id="version" type="checkbox" class="btn-check" data-column="3" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label for="version" class="btn btn-secondary">Versión</label>
+      
+			<input id="objetivo" type="checkbox" class="btn-check" data-column="4" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label for="objetivo" class="btn btn-secondary">Objetivo</label>
+
+			<input id="finalidad" type="checkbox" class="btn-check" data-column="5" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label for="finalidad" class="btn btn-secondary">Finalidad</label>
+      
+			<input id="intencion" type="checkbox" class="btn-check" data-column="6" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label for="intencion" class="btn btn-secondary">Intención</label>
+      
+			<input id="beneficios" type="checkbox" class="btn-check" data-column="7" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label for="beneficios" class="btn btn-secondary">Beneficios</label>
+
+			<input id="categoria" type="checkbox" class="btn-check" data-column="8" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label for="categoria" class="btn btn-secondary">Categoría</label>
+      
+			<input id="enlaces" type="checkbox" class="btn-check" data-column="9" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label for="enlaces" class="btn btn-secondary">Enlaces</label>
+
+    </div>
+    <table id="table" class="table table-responsive table-light pt-5">
       <thead class="table-dark">
         <tr>
+          <td></td>
           <th scope="col">Criterio</th>
           <th scope="col">Nivel</th>
+          <th scope="col">Versión</th>
           <th scope="col">Objetivo</th>
+          <th scope="col">Finalidad</th>
+          <th scope="col">Intención</th>
+          <th scope="col">Beneficios</th>
+          <th scope="col">Categoría</th>
+          <th scope="col">Enlaces</th>
         </tr>
       </thead>
-      <tbody>
-      </tbody>
-      <tfoot class="table-dark">
-        <tr>
-          <th>Criterio</th>
-          <th>Nivel</th>
-          <th>Objetivo</th>
-        </tr>
-      </tfoot>
+    </table>
   </div>
 </div>
 <script>
@@ -51,17 +79,94 @@
       language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
       ajax: './assets/wcag/wcag21.json',
       columns: [
-          { data: 'criteria',
+          {
+            className: 'dt-control',
+            orderable: false,
+            data: null,
+            defaultContent: '',
             render: function (data, type, row, meta) {
-              return '<a href="' + row.link + '">' + data + '</a>';
+              if (data.tests != null) {
+                return '<button type="button" class="btn btn-dark bi bi-caret-up-fill" data-bs-toggle="button" title="Expandir"></button>';
+              }
+            },
+          },
+          { data: 'criterio',
+            orderable: true,
+            render: function (data, type, row, meta) {
+              return '<a href="' + row.enlace + '">' + data + '</a>';
             }, 
           },
-          { data: 'level' },
+          { data: 'nivel' },
+          { data: 'version' },
+          { data: 'objetivo' },
           { data: 'goal' },
+          { data: 'intent' },
+          { data: 'benefits' },
+          { data: 'category', 
+            render: function (data, type, row, meta) {
+              let badges = '';
+              data.forEach(element => {
+                badges += '<span class="badge rounded-pill text-bg-primary">' + element + '</span><br>';
+              });
+              return badges
+            }, 
+          },
+          { data: 'examples',
+            render: function (data, type, row, meta) {
+              let enlaces = '<ul>';
+              if (data != '' && data != null) {
+                enlaces += '<li><a href="' + data + '" title="' + row.criterio + '">Ejemplo</a><br></li>';
+              } 
+              
+              if (row.techniques != '' && data != null) {
+                enlaces += '<li><a href="' + row.techniques + '" title="' + row.criterio + '">Técnicas</a></li>';
+              }
+
+              enlaces += '</ul>';
+              return enlaces;
+            },
+          },
       ],
+      columnDefs: [
+        { orderable: false, targets: 0 },
+        { target: 5, visible: false },
+        { target: 6, visible: false },
+        { target: 7, visible: false },
+        { target: 8, visible: false }
+      ],
+      order: [[1, 'asc']]
     });
 
-    $('#filtro2 input').on('click', function () {
+    $('#table tbody').on('click', 'td.dt-control', function () {
+      var tr = $(this).closest('tr');
+      var row = table.row(tr);
+
+      $(this).children('button').toggleClass('bi-caret-down-fill bi-caret-up-fill');
+
+      if (row.child.isShown()) {
+        // This row is already open - close it
+        row.child.hide();
+        tr.removeClass('shown');
+      } else {
+        // Open this row
+        row.child(format(row.data())).show();
+        tr.addClass('shown');
+      }
+    });
+
+    function format(data) {
+      if(data.tests !== null){
+        var table = "<table class=\"table table-light\">";
+        $.each(data.tests, function(k, v){
+            table += "<tr><td>" + k + "</td><td>" + v.verificacion + "</td><td>" + v.herramientas + "</td></tr>";
+        });
+        return table + "</table>";
+      }else{
+        return "";
+      }
+    }
+
+    $('#filtro1 input').on('click', function () {
       if (this.id == 'all') {
         table
         .columns()
@@ -69,10 +174,17 @@
         .draw();
       } else {
         table
-        .columns(1)
+        .columns(2)
         .search('^' + this.id + '$', true, true, false)
         .draw();
       }
     });
+
+    $('#filtro2 input').on('click', function () {
+      var column = table.column($(this).attr('data-column'));
+      column.visible(!column.visible());
+    });
+
+
   });
 </script>
