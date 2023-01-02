@@ -69,28 +69,16 @@
       "enlace" : "https://info.usablenet.com/hubfs/Accessibility%20Testing%20Pillar%20Page/The-Ultimate-Guide-to-Accessibility-Testing.pdf?utm_campaign=PP%3A%20Accessibility%20Testing&utm_medium=email&_hsenc=p2ANqtz-9pp0cfWl4gMDUfAqTq4P_J12M1MYIqyp8Z1TbtK8yBhDTuKP3-6_huySvalf7amKkDYBeJh5pWsRNyXq6Zt046KcBklg&_hsmi=86899062&utm_content=86899062&utm_source=hs_automation&hsCtaTracking=0ca90c10-363c-4eca-8825-91007cc38375%7C39d4f107-afbe-4623-921c-8290dc547ee1"
     },
     { 
-      "nombre" : "",
-      "enlace" : ""
+      "nombre" : "Mozilla Accessibility test cases",
+      "enlace" : "https://website-archive.mozilla.org/www.mozilla.org/access/access/qa/testcases"
     },
     { 
-      "nombre" : "",
-      "enlace" : ""
+      "nombre" : "Mobile Testing",
+      "enlace" : "https://www.accessibilityoz.com/resources/mobile-testing/"
     },
     { 
-      "nombre" : "",
-      "enlace" : ""
-    },
-    { 
-      "nombre" : "",
-      "enlace" : ""
-    },
-    { 
-      "nombre" : "",
-      "enlace" : ""
-    },
-    { 
-      "nombre" : "",
-      "enlace" : ""
+      "nombre" : "Accessibility Programming Guide for OS X",
+      "enlace" : "https://developer.apple.com/library/archive/documentation/Accessibility/Conceptual/AccessibilityMacOSX/index.html#//apple_ref/doc/uid/TP40001078-CH254-SW1"
     }
   ]
 }  
