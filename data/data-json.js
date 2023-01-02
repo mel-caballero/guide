@@ -113,6 +113,61 @@ const temas =  {
     {
       'tituloTema' : 'Componentes',
       'subtema' : [
+        {
+          'tituloSubtema' : 'Acordeón',
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'accordion',
+        },
+        {
+          'tituloSubtema' : 'Botones',
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'button',
+        },
+        {
+          'tituloSubtema' : 'Cabecera',
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'header',
+        },
+        {
+          'tituloSubtema' : 'Enlaces',
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'link',
+        },
+        {
+          'tituloSubtema' : 'Enlaces salto contenido',
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'skipContent',
+        },
+        {
+          'tituloSubtema' : 'Formulario',
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'form',
+        },
+        {
+          'tituloSubtema' : 'Lista',
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'list',
+        },
+        {
+          'tituloSubtema' : 'Migas de pan',
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'breadcrumb',
+        },
+        {
+          'tituloSubtema' : 'Modal',
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'modal',
+        },
+        {
+          'tituloSubtema' : 'Pie de página',
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'footer',
+        },
+        {
+          'tituloSubtema' : 'Tabla',
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'table',
+        },
       ]
     },
     {
@@ -127,7 +182,7 @@ const temas =  {
           'tituloSubtema' : 'WCAG 2.1.',
           'ruta' : 'assets/wcag/',
           'nombre' : 'wcag21',
-        },
+        }
       ]
     },
     {
