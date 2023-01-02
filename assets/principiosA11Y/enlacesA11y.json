@@ -33,12 +33,64 @@
       "enlace" : "https://www.youtube.com/watch?v=nkC4uP8B_94&ab_channel=Plenainclusi%C3%B3n"
     },
     { 
-      "nombre" : "",
-      "enlace" : ""
+      "nombre" : "** WAI Website Assets",
+      "enlace" : "https://w3c.github.io/wai-website-components/index.html"
     },
     { 
-      "nombre" : "",
-      "enlace" : ""
+      "nombre" : "** Web Accessibility Initiative WAI",
+      "enlace" : "https://www.w3.org/WAI/"
+    },
+    { 
+      "nombre" : "ATAG Report Tool",
+      "enlace" : "https://wai-atag-report-tool.netlify.app/"
+    },
+    { 
+      "nombre" : "Draft Web Content Accessibility Guidelines (WCAG) 2.2",
+      "enlace" : "https://www.w3.org/TR/WCAG22/"
+    },
+    { 
+      "nombre" : "WCAG 3 Introduction",
+      "enlace" : "https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/"
+    },
+    { 
+      "nombre" : "Draft W3C Accessibility Guidelines (WCAG) 3.0",
+      "enlace" : "https://www.w3.org/TR/wcag-3.0/"
+    },
+    { 
+      "nombre" : "Editor’s Picks",
+      "enlace" : "https://wcag.com/editors-picks/"
+    },
+    { 
+      "nombre" : "Rules for accessibility conformance testing (ACT)",
+      "enlace" : "https://wai-wcag-act-rules.netlify.app/standards-guidelines/act/rules/"
+    },
+    { 
+      "nombre" : "ARIA Authoring Practices Guide (APG) Home",
+      "enlace" : "https://www.w3.org/WAI/ARIA/apg/"
+    },
+    { 
+      "nombre" : "Árbol de decisión para los productos de apoyo",
+      "enlace" : "https://accesibilidadenlaweb.blogspot.com/2014/07/arbol-de-decision-para-los-productos-de.html"
+    },
+    { 
+      "nombre" : "** All WCAG 2.1 Understanding Docs",
+      "enlace" : "https://www.w3.org/WAI/WCAG21/Understanding/"
+    },
+    { 
+      "nombre" : "Apple Dev - Building accessible apps",
+      "enlace" : "https://developer.apple.com/accessibility/"
+    },
+    { 
+      "nombre" : "Apple Dev - Accessibility",
+      "enlace" : "https://developer.apple.com/design/human-interface-guidelines/foundations/accessibility/#"
+    },
+    { 
+      "nombre" : "Apple Dev - Videos Accessibility & Inclusion",
+      "enlace" : "https://developer.apple.com/videos/accessibility-inclusion"
+    },
+    { 
+      "nombre" : "Apple QA - Accessibility",
+      "enlace" : "https://www.apple.com/qa/accessibility/"
     }
   ]
 }  
