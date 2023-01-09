@@ -91,6 +91,62 @@
     { 
       "nombre" : "Apple QA - Accessibility",
       "enlace" : "https://www.apple.com/qa/accessibility/"
+    },
+    { 
+      "nombre" : "** The A11Y Project",
+      "enlace" : "https://www.a11yproject.com/"
+    },
+    { 
+      "nombre" : "** MDN accessibility documentation",
+      "enlace" : "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+    },
+    { 
+      "nombre" : "Tenon.io Accessibility Checker",
+      "enlace" : "https://tenon.io/"
+    },
+    { 
+      "nombre" : "Color Contrast Analyser (CCA)",
+      "enlace" : "https://www.tpgi.com/color-contrast-checker/https://squizlabs.github.io/HTML_CodeSniffer/"
+    },
+    { 
+      "nombre" : "“HTML Codesniffer” bookmarklet for identifying accessibility issues",
+      "enlace" : "https://squizlabs.github.io/HTML_CodeSniffer/"
+    },
+    { 
+      "nombre" : "Microsoft Accessibility Insights",
+      "enlace" : "https://accessibilityinsights.io/"
+    },
+    { 
+      "nombre" : "Deque Axe testing tools",
+      "enlace" : "https://www.deque.com/axe/"
+    },
+    { 
+      "nombre" : "** Introduction to Web Accessibility",
+      "enlace" : "https://www.w3.org/WAI/fundamentals/accessibility-intro/The A11Y Project"
+    },
+    { 
+      "nombre" : "** W3C Standards",
+      "enlace" : "https://www.w3.org/standards/"
+    },
+    { 
+      "nombre" : "Internationalization techniques: Authoring Web pages",
+      "enlace" : "https://www.w3.org/International/techniques/authoring-html"
+    },
+    { 
+      "nombre" : "** Internationalization Best Practices for Spec Developers",
+      "enlace" : "https://www.w3.org/TR/international-specs/"
+    },
+    { 
+      "nombre" : "** Internationalization (i18n)",
+      "enlace" : "https://www.w3.org/blog/international/"
+    },
+    { 
+      "nombre" : "",
+      "enlace" : ""
+    },
+    { 
+      "nombre" : "",
+      "enlace" : ""
     }
   ]
 }  
