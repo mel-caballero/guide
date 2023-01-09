@@ -182,6 +182,16 @@ const temas =  {
           'tituloSubtema' : 'WCAG 2.1.',
           'ruta' : 'assets/wcag/',
           'nombre' : 'wcag21',
+        },
+        {
+          'tituloSubtema' : 'WCAG 2.2. Draft',
+          'ruta' : 'assets/wcag/',
+          'nombre' : 'wcag22draft',
+        },
+        {
+          'tituloSubtema' : 'WCAG 3.0. Draft',
+          'ruta' : 'assets/wcag/',
+          'nombre' : 'wcag30draft',
         }
       ]
     },

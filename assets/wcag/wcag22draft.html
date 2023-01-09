@@ -1,8 +1,9 @@
 <div id="card" class="card">
   <div class="card-header text-center">
-    <h2>WCAG 2.1.</h2>
+    <h2>WCAG 2.2. Draft</h2>
   </div>
   <div class="card-body">
+
     <div id="filtro1" class="btn-group" role="group">
       <div class="input-group-text" id="filtroNivel">Nivel :</div>
 
@@ -22,39 +23,30 @@
     <div id="filtro2" class="col-12 btn-group py-3" role="group">
 			<div class="input-group-text" id="btnGroupAddon">Mostrar u ocultar :</div>
 
-			<input id="nivel" type="checkbox" class="btn-check" data-column="2" aria-describedby="btnGroupAddon" autocomplete="off" checked>
+			<input id="nivel" type="checkbox" class="btn-check" data-column="1" aria-describedby="btnGroupAddon" autocomplete="off" checked>
 			<label for="nivel" class="btn btn-secondary">Nivel</label>
-      
-			<input id="version" type="checkbox" class="btn-check" data-column="3" aria-describedby="btnGroupAddon" autocomplete="off" checked>
-			<label for="version" class="btn btn-secondary">Versión</label>
-      
-			<input id="objetivo" type="checkbox" class="btn-check" data-column="4" aria-describedby="btnGroupAddon" autocomplete="off" checked>
-			<label for="objetivo" class="btn btn-secondary">Objetivo</label>
 
-			<input id="finalidad" type="checkbox" class="btn-check" data-column="5" aria-describedby="btnGroupAddon" autocomplete="off">
+			<input id="finalidad" type="checkbox" class="btn-check" data-column="2" aria-describedby="btnGroupAddon" autocomplete="off" checked>
 			<label for="finalidad" class="btn btn-secondary">Finalidad</label>
       
-			<input id="intencion" type="checkbox" class="btn-check" data-column="6" aria-describedby="btnGroupAddon" autocomplete="off">
+			<input id="intencion" type="checkbox" class="btn-check" data-column="3" aria-describedby="btnGroupAddon" autocomplete="off">
 			<label for="intencion" class="btn btn-secondary">Intención</label>
       
-			<input id="beneficios" type="checkbox" class="btn-check" data-column="7" aria-describedby="btnGroupAddon" autocomplete="off">
+			<input id="beneficios" type="checkbox" class="btn-check" data-column="4" aria-describedby="btnGroupAddon" autocomplete="off">
 			<label for="beneficios" class="btn btn-secondary">Beneficios</label>
 
-			<input id="categoria" type="checkbox" class="btn-check" data-column="8" aria-describedby="btnGroupAddon" autocomplete="off">
+			<input id="categoria" type="checkbox" class="btn-check" data-column="5" aria-describedby="btnGroupAddon" autocomplete="off">
 			<label for="categoria" class="btn btn-secondary">Categoría</label>
       
-			<input id="enlaces" type="checkbox" class="btn-check" data-column="9" aria-describedby="btnGroupAddon" autocomplete="off" checked>
+			<input id="enlaces" type="checkbox" class="btn-check" data-column="6" aria-describedby="btnGroupAddon" autocomplete="off" checked>
 			<label for="enlaces" class="btn btn-secondary">Enlaces</label>
 
     </div>
     <table id="table" class="table table-responsive table-light pt-5" width="100%">
       <thead class="table-dark">
         <tr>
-          <th scope="col">Tests</th>
           <th scope="col">Criterio</th>
           <th scope="col">Nivel</th>
-          <th scope="col">Versión</th>
-          <th scope="col">Objetivo</th>
           <th scope="col">Finalidad</th>
           <th scope="col">Intención</th>
           <th scope="col">Beneficios</th>
@@ -69,27 +61,14 @@
   $(document).ready(function () {
     let table = $('#table').DataTable({
       info: true,
-      paging: true,
+      paging: false, // true
       ordering: true,
-      order: [[1, 'asc']],
       searching: true,
-      dom : '<"row py-3" <"col-sm-12 col-md-6" l> <"col-sm-12 col-md-6" f> >' +
-            '<"row py-3" <"col-sm-12 col-md-6" i> <"col-sm-12 col-md-6" p> >' +
-            '<"row" <"col-sm-12" t> >' +
-            '<"row py-3" <"col-sm-12 col-md-6" i> <"col-sm-12 col-md-6" p> >',
+      dom : '<"row py-3" <"col-sm-12 col-md-6" i>' +
+            '<"row" <"col-sm-12" t> >',
       language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
-      ajax: './assets/wcag/wcag21.json',
+      ajax: './assets/wcag/wcag22draft.json',
       columns: [
-          { data: null,
-            className: 'dt-control',
-            orderable: false,
-            defaultContent: '',
-            render: function (data, type, row, meta) {
-              if (!(data.tests == null || data.tests.A.verificacion == "")) {
-                return '<button type="button" class="btn btn-dark bi bi-caret-up-fill" data-bs-toggle="button" title="Expandir"></button>';
-              }
-            },
-          },
           { data: 'criterio',
             orderable: true,
             render: function (data, type, row, meta) {
@@ -97,12 +76,10 @@
             }, 
           },
           { data: 'nivel' },
-          { data: 'version' },
-          { data: 'objetivo' },
-          { data: 'goal', visible: false },
-          { data: 'intent', visible: false },
-          { data: 'benefits', visible: false },
-          { data: 'category', visible: false,
+          { data: 'goal' },
+          { data: 'intent' },
+          { data: 'benefits' },
+          { data: 'category', 
             render: function (data, type, row, meta) {
               let badges = '';
               data.forEach(element => {
@@ -115,11 +92,11 @@
             render: function (data, type, row, meta) {
               let enlaces = '<ul>';
               if (data != '' && data != null) {
-                enlaces += '<li><a href="' + data + '" title="' + row.criterio + '">Ejemplo <span class="bi bi-box-arrow-up-right text-decoration-none" alt="Abre ventana nueva"></span></a></li>';
+                enlaces += '<li><a href="' + data + '" title="' + row.criterio + '">Ejemplo</a><br></li>';
               } 
               
               if (row.techniques != '' && data != null) {
-                enlaces += '<li><a href="' + row.techniques + '" title="' + row.criterio + '">Técnicas <span class="bi bi-box-arrow-up-right text-decoration-none" alt="Abre ventana nueva"></span></a></li>';
+                enlaces += '<li><a href="' + row.techniques + '" title="' + row.criterio + '">Técnicas</a></li>';
               }
 
               enlaces += '</ul>';
@@ -127,8 +104,14 @@
             },
           },
       ],
+      columnDefs: [
+        { target: 3, visible: false },
+        { target: 4, visible: false },
+        { target: 5, visible: false },
+      ],
+      order: [[1, 'asc']]
     });
-    
+
     $('#table tbody').on('click', 'td.dt-control', function () {
       var tr = $(this).closest('tr');
       var row = table.row(tr);
@@ -166,7 +149,7 @@
         .draw();
       } else {
         table
-        .columns(2)
+        .columns(1)
         .search('^' + this.id + '$', true, true, false)
         .draw();
       }
