@@ -714,32 +714,6 @@
       "youtube" : "https://www.youtube.com/user/meke/videos",
       "ubicacion" : "Dallas",
       "telefono" : ""
-    },
-    { 
-      "nombre" : "",
-      "descripcion" : "",
-      "tipo" : "",
-      "web" : "",
-      "linkedin" : "",
-      "correo" : "",
-      "twitter" : "",
-      "instagram" : "",
-      "youtube" : "",
-      "ubicacion" : "",
-      "telefono" : ""
-    },
-    { 
-      "nombre" : "",
-      "descripcion" : "",
-      "tipo" : "",
-      "web" : "",
-      "linkedin" : "",
-      "correo" : "",
-      "twitter" : "",
-      "instagram" : "",
-      "youtube" : "",
-      "ubicacion" : "",
-      "telefono" : ""
     }
   ]
 }  
