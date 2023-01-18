@@ -24,7 +24,7 @@ function refreshContent(param) {
         if (subtema.nombre == param) {
           $('#content').load(subtema.ruta + subtema.nombre + '.html');
         } else {
-          $('#content').html('Error al cargar el contenido');
+          $('#content').html('Contenido no disponible');
         }
       })
     })

@@ -1,8 +1,8 @@
-<div id="card" class="card">
-  <div class="card-header text-center">
+<section id="card" class="card">
+  <header class="card-header text-center">
     <h2>Árbol de decisiones UNE EN-301 549</h2>
-  </div>
-  <div class="card-body">
+  </header>
+  <article class="card-body">
     <p>El objetivo del árbol de decisión es reducir en gran medida el número inicial de 239 preguntas que serían necesarias para conocer qué requisitos se aplican a cada caso concreto.</p>
     <p>En el árbol de decisión, la respuesta de cada pregunta permite identificar si se aplican o no grupos de dos o más requisitos. Y una vez contestada cada pregunta, la respuesta dada permite saber cuál es la siguiente pregunta que debe hacerse.</p>
     <hr>
@@ -617,9 +617,8 @@
         </div>
       </div>
     </fieldset>
-  </div>
-  
-  <div class="card-footer">
+  </article>
+  <footer class="card-footer">
     <ul>
       <li>Requisitos siempre aplicables</li>
       <ul>
@@ -930,8 +929,8 @@
         <li>13.1.6. Servicios de intermediación voz a voz.</li>
       </ul>
     </ul>
-  </div>
-</div>
+  </footer>
+</section>
 
 <script>
   $(document).ready(function() {
@@ -1177,49 +1176,3 @@
     inputs[37] == 'true' ? $('#q37true').show() : $('#q37true').hide();
   }
 </script>
-
-<!--
-  - Q1 - 1
-    - Q2 - 1.1.
-      - Q3 - 1.1.1.
-        -Q4 - 1.1.1.1.
-          -Q5 - 1.1.1.1.1.
-    - Q6 - 1.2.
-  - Q7 - 2
-    - Q8 - 2.1.
-  - Q9 - 3
-    - Q10 - 3.1
-      - Q11 - 3.1.1.
-        - !Q1 - 3.1.1.1.
-        - Q12 - 3.1.1.2.
-    - Q13 - 3.2.
-      - Q12 - 3.2.1.
-  - Q14 - 4
-    - Q15 - 4.1.
-      - Q16 - 4.1.1.
-    - Q17 - 4.2.
-  - Q18 - 5
-    - Q19 - 5.1.
-      - Q20 - 5.1.1.
-    - Q21 - 5.2.
-      - Q22 - 5.2.1.
-      - Q23 - 5.2.2.
-      - Q24 - 5.2.3.
-      - Q25 - 5.2.4.
-        - Q26 - 5.2.4.1.
-    - Q27 - 5.3.
-  - Q28 - 6
-  - Q29 - 7
-  - Q30 - 8
-    - Q1
-    - Q31 - 8.1
-      - Q32 - 8.1.1
-        - !Q1
-        - Q1
-          - Q4
-    - Q33 - 8.2
-    - Q34 - 8.3
-  - Q35 - 9
-  - Q36 - 10
-  - Q37 - 11
--->

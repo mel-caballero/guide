@@ -1,0 +1,85 @@
+<section id="card" class="card">
+  <header class="card-header text-center">
+    <h2>Criterios UNE EN-301 549</h2>
+  </header>
+  <article class="card-body">
+    <div id="filtroColumnas" class="col-12 btn-group py-3" role="group">
+			<div class="input-group-text" id="btnGroupAddon">Mostrar u ocultar :</div>
+
+			<input id="tipoEv" type="checkbox" class="btn-check" data-column="1" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label for="tipoEv" class="btn btn-secondary">Tipo de evaluación</label>
+      
+			<input id="precondicion" type="checkbox" class="btn-check" data-column="2" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label for="precondicion" class="btn btn-secondary">Precondiciones</label>
+      
+			<input id="procedimiento" type="checkbox" class="btn-check" data-column="3" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label for="procedimiento" class="btn btn-secondary">Procedimiento</label>
+
+			<input id="resultado" type="checkbox" class="btn-check" data-column="4" aria-describedby="btnGroupAddon" autocomplete="off">
+			<label for="resultado" class="btn btn-secondary">Resultado</label>
+      
+			<input id="beneficia" type="checkbox" class="btn-check" data-column="5" aria-describedby="btnGroupAddon" autocomplete="off" disabled>
+			<label for="beneficia" class="btn btn-secondary">Beneficia</label>
+    </div>
+<a class="externalLink">hola patata</a>
+    <table id="table" class="table table-responsive table-light pt-5" width="100%">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Criterio</th>
+          <th scope="col">Tipo de evaluación</th>
+          <th scope="col">Precondiciones</th>
+          <th scope="col">Procedimiento</th>
+          <th scope="col">Resultado</th>
+        </tr>
+      </thead>
+    </table>
+  </article>
+</section>
+
+<script>
+  $(document).ready(function () {
+    let table = $('#table').DataTable({
+      info: true,
+      paging: false, //true
+      ordering: true,
+      order: [[0, 'asc']],
+      searching: true,
+      dom : '<"row py-3" <"col-sm-12 col-md-6" l> <"col-sm-12 col-md-6" f> >' +
+        '<"row py-3" <"col-sm-12 col-md-6" i> <"col-sm-12 col-md-6" p> >' +
+        '<"row" <"col-sm-12" t> >' +
+        '<"row py-3" <"col-sm-12 col-md-6" i> <"col-sm-12 col-md-6" p> >',
+      language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
+      ajax: './assets/une/criterios.json',
+      columns: [
+        { data: 'criterio' },
+        { data: 'tipoEv' },
+        { data: 'precondicion' },
+        { data: 'procedimiento' },
+        { data: 'resultado',
+          defaultContent: '',
+          render: function (data, type, row, meta) {
+            if (!(data == null || data['Superado'] == "")) {
+              let result = '<ul>'
+              for (const key in data) {
+                if (Object.hasOwnProperty.call(data, key)) {
+                  result += '<li>' + key + ' : ' + data[key] + '</li>';
+                  
+                }
+              }
+              return result += '</ul>'
+            }
+          },
+        }
+      ],
+    });
+
+    $('#filtroColumnas input').on('click', function () {
+      var column = table.column($(this).attr('data-column'));
+      column.visible(!column.visible());
+    });
+
+    table.on('draw', function() {
+      $('.externalLink').attr({title: 'Abre una ventana nueva', target: '_blank'});
+    });
+  });
+</script>

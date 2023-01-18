@@ -1,8 +1,8 @@
-<div id="card" class="card">
-  <div class="card-header text-center">
+<section id="card" class="card">
+  <header class="card-header text-center">
     <h2>Anexo B</h2>
-  </div>
-  <div class="card-body">
+  </header>
+  <article class="card-body">
     <div class="accordion" id="accordionExample">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingTwo">
@@ -100,8 +100,8 @@
 					</tr>
 			</tfoot>
 		</table>
-  </div>
-</div>
+  </article>
+</section>
 
 <script>
   $(document).ready(function () {
@@ -111,20 +111,64 @@
       ordering: false,
       searching: true,
       language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
-      ajax: './assets/une/anexob.json',
+      ajax: './assets/une/criterios.json',
       columns: [
-          { data: 'Criterio' },
-          { data: 'SV' },
-          { data: 'VL' },
-          { data: 'SPC' },
-          { data: 'SA' },
-          { data: 'AL' },
-          { data: 'SCV' },
-          { data: 'MFL' },
-          { data: 'ALL' },
-          { data: 'DCF' },
-          { data: 'CL' },
-          { data: 'P' },
+          { data: 'criterio' },
+          { data: 'beneficia', 
+            render: function (data, type, row, meta) {
+              return data.SV
+            }
+          },
+          { data: 'beneficia', 
+            render: function (data, type, row, meta) {
+              return data.VL
+            }
+          },
+          { data: 'beneficia', 
+            render: function (data, type, row, meta) {
+              return data.SPC
+            }
+          },
+          { data: 'beneficia', 
+            render: function (data, type, row, meta) {
+              return data.SA
+            }
+          },
+          { data: 'beneficia', 
+            render: function (data, type, row, meta) {
+              return data.AL
+            }
+          },
+          { data: 'beneficia', 
+            render: function (data, type, row, meta) {
+              return data.SCV
+            }
+          },
+          { data: 'beneficia', 
+            render: function (data, type, row, meta) {
+              return data.MFL
+            }
+          },
+          { data: 'beneficia', 
+            render: function (data, type, row, meta) {
+              return data.ALL
+            }
+          },
+          { data: 'beneficia', 
+            render: function (data, type, row, meta) {
+              return data.DCF
+            }
+          },
+          { data: 'beneficia', 
+            render: function (data, type, row, meta) {
+              return data.CL
+            }
+          },
+          { data: 'beneficia', 
+            render: function (data, type, row, meta) {
+              return data.P
+            }
+          },
       ],
     });
     $('#filtro1 input').on('click', function () {

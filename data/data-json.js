@@ -19,6 +19,11 @@ const temas =  {
           'nombre' : 'consideraciones',
         },
         {
+          'tituloSubtema' : 'At. al cliente diverso',
+          'ruta' : 'assets/intro/',
+          'nombre' : 'atclientediverso',
+        },
+        {
           'tituloSubtema' : 'Contactos',
           'ruta' : 'assets/intro/',
           'nombre' : 'contactos',
@@ -198,6 +203,11 @@ const temas =  {
     {
       'tituloTema' : 'UNE',
       'subtema' : [
+        {
+          'tituloSubtema' : 'Criterios',
+          'ruta' : 'assets/une/',
+          'nombre' : 'criterios',
+        },
         {
           'tituloSubtema' : 'Árbol de decisiones',
           'ruta' : 'assets/une/',
