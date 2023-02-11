@@ -19,6 +19,11 @@ const temas =  {
           'nombre' : 'consideraciones',
         },
         {
+          'tituloSubtema' : 'Historias de usuario',
+          'ruta' : 'assets/intro/',
+          'nombre' : 'historiasusuario',
+        },
+        {
           'tituloSubtema' : 'At. al cliente diverso',
           'ruta' : 'assets/intro/',
           'nombre' : 'atclientediverso',
@@ -28,20 +33,40 @@ const temas =  {
           'ruta' : 'assets/intro/',
           'nombre' : 'contactos',
         },
+        {
+          'tituloSubtema' : 'Biblioteca',
+          'ruta' : 'assets/intro/',
+          'nombre' : 'biblioteca',
+        },
       ],
     },
     {
       'tituloTema' : 'Principios Accesibilidad',
       'subtema' : [
         {
+          'tituloSubtema' : 'DTD',
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'dtd',
+        },
+        {
           'tituloSubtema' : 'Idioma',
           'ruta' : 'assets/principiosA11Y/',
           'nombre' : 'idioma',
         },
         {
-          'tituloSubtema' : 'Estructura',
+          'tituloSubtema' : 'Título',
           'ruta' : 'assets/principiosA11Y/',
-          'nombre' : 'estructura',
+          'nombre' : 'titulo',
+        },
+        {
+          'tituloSubtema' : 'Viewport',
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'viewport',
+        },
+        {
+          'tituloSubtema' : 'Semántica',
+          'ruta' : 'assets/principiosA11Y/',
+          'nombre' : 'semantica',
         },
         {
           'tituloSubtema' : 'Imágenes',
@@ -178,6 +203,11 @@ const temas =  {
     {
       'tituloTema' : 'WCAG',
       'subtema' : [
+        {
+          'tituloSubtema' : 'WCAG Introducción',
+          'ruta' : 'assets/wcag/',
+          'nombre' : 'wcag-introduccion',
+        },
         {
           'tituloSubtema' : 'WCAG Principios',
           'ruta' : 'assets/wcag/',

@@ -1,0 +1,69 @@
+<section id="card" class="card">
+  <header class="card-header text-center">
+    <h2>Historias de usuario</h2>
+  </header>
+  <article class="card-body">
+    <div class="row"></div>
+  </article>
+</section>
+
+<script src="assets/intro/historiasusuario.js"></script>
+<script>
+  const persona = personas['persona'];
+  persona.forEach(element => {
+    let article = document.createElement("article");
+    article.classList.add('card-container', 'col-lg-4', 'col-md-6', 'col-sm-12', 'p-4')
+    $('.card-body .row').append(article); 
+
+
+    let card = document.createElement("div");
+    card.classList.add('card');
+    article.append(card);
+
+    let front = document.createElement("section");
+    front.classList.add('card-front', 'h-100', 'show');
+    card.append(front);
+
+    let img = document.createElement('img');
+    img.classList.add('card-img-top', 'p-4');
+    img.setAttribute('src', element.imagen);
+    img.setAttribute('alt', 'patata');
+    front.append(img);
+
+
+    let footer = document.createElement('footer');
+    footer.classList.add('card-footer');
+    front.append(footer);
+
+    let nombre = document.createElement('p')
+    let txtNombre = document.createTextNode('Nombre : ' + element.nombre);
+    nombre.append(txtNombre)
+
+    let edad = document.createElement('p')
+    let txtEdad = document.createTextNode('Edad : ' + element.edad);
+    edad.append(txtEdad)
+  
+    footer.append(nombre, edad)
+    footer.classList.add('text-center')
+
+    let back = document.createElement("section");
+    back.classList.add('card-back', 'h-100', 'hide', 'p-4', 'text-start', 'h-100');
+    back.innerHTML = element.resumen;
+    card.append(back);
+  });
+
+  $('.card-container').on('click', function () {
+    this.classList.toggle("flipped");
+
+    var front = this.querySelector(".card-front");
+    front.classList.toggle("show");
+    front.classList.toggle("hide");
+
+    var back = this.querySelector(".card-back");
+    back.setAttribute("aria-hidden", !back.getAttribute("aria-hidden") || back.getAttribute("aria-hidden") === "true");
+    back.classList.toggle("hide")
+    back.classList.toggle("show");
+  });
+
+
+</script>
