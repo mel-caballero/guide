@@ -19,16 +19,6 @@ const temas =  {
           'nombre' : 'consideraciones',
         },
         {
-          'tituloSubtema' : 'Historias de usuario',
-          'ruta' : 'assets/intro/',
-          'nombre' : 'historiasusuario',
-        },
-        {
-          'tituloSubtema' : 'At. al cliente diverso',
-          'ruta' : 'assets/intro/',
-          'nombre' : 'atclientediverso',
-        },
-        {
           'tituloSubtema' : 'Contactos',
           'ruta' : 'assets/intro/',
           'nombre' : 'contactos',
