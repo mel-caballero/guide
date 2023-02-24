@@ -43,8 +43,14 @@
   items.css('border', '1px solid black');
 
   function init() {
+    for (i = 0; i < items.length; i++) {
+      if (i >= mostrarIni && i < mostrarFin) {
+        items[i].classList.remove('d-none');
+      } else {
+        items[i].classList.add('d-none');
+      }
+    };
     botones();
-    actualizar();
   }
 
   function moverCarrusel(event) {
