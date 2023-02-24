@@ -139,6 +139,22 @@
     { 
       "nombre" : "** Internationalization (i18n)",
       "enlace" : "https://www.w3.org/blog/international/"
+    },
+    { 
+      "nombre" : "Un Año de Webinars de IHC en Iberoamérica (1ª edición, 2019)",
+      "enlace" : "https://hci-collab.com/2018/12/20/wipo2019/"
+    },
+    { 
+      "nombre" : "Un Año de Webinars de IHC en Iberoamérica (2ª edición, 2020)",
+      "enlace" : "https://hci-collab.com/2020/01/28/wipo2020/"
+    },
+    { 
+      "nombre" : "Un Año de Webinars de IHC en Iberoamérica (3ª edición, 2021)",
+      "enlace" : "https://hci-collab.com/2021/01/08/wipo2021/"
+    },
+    { 
+      "nombre" : "Developers' Guide to Features of Web Accessibility Evaluation Tools (2014. Draft)",
+      "enlace" : "https://w3c.github.io/w3c-waet/WAET.html"
     }
   ]
 }  
