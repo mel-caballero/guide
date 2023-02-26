@@ -31,7 +31,7 @@ const temas =  {
       ],
     },
     {
-      'tituloTema' : 'Principios Accesibilidad',
+      'tituloTema' : 'Accesibilidad Web',
       'subtema' : [
         {
           'tituloSubtema' : 'DTD',
@@ -131,71 +131,6 @@ const temas =  {
       ]
     },
     {
-      'tituloTema' : 'Componentes',
-      'subtema' : [
-        {
-          'tituloSubtema' : 'Acordeón',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'accordion',
-        },
-        {
-          'tituloSubtema' : 'Botones',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'button',
-        },
-        {
-          'tituloSubtema' : 'Cabecera',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'header',
-        },
-        {
-          'tituloSubtema' : 'Carrusel',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'carrusel',
-        },
-        {
-          'tituloSubtema' : 'Enlaces',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'link',
-        },
-        {
-          'tituloSubtema' : 'Enlaces salto contenido',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'skipContent',
-        },
-        {
-          'tituloSubtema' : 'Formulario',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'form',
-        },
-        {
-          'tituloSubtema' : 'Lista',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'list',
-        },
-        {
-          'tituloSubtema' : 'Migas de pan',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'breadcrumb',
-        },
-        {
-          'tituloSubtema' : 'Modal',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'modal',
-        },
-        {
-          'tituloSubtema' : 'Pie de página',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'footer',
-        },
-        {
-          'tituloSubtema' : 'Tabla',
-          'ruta' : 'assets/componentes/',
-          'nombre' : 'table',
-        },
-      ]
-    },
-    {
       'tituloTema' : 'WCAG',
       'subtema' : [
         {
@@ -222,26 +157,6 @@ const temas =  {
           'tituloSubtema' : 'WCAG 3.0. Draft',
           'ruta' : 'assets/wcag/',
           'nombre' : 'wcag30draft',
-        }
-      ]
-    },
-    {
-      'tituloTema' : 'UNE',
-      'subtema' : [
-        {
-          'tituloSubtema' : 'Criterios',
-          'ruta' : 'assets/une/',
-          'nombre' : 'criterios',
-        },
-        {
-          'tituloSubtema' : 'Árbol de decisiones',
-          'ruta' : 'assets/une/',
-          'nombre' : 'arboldecisiones',
-        },
-        {
-          'tituloSubtema' : 'Anexo B - FPS',
-          'ruta' : 'assets/une/',
-          'nombre' : 'anexob',
         }
       ]
     },
