@@ -149,6 +149,11 @@ const temas =  {
           'nombre' : 'header',
         },
         {
+          'tituloSubtema' : 'Carrusel',
+          'ruta' : 'assets/componentes/',
+          'nombre' : 'carrusel',
+        },
+        {
           'tituloSubtema' : 'Enlaces',
           'ruta' : 'assets/componentes/',
           'nombre' : 'link',
