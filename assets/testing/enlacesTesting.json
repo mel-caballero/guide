@@ -53,7 +53,7 @@
       "enlace" : "https://www.w3.org/TR/WCAG-EM/"
     },
     { 
-      "nombre" : "Web Accessibility Test Cases",
+      "nombre" : "Web Accessibility Test Cases - Repo",
       "enlace" : "https://github.com/narayananpalani/webAccessibilityTestCases"
     },
     { 
@@ -79,6 +79,30 @@
     { 
       "nombre" : "Accessibility Programming Guide for OS X",
       "enlace" : "https://developer.apple.com/library/archive/documentation/Accessibility/Conceptual/AccessibilityMacOSX/index.html#//apple_ref/doc/uid/TP40001078-CH254-SW1"
+    },
+    { 
+      "nombre" : "axe-core/react",
+      "enlace" : "https://github.com/dequelabs/axe-core-npm/tree/develop/packages/react"
+    },
+    { 
+      "nombre" : "eslint-plugin-jsx-a11y",
+      "enlace" : "https://github.com/evcohen/eslint-plugin-jsx-a11y"
+    },
+    { 
+      "nombre" : "jest-axe",
+      "enlace" : "https://github.com/nickcolley/jest-axe"
+    },
+    { 
+      "nombre" : "axe-core/cli",
+      "enlace" : "https://github.com/dequelabs/axe-core-npm/tree/develop/packages/cli"
+    },
+    { 
+      "nombre" : "Pa11y CI",
+      "enlace" : "https://github.com/pa11y/pa11y-ci"
+    },
+    { 
+      "nombre" : "",
+      "enlace" : ""
     }
   ]
 }  
