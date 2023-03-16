@@ -86,35 +86,3 @@ footer {
   text-decoration: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' class='bi bi-box-arrow-up-right' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
 }
-
-.book span {
-  display: block;
-  width: 220px;
-  height: 310px;
-  margin: 10px;
-  transform: translate(5%, 0%);
-  background: var(--color1);
-  border-radius: 20px 5px 5px 30px;
-}
-
-.book span:after {
-  content: ""; 
-  position: absolute;
-  box-sizing: inherit; 
-  width: 210px;
-  height: 35px;
-  bottom: 10px;
-  right: 0px;
-  background: white;
-  border-radius: 32px 4px 4px 32px;
-  box-shadow: inset 4px 6px 0px 0px #E4E0CE;  
-  background-image: linear-gradient(to bottom, transparent 6px, #E4E0CE 8px, transparent 8px, transparent 12px, #E4E0CE 12px, transparent 14px, transparent 18px,#E4E0CE 18px, transparent 20px, transparent 24px, #E4E0CE 24px, transparent 26px, transparent 30px, #E4E0CE 30px, transparent 32px, transparent 36px, #E4E0CE 36px, transparent 38px, transparent 42px, #E4E0CE 42px, transparent 44px, transparent 48px, #E4E0CE 48px, transparent 50px);     
-}
-
-.book img {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 185px;
-  height: 245px;
-}
