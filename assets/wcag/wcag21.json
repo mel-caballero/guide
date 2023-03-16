@@ -719,7 +719,7 @@
       "benefits" : "<ul><li>Personas ciegas (que no pueden usar dispositivos como ratones que requieren coordinación ojo-mano).</li><li>Personas con baja visión (que pueden tener problemas para encontrar o seguir un indicador de puntero en la pantalla).</li><li>A algunas personas con temblores en las manos les resulta muy difícil usar un mouse y, por lo tanto, generalmente usan un teclado.</li></ul>", 
       "examples" : "https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html#examples",
       "techniques" : "https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html#techniques",
-      "category" : ["controles personalizados", "Formularios", "UI", "Mecanismos entrada"],
+      "category" : ["Controles Personalizados", "Formularios", "UI", "Mecanismos entrada"],
       "tests" : {
         "A": {
           "verificacion" : "Toda la funcionalidad de la página debe ser operable a través del teclado, excepto cuando dicha funcionalidad sea imposible realizarse con teclado (por ejemplo, un dibujo a mano alzada).", 
@@ -1103,7 +1103,7 @@
       "benefits" : "<p>Los encabezados descriptivos son especialmente útiles para los usuarios que tienen discapacidades que dificultan la lectura y para las personas con memoria a corto plazo limitada. Estas personas se benefician cuando los títulos de las secciones permiten predecir lo que contiene cada sección.</p><p>Los controles de entrada de formulario con etiquetas que describen claramente el contenido que se espera que se ingrese ayudan a los usuarios a saber cómo completar correctamente el formulario.</p><p>Cuando los encabezados y las etiquetas también se marcan e identifican correctamente de acuerdo con 1.3.1: Información y relaciones , este Criterio de Conformidad ayuda a las personas que usan lectores de pantalla al garantizar que las etiquetas y los encabezados sean significativos cuando se leen fuera de contexto, por ejemplo, en un lista de encabezados/tabla de contenido generada automáticamente, o al saltar de un encabezado a otro dentro de una página.</p>",
       "examples" : "https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html#examples",
       "techniques" : "https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html#techniques",
-      "category" : ["controles personalizados", "Formularios", "UI"],
+      "category" : ["Controles Personalizados", "Formularios", "UI"],
       "tests" : {
         "A": {
           "verificacion" : "Los encabezados usados en la página deben identificar el contenido de la sección que encabezan.", 
@@ -1127,7 +1127,7 @@
       "benefits" : "<p>Este Criterio de Conformidad ayuda a cualquiera que confíe en el teclado para operar la página, al permitirle determinar visualmente el componente en el que las operaciones del teclado interactuarán en cualquier momento.</p><p>Las personas con limitaciones de atención, limitaciones de memoria a corto plazo o limitaciones en los procesos ejecutivos se benefician al poder descubrir dónde se encuentra el foco.</p>",
       "examples" : "https://www.w3.org/WAI/WCAG21/Understanding/focus-visible#examples",
       "techniques" : "https://www.w3.org/WAI/WCAG21/Understanding/focus-visible#examples",
-      "category" : ["controles personalizados", "Formularios", "UI"],
+      "category" : ["Controles Personalizados", "Formularios", "UI"],
       "tests" : {
         "A": {
           "verificacion" : "Se debe poder identificar visualmente cuál es el elemento de interacción que tiene el foco del teclado en cada momento.", 
@@ -1207,7 +1207,7 @@
       "benefits" : "<ul><li>Los usuarios que no puedan (con precisión) realizar gestos de puntero complejos tendrán medios alternativos para operar el contenido.</li><li>La disponibilidad de los elementos de la interfaz de usuario proporcionados como respaldo para gestos complejos ayuda a los usuarios que a menudo no conocen la compatibilidad con gestos de puntero complejos. Esto puede ser especialmente beneficioso para los usuarios con discapacidades cognitivas o de aprendizaje.</li></ul>", 
       "examples" : "https://www.w3.org/WAI/WCAG21/Understanding/pointer-gestures.html#examples",
       "techniques" : "https://www.w3.org/WAI/WCAG21/Understanding/pointer-gestures.html#techniques",
-      "category" : ["controles personalizados"],
+      "category" : ["Controles Personalizados"],
       "tests" : {
         "A": {
           "verificacion" : "Toda la funcionalidad que emplee gestos multipunto o dependientes de la trayectoria realizada también se debe poder realizar empleando un único punto de contacto y sin trazos, mediante una pulsación sencilla con un dedo o con un puntero.", 
@@ -1227,7 +1227,7 @@
       "benefits" : "<ul><li>Hace que sea más fácil para todos los usuarios recuperarse de golpear el objetivo equivocado.</li><li>Ayuda a las personas con discapacidades visuales, limitaciones cognitivas y deficiencias motoras al reducir la posibilidad de que un control se active accidentalmente o que una acción ocurra de forma inesperada, y también asegura que cuando se activan controles complejos, hay un medio disponible para deshacer o cancelar la acción.</li><li>Las personas que no pueden detectar cambios de contexto tienen menos probabilidades de desorientarse mientras navegan por un sitio.</li></ul>", 
       "examples" : "https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html#examples",
       "techniques" : "https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html#techniques",
-      "category" : ["controles personalizados"],
+      "category" : ["Controles Personalizados"],
       "tests" : {
         "A": {
           "verificacion" : "<p>Toda funcionalidad que se pueda operar mediante un puntero sencillo (single pointer) debe cumplir al menos una de las siguientes condiciones:</p><ul><li>El evento down del puntero no se emplea para ejecutar ninguna parte de la funcionalidad.</li><li>La función se completa con el evento up del puntero y existe un mecanismo para cancelar la función antes de que se complete o para deshacerla una vez completada.</li><li>El evento up del puntero deshace cualquier consecuencia del evento down previo.</li><li>Completar la función con el evento down es esencial (p. ej. se considera esencial un emulador de teclado).</li></ul>", 
@@ -1247,7 +1247,7 @@
       "benefits" : "",
       "examples" : "https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html#examples",
       "techniques" : "https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html#techniques",
-      "category" : ["controles personalizados", "Formularios", "UI"],
+      "category" : ["Controles Personalizados", "Formularios", "UI"],
       "tests" : {
         "A": {
           "verificacion" : "En los componentes del interfaz de usuario (como los campos de formulario o botones) es necesario que el texto visible que actúa como su etiqueta y que sirve para reconocerlos visualmente también forme parte de su nombre accesible.", 
@@ -1703,7 +1703,7 @@
       "benefits" : "Proporcionar información de función, estado y valor en todos los componentes de la interfaz de usuario permite la compatibilidad con la tecnología de asistencia, como lectores de pantalla, ampliadores de pantalla y software de reconocimiento de voz, utilizados por personas con discapacidades.",
       "examples" : "https://www.w3.org/WAI/WCAG21/Understanding/name-role-value#examples",
       "techniques" : "https://www.w3.org/WAI/WCAG21/Understanding/name-role-value#techniques",
-      "category" : ["controles personalizados", "Formularios", "UI"],
+      "category" : ["Controles Personalizados", "Formularios", "UI"],
       "tests" : {
         "A": {
           "verificacion" : "Los elementos de la interfaz de usuario (formularios, enlaces, componentes personalizados con scripts, etc.) deben ser accesibles. Es decir, los productos de apoyo deben poder reconocer cuál es su nombre, su función y su valor o estado y pueden interactuar con ellos.", 
@@ -1723,7 +1723,7 @@
       "benefits" : "<ul><li>Cuando se asignan funciones o propiedades apropiadas a los mensajes de estado, los lectores de pantalla pronuncian el nuevo contenido para ayudar a los usuarios ciegos o con baja visión. La mayoría de los usuarios videntes pueden observar el texto agregado periféricamente a la ventana gráfica. Dicho contenido proporciona información adicional sin afectar el punto de vista actual del usuario. La capacidad de una tecnología de asistencia para anunciar este nuevo contenido de texto importante permite que más usuarios se beneficien del conocimiento de la información de manera equivalente.</li><li>La asignación de funciones o propiedades adecuadas a los mensajes de estado brinda posibles usos futuros y oportunidades de personalización, como el potencial para ser explotado por tecnologías de asistencia creadas para usuarios con algunas discapacidades cognitivas. Cuando los autores de la página eligen diseñar adiciones a la pantalla que nocambiar el contexto del usuario (es decir, tomar el foco), la información es sin duda de menos importancia que algo presentado mediante un diálogo modal, que debe ser reconocido por el usuario. Como tal, según las preferencias del usuario, una tecnología de asistencia puede optar por retrasar, suprimir o transformar dichos mensajes para que el usuario no sea interrumpido innecesariamente; o, por el contrario, la tecnología de asistencia puede resaltar dichos mensajes cuando el usuario lo considere óptimo para hacerlo.</li></ul>", 
       "examples" : "https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html#examples",
       "techniques" : "https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html#techniques",
-      "category" : ["controles personalizados"],
+      "category" : ["Controles Personalizados"],
       "tests" : {
         "A": {
           "verificacion" : "Los mensajes de estado deben poder ser identificados por software a través de sus roles o propiedades de forma que se puedan transmitir a los usuarios sin necesidad de recibir el foco.", 
