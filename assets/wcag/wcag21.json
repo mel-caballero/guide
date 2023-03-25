@@ -15,7 +15,8 @@
       "tests": {
         "A": {
           "verificacion" : "Todo contenido no textual debe disponer de una alternativa textual breve que proporcione la misma información o cumpla el mismo propósito que el contenido no textual.", 
-          "herramientas" : "<p><a href=\"https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=es\" target=\"_blank\">Web Developer Toolbar <span class=\"bi bi-box-arrow-up-right text-decoration-none\" alt=\"Abre ventana nueva\"></span></a>.</p><ol><li>Seleccionar Images - Outline images without alt attributes y comprobar la página. Si hay alguna imagen resaltada, es un error y debe proporcionársele un atributo \"alt\".</li><li>Seleccionar \"Images - Display alt attribute\". Comprobar la página valorando si el texto de dicho atributo describe el cometido de la imagen.</li></ol>"
+          "herramientas" : "<p><a href=\"https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=es\" target=\"_blank\">Web Developer Toolbar <span class=\"bi bi-box-arrow-up-right text-decoration-none\" alt=\"Abre ventana nueva\"></span></a>.</p><ol><li>Seleccionar Images - Outline images without alt attributes y comprobar la página. Si hay alguna imagen resaltada, es un error y debe proporcionársele un atributo \"alt\".</li><li>Seleccionar \"Images - Display alt attribute\". Comprobar la página valorando si el texto de dicho atributo describe el cometido de la imagen.</li></ol>",
+          "categ" : "Contenido no textual"
         },
         "B": {
           "verificacion" : "Las alternativas textuales se deben actualizar cuando cambia el contenido no textual.", 
