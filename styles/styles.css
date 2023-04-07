@@ -1,9 +1,4 @@
 :root {
-  --azulOscuro : #004A6D;
-  --azulClaro : #00ABCB;
-  --blanco : #FFF;
-  --colorPrincipal : #000000;
-  --colorSecundario : #2f00d8;
   --morado : #2b1154;
   --violeta : #ADA2FF;
   --lightblue : #C0DEFF;
@@ -17,23 +12,48 @@
   --color4 : #FFCCB3;
 }
 
+.main-color {
+  background-color: var(--morado);
+  color: var(--white);
+}
+
+.secondary-color {
+  background-color: var(--violeta);
+  color: var(--balck);
+}
+
 html, body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--cream);
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
-body {
-  margin: 0;
+#header {
+  border-color: var(--color1);
+  border-style: solid;
+  border-width: 20px 20px 0px 20px;
 }
 
-header, footer {
-  background-color: var(--azulOscuro);
-  color : var(--blanco);
+#header nav{
+  background-color: var(--color1);
+  color: white;
 }
 
-footer {
+#content {
+  flex: 1 auto; 
+  border-color: var(--color1);
+  border-style: solid;
+  border-width: 0px 20px 0px 20px;
+}
+
+#footer {
   position: sticky;
   top: 100vh;
+  border-color: var(--color2);
+  border-style: solid;
+  border-width: 0px 20px 20px 20px;
 }
 
 .colorList li {
