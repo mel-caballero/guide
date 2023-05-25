@@ -149,6 +149,11 @@ const temas =  {
           'nombre' : 'wcag21',
         },
         {
+          'tituloSubtema' : 'WCAG 2.1. Tests',
+          'ruta' : 'assets/wcag/',
+          'nombre' : 'wcag21tests',
+        },
+        {
           'tituloSubtema' : 'WCAG 2.2. Draft',
           'ruta' : 'assets/wcag/',
           'nombre' : 'wcag22draft',

@@ -254,9 +254,9 @@
 
     function format(data) {
       if (data.tests !== null) {
-        var table = "<table class=\"table table-light\">";
+        var table = '<table class="table table-light">';
         $.each(data.tests, function (k, v) {
-          table += "<tr><td>" + k + "</td><td>" + v.verificacion + "</td><td>" + v.herramientas + "</td></tr>";
+          table += '<tr><td>' + k + '</td><td>' + v.verificacion + '</td><td>' + v.herramientas + '</td><td><span class="badge rounded-pill text-bg-primary">' + v.subcategory + '</td></tr>';
         });
         return table + "</table>";
       } else {
