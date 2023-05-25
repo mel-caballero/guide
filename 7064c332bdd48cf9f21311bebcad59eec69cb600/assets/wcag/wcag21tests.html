@@ -1,0 +1,72 @@
+<section id="card" class="card">
+  <header class="card-header text-center">
+    <h2>WCAG 2.1.</h2>
+  </header>
+  <article class="card-body">
+    <table id="table" class="table table-responsive table-light pt-5" width="100%">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Verificacion</th>
+          <th scope="col">Herramientas</th>
+          <th scope="col">Categoría</th>
+        </tr>
+      </thead>
+    </table>
+  </article>
+</section>
+
+<script>
+  $(document).ready(function () {
+    let table = $('#table').DataTable({
+      info: true,
+      paging: false,
+      ordering: false,
+      searching: true,
+      /*
+        l - length changing input control
+        f - filtering input
+        t - The table!
+        i - Table information summary
+        p - pagination control
+        r - processing display element
+
+        dom: 'Pfrtip'
+      */
+      dom:  '<"row py-3" <"col-sm-12 col-md-6" i> <"col-sm-12 col-md-6" f> >' +
+            '<"row" <"col-sm-12" P> >' +
+            '<"row" <"col-sm-12" t> >' +
+            '<"row py-3" <"col-sm-12 col-md-6" i> >',
+      language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
+      ajax: './assets/wcag/wcag21.json',
+      columns: [
+        { data: 'tests',
+          render: function (data, type, row, meta) {
+            var txt = '';
+            $.each(data, function (k, v) {
+              txt += k + ". " + v.verificacion;
+            });
+            return txt
+          },
+        },
+        { data: 'tests',
+          render: function (data, type, row, meta) {
+            var txt = '';
+            $.each(data, function (k, v) {
+              txt += v.herramientas;
+            });
+            return txt
+          },
+        },
+        { data: 'tests',
+          render: function (data, type, row, meta) {
+            var badges = '';
+            $.each(data, function (k, v) {
+              badges += '<span class="badge rounded-pill text-bg-primary">' + v.subcategory + '</span><br>';
+            });
+            return badges
+          },
+        },
+      ],
+    });
+  });
+</script>
