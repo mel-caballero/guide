@@ -182,6 +182,16 @@ const temas =  {
           'tituloSubtema' : 'Anexo B',
           'ruta' : 'assets/une/',
           'nombre' : 'anexob',
+        },
+        {
+          'tituloSubtema' : 'Muestra',
+          'ruta' : 'assets/une/',
+          'nombre' : 'muestra',
+        },
+        {
+          'tituloSubtema' : 'Tabla detallada',
+          'ruta' : 'assets/une/',
+          'nombre' : 'tabladetallada',
         }
       ]
     },
