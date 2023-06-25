@@ -1,0 +1,872 @@
+{
+  "data": [
+    { 
+      "Identificador" : "1.1. Existencia de alternativas textuales",
+      "Explicación" : "Este punto trata de comprobar que aquellos elementos puramente visuales posean una alternativa textual válida. Si todos ellos cumplen con esta condición, al punto se le asigna el valor 1 y la modalidad pasa, si algún elemento no la cumple, se le asigna el valor 0 y la modalidad falla, y este punto no se tiene en cuenta en caso de que no haya elementos que requieran de esta alternativa textual.",
+      "Nivel" : "A",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "No hay ningún elemento de los examinados.",
+          "Valor" : "No aplica",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "Hay elementos y todos tienen alternativa válida (pasan las validaciones).",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "C": {
+          "Resultado" : "Hay elementos sin alternativa, algún elemento tiene como alternativa el nombre del archivo o un texto de relleno, hay imágenes decorativas no transparentes para el lector de pantalla, hay URLs incorrectas para descripciones largas, hay textos alternativos demasiado extensos o se hace referencia a textos descriptivos inexistentes (WAI-ARIA).",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "1.1.1": {
+          "Tests" : "Comprobación de marcado correcto para imagen decorativa transparente para los lectores de pantalla",
+          "Comprobación" : "Se comprueba el marcado de una imagen para verificar si se está marcando correctamente como imagen decorativa de forma que sea transparente para los lectores de pantalla. Para ello si siguen los criterios establecidos en la documentación de las WCAG 2.0. En concreto: <p>F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them.</p><p>https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F38</p><p>Además, se complementa lo anterior comprobando las diferentes opciones contempladas para proporcionar textos alternativos incluyendo WAI-ARIA:</p><p>F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute or text alternative on img elements, area elements, and input elements of type \"image\"</p><p>https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F65</p><p>Por tanto, se considera que una imagen está marcada como NO decorativa si se cumplen las condiciones siguientes:</p><p> No tiene atributo role o tiene un atributo role con un valor que no es \"presentation\".</p><p>Tiene un atributo alt no vacío o un title no vacío o tiene los atributos aria- label, aria-labelledby o aria-describedby.</p><p>A la inversa, y de forma más específica, para que una imagen esté correctamente marcada como decorativa debe tener role con valor"
+        },
+        "1.1.2": {
+          "Tests" : "Se verifica que todos los elementos AREA tengan un texto alternativo asociado",
+          "Comprobación" : "Se buscan todos los elementos AREA del documento HTML, verificando que todos ellos posean un texto alternativo asociado, bien en forma de atributo alt o, en su defecto, mediante las propiedades de WAI-ARIA aria-label con un valor no vacío o la propiedad aria-labelledby haciendo referencia a un elemento con contenido textual."
+        },
+        "1.1.3": {
+          "Tests" : "Se verifica que si un elemento AREA tiene el atributo href, también posea un texto alternativo no vacío",
+          "Comprobación" : "Se buscan todos los elementos AREA del documento HTML, verificando que todos aquellos que posean el atributo href, utilicen también el atributo alt y éste no esté vacío o, en su defecto, emplee la propiedad de WAI- ARIA aria-label con un valor no vacío o la propiedad aria-labelledby haciendo referencia a un elemento con contenido textual."
+        },
+        "1.1.4": {
+          "Tests" : "Se verifica que si hay algún INPUT de tipo imagen tenga un texto alternativo no vacío.",
+          "Comprobación" : "Se buscan aquellos elementos INPUT, cuyo atributo type sea igual a image, y se verifica que todos ellos utilicen el atributo alt y que éste no esté vacío o, en su defecto, emplee la propiedad de WAI-ARIA aria-label con un valor no vacío o la propiedad aria-labelledby haciendo referencia a un elemento con contenido textual."
+        },
+        "1.1.5": {
+          "Tests" : "Se verifica que todos los elementos APPLET tengan una alternativa textual no vacía",
+          "Comprobación" : "<p>Se verifica que los elementos APPLET tengan alternativa textual, de alguna de las siguientes formas:</p><ul><li>Bien en forma de atributo alt con contenido junto con un contenido textual dentro de las etiquetas de apertura y de cierre del elemento APPLET</li><li>O bien mediante algunas de las propiedades de WAI-ARIA: aria-label con un valor no vacío o la propiedad aria-labelledby haciendo referencia a un elemento con contenido textual.</li></ul>"
+        },
+        "1.1.6": {
+          "Tests" : "Se verifica que los elementos imagen no tengan como alternativa el nombre de un fichero o un texto de relleno",
+          "Comprobación" : "<p>Se buscan aquellas imágenes en el documento cuyo texto alternativo siga el patrón: *.jpg, *.jpeg, *.gif, *.png, *.bmp.; sea considerado un texto de relleno (*); o siga patrones similares en la misma página como \"Pic1\", \"Pic2\", \"0001\", \"0002\".</p><p>(*) A continuación se indican las cadenas que se consideran textos de relleno (en las diferentes versiones idiomáticas) y por tanto no son válidos:</p><ul><li>Es: imagen, dibujo, pintura, cuadro, figura, ilustración, foto, fotografía, instantánea, retrato, captura, captura de pantalla, gráfico, gráfica, esquema, diagrama, miniatura, separador, espaciador, espacio, decorativa, ornamental, imagen decorativa, texto alternativo, descripción, descripción de la imagen.</li><li>En: Image, drawing, picture, painting, figure, illustration, photo, snapshot, snap, shot, shooting, photograph, photography, portrait, screenshot, graphic, graph, chart, diagram, scheme, diagram, thumb, thumbnail, separator, spacer, space, decorative, ornamental, decorative image, alternative text, description, image description.</li><li>Fr: image, dessin, peinture, figure, illustration, photo, instantané, photo instantané, photographie, portrait, capture d’écran, graphique, schème, diagramme, miniature, vignettes, séparateur, entretoise, espace, décoratif, décoration, ornemental, image décorative, texte alternatif, description, image description.</li><li>Ca: imatge, dibuix, pintura, quadre, figura, il-lustració, foto, fotografia, instantània, retrat, captura, captura de pantalla, gràfic, gràfica, esquema, diagrama, miniatura, separador, espaiador, espai, decorativa, ornamental, imatge decorativa, text alternatiu, descripció, descripció de la imatge.</li><li>Gl: imaxe, debuxo, deseño, pintura, cadro, táboa, figura, ilustración, foto, fotografía, instantánea, retrato, captura, captura de pantalla, gráfico, gráfica, esquema, diagrama, miniatura, separador, espazador, espazos, espazo, decorativa, ornamental, imaxe decorativa, texto alternativo, descrición, descrición da imaxe.</li><li>Eu: irudia, marrazkia, pintura, koadroa, ilustrazioa, argazki, argazkilaritza, argazkigintza, argazkia, erretratua, harrapaketa, kaptura, pantaila-kaptura, pantaila-tiroa, grafikoa, eskema, diagrama, miniatura, bereizlea, espazioa, apaingarria, irudi apaingarria, ordezko testua, deskribapena, irudiko deskribapena.</li></ul>"
+        },
+        "1.1.7": {
+          "Tests" : "Se verifica que las imágenes sin texto alternativo están correctamente marcadas como imágenes decorativas transparentes para los lectores de pantalla",
+          "Comprobación" : "Como norma general se comprueba que todas las imágenes tengan un atributo alt o alguna de las propiedades de WAI-ARIA para proporcionar etiquetas (aria-label, aria-labelledby). En aquellas imágenes sin atributo alt, ni aria-label ni aria-labelledby se verifica que estén marcadas como imágenes decorativas de forma que sean transparentes para los lectores de pantalla. Es decir, en estos casos, se comprueba que tenga asignado un atributo role con valor \"presentation\"."
+        },
+        "1.1.8": {
+          "Tests" : "Se verifica que las imágenes con texto alternativo vacío están correctamente marcadas como imágenes decorativas transparentes para los lectores de pantalla",
+          "Comprobación" : "Se comprueba que aquellas imágenes con texto alternativo vacío (atributo alt vacío), en principio marcadas como decorativas, están marcadas de forma que efectivamente sean transparentes para los lectores de pantalla. Es decir, que no tengan atributos de etiquetas de WAI-ARIA (aria- label, aria-labelledby), que no tengan atributo title o bien esté vacío y que, en caso de tener asignado un atributo role, éste tenga el valor “presentation”."
+        },
+        "1.1.9": {
+          "Tests" : "Se verifica que las imágenes con alt no vacío no tengan un atributo role que las marque como decorativas",
+          "Comprobación" : "Se comprueba que aquellas imágenes con texto alternativo no vacío, en principio marcadas como de contenido, no tengan un marcado adicional que las haga transparentes para los lectores de pantalla. Es decir, que no tengan un atributo role con valor “presentation”."
+        },
+        "1.1.10": {
+          "Tests" : "Se verifica que las imágenes pequeñas que no pueden aportar información visual se declaran como decorativas y son transparentes para los lectores de pantalla",
+          "Comprobación" : "<p>Se comprueba que las imágenes con un alto y/o ancho igual o inferior a 2px están marcadas como imágenes decorativas transparentes para los lectores de pantalla, considerando que las imágenes de tales dimensiones no pueden transmitir información y se emplean eminentemente con fines presentacionales.</p><p>Para que una imagen sea transparente para los lectores de pantalla debe tener un texto alternativo vacío, carecer de atributo title (o estar vacío) y carecer de atributo role o bien ser “presentation”. Si no tiene atributo alt entonces debe tener un atributo role=”presentation” y carecer de título.</p>"
+        },
+        "1.1.11": {
+          "Tests" : "Se verifica que el valor de los atributos longdesc es correcto",
+          "Comprobación" : "<p>Se comprueba que en todas las imágenes en las que se define el atributo longdesc el valor de éste es una URL válida y enlaza efectivamente con una página existente (al hacer la petición el servidor devuelve un código de estado 200 OK).</p><p>El valor del atributo longdesc debe ser una URL válida no vacía, rodeada potencialmente por espacios (*). La URL es un enlace a la descripción de la imagen correspondiente al elemento IMG para el que se define el atributo longdesc.</p><p>(*) http://www.w3.org/TR/html401/struct/objects. html#adef-longdesc-IMG, http://www.w3.org/TR/html-longdesc/#longdesc</p>"
+        },
+        "1.1.12": {
+          "Tests" : "Se verifica que los textos alternativos de las imágenes no sean demasiado extensos",
+          "Comprobación" : "Se comprueba que las imágenes no tengan alternativas textuales (atributos alt, aria-label o aria-labelledby) cuyo contenido textual sea superior a 150 caracteres, entendiendo que en dicho caso lo que requieren son de descripciones detalladas con los atributos longdesc o aria-describedby."
+        },
+        "1.1.13": {
+          "Tests" : "Se verifica que los atributos aria-describedby hacen referencia a elementos existentes en la página y con contenido textual",
+          "Comprobación" : "Se comprueba que en el valor de los atributos aria- describedby se indican identificadores reales de otros elementos existentes en la página y que tienen contenido textual. Como en el atributo aria-describedby se pueden indicar varios identificadores (id) separados por coma es suficiente con que sólo uno de ellos exista y tenga contenido."
+        }
+      }
+    },
+    { 
+      "Identificador" : "1.2. Uso de encabezados",
+      "Explicación" : "Este punto trata de verificar que el documento utilice una estructura correcta de encabezados, asignándole el valor 1 y la modalidad pasa si es así, el valor 0.5 y la modalidad pasa si se considera que el documento no contiene suficientes encabezados o no existe un H1, o el valor 0 y la modalidad falla si dicha estructura es incorrecta.",
+      "Nivel" : "A",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "Todas las verificaciones de encabezados son correctas.",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "Se utilizan encabezados pero no los suficientes para estructurar el contenido o sin la presencia de uno de primer nivel.",
+          "Valor" : "0.5",
+          "Modalidad" : "Pasa"
+        },
+        "C": {
+          "Resultado" : "Alguna verificación de encabezados es incorrecta.",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "1.2.1": {
+          "Tests" : "Se verifica que el documento no carezca de encabezados.",
+          "Comprobación" : "Se comprueba que el documento utilice las etiquetas de encabezado H1, H2, H3, H4, H5 o H6, o bien defina encabezados mediante WAI-ARIA con los atributos role=”heading” y aria-level (cualquier nivel)."
+        },
+        "1.2.2": {
+          "Tests" : "Se verifica la presencia de un encabezado de primer nivel, en cualquier posición",
+          "Comprobación" : "469. Se detectan los encabezados de la página (elementos H1, H2, H3, H4, H5 y H6 o bien mediante WAI-ARIA con el atributo role=”heading”) y se comprueba que contengan un texto no vacío."
+        },
+        "1.2.3": {
+          "Tests" : "Se verifica que no hay encabezados vacíos",
+          "Comprobación" : "469. Se detectan los encabezados de la página (elementos H1, H2, H3, H4, H5 y H6 o bien mediante WAI-ARIA con el atributo role=”heading”) y se comprueba que contengan un texto no vacío."
+        },
+        "1.2.4": {
+          "Tests" : "Se verifica que no haya dos encabezados del mismo nivel (o superior) sin contenido entre ellos",
+          "Comprobación" : "<p>470. Se comprueba que exista contenido textual entre un encabezado y el siguiente encabezado cuando este último es del mismo nivel o de un nivel superior que el encabezado anterior. Por ejemplo, que exista contenido entre secuencias de encabezado del tipo (H2, H2) o (H2, H1). Se tendrán también en cuenta los encabezados definidos mediante WAI-ARIA con los atributos role=\"heading\" y aria-level (cualquiera).</p><p>Se considera también que existe contenido entre un encabezado y el siguiente, aunque no haya texto, cuando aparezcan algunos de los siguientes elementos: AUDIO, VIDEO, CANVAS, APPLET, EMBED, IFRAME, OBJECT.</p>"
+        },
+        "1.2.5": {
+          "Tests" : "Se verifica que no se saltan niveles de encabezado.",
+          "Comprobación" : "Se comprueba que, a partir del primer encabezado del documento, e independientemente de cuál sea ese nivel, no se producen saltos en los niveles de los encabezados sucesivos. Se tendrán también en cuenta los encabezados definidos mediante WAI-ARIA con los atributos role=\"heading\" y aria- level (cualquiera)."
+        },
+        "1.2.6": {
+          "Tests" : "Se verifica que se utilice una estructura de encabezados adecuada para estructurar el contenido.",
+          "Comprobación" : "472. Se verifica que la página no tenga un único encabezado y 15 ó más párrafos de texto marcados con el elemento P, y con al menos 80 caracteres. Si esta verificación se incumple, generaría un valor 0.5 con modalidad pasa. Se tendrán también en cuenta los encabezados definidos mediante WAI-ARIA con los atributos role=\"heading\" y aria-level (cualquiera)."
+        }
+      }
+    },
+    { 
+      "Identificador" : "1.3. Uso de listas",
+      "Explicación" : "En este punto se intenta verificar que si un documento HTML utiliza listas para presentar información, éstas se utilicen de forma correcta, y realmente la información requiera el uso de las mismas, y no se trate solo de un método para controlar la visualización del contenido. Así, si las listas se emplean correctamente, a este punto se le asignará un valor 1 con modalidad pasa; si no es así, se le asignará el valor 0 con modalidad falla. Por último si la página no utiliza listas a este punto no se le asignará ningún valor.",
+      "Nivel" : "A",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "La página no tiene listas",
+          "Valor" : "No aplica",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "La página tiene listas y todas son correctas",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "C": {
+          "Resultado" : "La página tiene listas y alguna no es correcta",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "1.3.1": {
+          "Tests" : "Se verifica que cada elemento LI sea hijo de UL u OL.",
+          "Comprobación" : "Se comprueba que si hay un elemento LI, su padre directo sea un elemento UL u OL."
+        },
+        "1.3.2": {
+          "Tests" : "Se verifica que las listas de definición tengan una estructura correcta.",
+          "Comprobación" : "Se comprueba que las listas de definición sigan una estructura correcta, es decir, que cada elemento DL contenga directamente al menos un elemento DT y al menos un elemento DD, que el primer elemento sea un DT y el último un DD."
+        },
+        "1.3.3": {
+          "Tests" : "Se verifica que cada elemento DT sea hijo de DL.",
+          "Comprobación" : "Se comprueba que si hay un elemento DT, su padre directo sea un elemento DL."
+        },
+        "1.3.4": {
+          "Tests" : "Se verifica que cada elemento DD sea hijo de DL.",
+          "Comprobación" : "Se comprueba que si hay un elemento DD, su padre directo sea un elemento DL."
+        },
+        "1.3.5": {
+          "Tests" : "Se verifica que no haya ningún tipo de lista directamente anidada bajo otra lista ordenada, sin ser elemento de ella.",
+          "Comprobación" : "Se comprueba que el anidamiento de listas sea correcto, de forma que no se añada una lista como hija directa de un elemento OL."
+        },
+        "1.3.6": {
+          "Tests" : "Se verifica que no haya ningún tipo de lista directamente anidada bajo otra lista sin orden, sin ser elemento de ella.",
+          "Comprobación" : "Se comprueba que el anidamiento de listas sea correcto, de forma que no se añada una lista como hija directa de un elemento UL."
+        },
+        "1.3.7": {
+          "Tests" : "Se verifica que todos los hijos de una lista ordenada sean LI.",
+          "Comprobación" : "Se comprueba que todos los hijos directos de un elemento OL sean LI."
+        },
+        "1.3.8": {
+          "Tests" : "Se verifica que todos los hijos de una lista sin orden sean LI.",
+          "Comprobación" : "Se comprueba que todos los hijos directos de un elemento UL sean LI."
+        },
+        "1.3.9": {
+          "Tests" : "Se verifica que no se utilizan párrafos para simular listas no numeradas.",
+          "Comprobación" : "Se verifica que no haya 3 ó más elementos P seguidos que empiecen por “-“ o “- “ o “*”, considerando que, de hacerlo, se está intentando simular una enumeración de elementos de forma incorrecta."
+        },
+        "1.3.10": {
+          "Tests" : "Se verifica que no haya 3 ó más líneas separadas por BR que empiecen por “-“ o “- “ o “*”.",
+          "Comprobación" : "Se verifica que no haya 3 ó más elementos BR seguidos que empiecen por “-“ o “- “ o “*”, considerando que, de hacerlo, se está intentando simular una enumeración de elementos de forma incorrecta."
+        },
+        "1.3.11": {
+          "Tests" : "Se verifica que no se utilizan párrafos para simular listas numeradas.",
+          "Comprobación" : "Se verifica que no haya 3 ó más elementos P seguidos que empiecen por los patrones “x“, “x “, “x.“, “xo”, “xa”, ”x)”, “x-”, “x.-” donde ‘x’ pertenezca a una secuencia de números, letras o números romanos, considerando que, de hacerlo, se está intentando simular una enumeración de elementos de forma incorrecta."
+        },
+        "1.3.12": {
+          "Tests" : "Se verifica que no haya 3 ó más líneas separadas por BR que empiecen por patrones de letras o números consecutivos",
+          "Comprobación" : "<p>Se verifica que no haya 3 ó más elementos BR seguidos que empiecen por los patrones “x“, “x “, “x.“, “xo”, “xa”, ”x)”, “x-”, “x.-” donde ‘x’ pertenezca a una secuencia de números, letras o números romanos, considerando que, de hacerlo, se está intentando simular una enumeración de elementos de forma incorrecta.</p><p>En esta verificación sólo se consideran aquellas secuencias que empiezan por la unidad (1, 1o, 1a, a, A, i, I).</p>"
+        },
+        "1.3.13": {
+          "Tests" : "Se verifica que no haya 3 o más elementos de lista desordenada que empiecen por patrones de letras o números consecutivos",
+          "Comprobación" : "<p>Se verifica que no haya 3 o más elementos LI de lista desordenada UL que empiecen por los patrones “x“, “x “, “x.“, “xo”, “xa”, ”x)”, “x-”, “x.-” donde ‘x’ pertenezca a una secuencia de números, letras o números romanos, considerando que, de hacerlo, se está intentando simular una lista ordenada.</p><p>En esta verificación sólo se consideran aquellas secuencias que empiezan por la unidad (1, 1o, 1a, a, A, i, I).</p>"
+        },
+        "1.3.14": {
+          "Tests" : "Se verifica que no haya 3 o más párrafos seguidos que comiencen por una imagen usada como viñeta de lista",
+          "Comprobación" : "Se verifica que no haya 3 o más párrafos seguidos que empiecen por una imagen cuyas dimensiones sean iguales o inferiores a 10x10 píxeles, considerando que, de hacerlo, dichas imágenes se están empleando como viñetas para simular listas."
+        },
+        "1.3.15": {
+          "Tests" : "Se verifica que no haya 3 o más líneas separadas por br que comiencen por una imagen usada como viñeta de lista",
+          "Comprobación" : "Se verifica que no haya 3 o más líneas separadas por BR que empiecen por una imagen cuyas dimensiones sean iguales o inferiores a 10x10 píxeles, considerando que, de hacerlo, dichas imágenes se están empleando como viñetas para simular listas."
+        },
+        "1.3.16": {
+          "Tests" : "Se verifica que no haya tablas de maquetación de una única columna para simular listas",
+          "Comprobación" : "Se verifica que no haya tablas formadas por una única columna y 3 o más filas en la que el contenido textual de cada celda no supere los 150 caracteres, considerando que, de hacerlo, dicha tabla se está empleando como una tabla de maquetación para simular un listado de elementos relacionados entre sí."
+        },
+        "1.3.17": {
+          "Tests" : "Se verifica que no haya listas vacías,sin ningún element ode lista",
+          "Comprobación" : "Se verifica que no haya elementos de lista desordenada UL u ordenada OL sin ningún elemento de lista LI hijo."
+        }
+      }
+    },
+    { 
+      "Identificador" : "1.4. Tablas de datos",
+      "Explicación" : "En este punto se trata de verificar que los encabezamientos, las asociaciones con las celdas de datos y la información de resumen de las tablas de datos se utilicen de forma correcta, para transmitir la información de forma bien estructurada, asignándole el valor 1 y la modalidad pasa si es así; el valor 0 y la modalidad falla en caso de que no se haga de forma correcta; y este punto no se tendrá en cuenta en caso de que no existan tablas de datos en el documento.",
+      "Nivel" : "A",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "No hay ninguna tabla de datos",
+          "Valor" : "No aplica",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "Hay tablas de datos con contenido y todas tienen los encabezados correctos y, en caso de emplearse o ser necesarias, asociaciones entre celdas e información de resumen correctas.",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "C": {
+          "Resultado" : "Hay tablas y algún encabezado no está marcado; las asociaciones entre celdas son incorrectas o no se usan cuando son necesarias; la información de resumen no se proporciona de forma correcta; o la tabla de datos está mayoritariamente vacía.",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "1.4.1": {
+          "Tests" : "Comprobación de que es una tabla de datos.",
+          "Comprobación" : "<p>Se verifica que la tabla es efectivamente de datos, con el siguiente algoritmo:</p><ul><li>No contiene a ninguna otra tabla.</li><li>No contiene ninguna celda con más de 150 caracteres mostrados por pantalla.</li><li>No se trata de una tabla con una sola celda.</li><li>No se trata de una tabla con una sola fila.</li><li>No se trata de una tabla con una sola columna.</li><li>Al menos el 70% de las celdas de la tabla contienen texto o, en caso contrario, todas las celdas con contenido de la primera fila y/o primera columna son encabezados. Para contabilizar el texto se tendrá en cuenta el contenido de los atributos alt, title o aria-label, así como la presencia de un atributo aria-labelledby o aria-describedby que hagan referencia a algún elemento con contenido.</li></ul><p>Una vez que se comprueba que la tabla es de datos, se aplican sobre ella el resto de verificaciones de tablas de datos, descartando el resto de tablas (por considerarlas de maquetación).</p><p>Se considera que una celda está marcada como celda de encabezado si se trata de un TH, un TD con atributo scope o una celda con los atributos de WAI-ARIA rowheader o columnheader. Esta condición es la que se aplica en las verificaciones para determinar las celdas de encabezado.</p>"
+        },
+        "1.4.2": {
+          "Tests" : "Se verifica que haya algún elemento de encabezado de tabla",
+          "Comprobación" : "Se verifica que toda tabla de datos contenga al menos una celda de encabezado en las filas o columnas exteriores, fallando en caso contrario."
+        },
+        "1.4.3": {
+          "Tests" : "Se verifica que los encabezados se marcan correctamente en tablas de datos simples",
+          "Comprobación" : "<p>La tabla de datos debe tener encabezados (todos los elementos son encabezados) en la primera fila o en la primera columna salvo para elementos con texto vacío. Es decir, falla si no hay ningún encabezado en la primera fila ni en la primera columna o si hay al menos una celda de encabezado y al menos una de datos con texto.</p><p>Pseudocódigo (se ignora el primer elemento de la tabla):</p><ul><li>Analizar la primera fila</li><li>MOD: Si hay algún elemento de encabezado con texto</li></ul><p>entonces todos los elementos con texto deben ser encabezados</p><ul><li>SiNo se analiza la primera columna</li><li>MOD: Si hay algún elemento de encabezado con texto</li></ul><p>entonces todos los elementos con texto deben ser encabezados</p>"
+        },
+        "1.4.4": {
+          "Tests" : "Se verifica que los encabezados se marcan correctamente en tablas de datos complejas (varios niveles de encabezamiento).",
+          "Comprobación" : "Se verifica si hay una tabla con más de un nivel de encabezados (es decir, si hay elementos TH en dos filas o en dos columnas) y existen atributos id en los elementos TH y headers en los elementos TD. Asimismo, en aquellas tablas con la celda superior izquierda vacía (de tipo TD) se verifica si la tabla tiene la primera celda vacía (TD) y el resto de celdas con texto marcadas como encabezado (TH), entonces se comprobará que todas las celdas de la primera columna (que tengan texto) sean encabezados, en caso contrario falla. Esta regla también es aplicable a la inversa, es decir, si la celda arriba a la izquierda es vacía, y la primera columna son encabezados, entonces la primera fila también deben ser encabezados."
+        },
+        "1.4.5": {
+          "Tests" : "Se verifica que el valor de los atributos scope sea válido",
+          "Comprobación" : "Se comprueba que el valor de los atributos scope sea un valor correcto. Es decir, debe ser alguno de los siguientes valores: “row”, “col”, “rowgroup” o “colgroup”."
+        },
+        "1.4.6": {
+          "Tests" : "Se verifica que el valor de los atributos headers y axis se corresponda con identificadores usados en encabezados de la misma tabla",
+          "Comprobación" : "Se comprueba que las asociaciones definidas mediante los atributos headers y axis son asociaciones válidas. Es decir, el valor de estos atributos se debe corresponder con identificadores id usados en celdas de encabezado de la misma tabla."
+        },
+        "1.4.7": {
+          "Tests" : "Se verifica que no se simula el título de la tabla mediante una celda de encabezado que ocupa todo el ancho de la tabla",
+          "Comprobación" : "Si la primera fila de una tabla tiene una única celda que ocupa todo el ancho de la tabla, se considerará que se está simulando de forma incorrecta el comportamiento del elemento CAPTION, por lo que se considerará erróneo."
+        },
+        "1.4.8": {
+          "Tests" : "Se verifica que no se simulan títulos de tabla mediante encabezados de página",
+          "Comprobación" : "Se comprueba que no existan tablas sin título, sin elemento <code>&lt;caption&gt;</code>, que sean el único contenido de la sección correspondiente a un encabezado de tabla, considerando que dicho encabezado es en realidad el título de la tabla y ha de marcarse como tal."
+        },
+        "1.4.9": {
+          "Tests" : "Se verifica que las tablas de complejidad superior disponen de información de resumen (atributo summary, aria-describedby o párrafo dentro de mismo elemento FIGURE)",
+          "Comprobación" : "<p>Se comprueba que las tablas de complejidad superior tienen información de resumen bien mediante un atributo summary no vacío y con contenido, mediante el atributo aria-describedby o mediante un párrafo contiguo a la tabla dentro del mismo elemento <code>&lt;fieldset&gt;</code>. Se considera que una tabla es compleja si tiene encabezados tanto de fila como de columna y además tiene dos o más filas o columnas de encabezados.</p><p>Cabe destacar que en HTML5 el atributo summary se considera una característica obsoleta y no conforme, proponiendo en su lugar técnicas alternativas como las consideradas en esta comprobación: uso del atributo aria-describedby o un párrafo contiguo a la tabla dentro del mismo elemento <code>&lt;fieldset&gt;</code>.</p>"
+        },
+        "1.4.10": {
+          "Tests" : "Se verifica que el título y el resumen de las tablas de datos no están duplicado",
+          "Comprobación" : "<p>Se comprueba que en caso de existir tanto un título de tabla, elemento <code>&lt;caption&gt;</code>, como información de resumen entonces el contenido de ambos no está duplicado. Se considera información de resumen la proporcionada mediante un atributo summary no vacío y con contenido, mediante el atributo aria-describedby o mediante un párrafo contiguo a la tabla dentro del mismo elemento <code>&lt;fieldset&gt;</code></p><p>La información de resumen debe proporcionar información adicional y si repite el título entonces se está usando de forma incorrecta.</p>"
+        },
+        "1.4.11": {
+          "Tests" : "Se verifica que no existan tablas de datos mayoritariamente vacías",
+          "Comprobación" : "<p>Se comprueba que los elementos (<code>&lt;td&gt;</code>) que están vacíos, sin contenido en su interior, no superan el 70% de las celdas de datos de la tabla, considerando que una tabla de datos eminentemente vacía supone un problema de lectura y comprensión para los usuarios de lectores de pantalla.</p><p>Para contabilizar el texto de las celdas de datos se tendrá en cuenta el contenido de los atributos alt, title o aria-label, así como la presencia de un atributo aria-labelledby o aria-describedby que hagan referencia a algún elemento con contenido.</p>"
+        }
+      }
+    },
+    { 
+      "Identificador" : "1.5. Agrupación estructural",
+      "Explicación" : "En este punto se trata de comprobar que se utilice el marcado HTML correcto para dividir la información del documento, asignándole el valor 1 con modalidad pasa si es así; y el valor 0 con modalidad falla si la información no se divide de forma correcta a través del marcado HTML correspondiente.",
+      "Nivel" : "A",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "No falla ninguna de las comprobaciones",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "Falla alguna de las comprobaciones",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "1.5.1": {
+          "Tests" : "Se verifica que no se estén simulando párrafos mediante el elemento BR.",
+          "Comprobación" : "<p>Se comprueba que no hay elementos P con más de 150 caracteres de texto (obviando el marcado de las etiquetas en línea) que contengan secuencias de 2 ó más BR seguidos, ignorando aquellas secuencias de BR que estén al principio y final del párrafo.</p><p>Etiquetas en línea: A, ABBR, ACRONYM, B, BIG, CODE, CITE, DFN, EM, FONT, IMG, INS, LABEL, Q, S, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, U.</p>"
+        },
+        "1.5.2": {
+          "Tests" : "Se verifica que no se estén simulando párrafos mediante el elemento DIV.",
+          "Comprobación" : "<p>Comprueba que no haya ningún elemento DIV cuyo contenido directo sea un texto de más de 150 caracteres, obviando las etiquetas en línea: A, ABBR, ACRONYM, B, BIG, CODE, CITE, DFN, EM, FONT, IMG, INS, Q, S, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, U.</p><p>A la hora de determinar el texto que forma parte de un elemento DIV no se tendrán en cuenta los elementos LABEL. Es decir, se ignorarán estos elementos y su contenido para permitir así la maquetación de formularios con elementos DIV sin requerir del empleo de párrafos.</p>"
+        },
+        "1.5.3": {
+          "Tests" : "Se verifica que no se estén empleando más de 10 elementos BR en la página.",
+          "Comprobación" : "Se verifica que no se estén empleando más de 10 elementos BR en la página, considerando que un abuso del elemento BR implica que se están empleando saltos de línea para simular párrafos. No se tendrán en cuenta los elementos BR dentro de elementos ADDRESS ni aquellos que estén separando líneas que no excedan los 80 caracteres de longitud."
+        }
+      }
+    },
+    { 
+      "Identificador" : "1.6. Separación de contenido y presentación",
+      "Explicación" : "En este punto se intenta verificar que en un documento HTML se independicen completamente los contenidos que ofrece de la presentación de los mismos, para garantizar la uniformidad visual entre diferentes documentos de contenido similar y la unicidad del contenido, independientemente de la visualización aplicada. De esta forma, se otorgará un valor 1 con modalidad pasa si se considera que se separan correctamente, y un valor 0 con modalidad falla si no es así.",
+      "Nivel" : "A",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "No se da ningún caso de los evaluados",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "Se da alguno de los casos evaluados que no separan adecuadamente el contenido y la presentación.",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "1.6.1": {
+          "Tests" : "Comprobación de qué es una tabla de maquetación",
+          "Comprobación" : "<p>Se verifica que la tabla es efectivamente de maquetación, con el siguiente algoritmo:</p><ul><li>Contiene a otra tabla o</li><li>Tienen el atributo role=”presentation”</li><li>Contiene alguna celda con más de 150 caracteres mostrados por pantalla.</li><li>Se trata de una tabla con una sola celda.</li><li>Se trata de una tabla con una sola fila.</li><li>Se trata de una tabla con una sola columna.</li><li>Menos del 70% de las celdas de la tabla contienen texto y, si en la primera fila o primera columna hay algún encabezado, también hay alguna celda de datos con contenido en la misma fila o columna. Para contabilizar el texto se tendrá en cuenta el contenido de los atributos alt, title o aria-label, así como la presencia de un atributo aria-labelledby o aria-describedby que hagan referencia a algún elemento con contenido.</li></ul><p></p>"
+        },
+        "1.6.2": {
+          "Tests" : "Se verifica que no haya tablas de maquetación que empleen elementos o atributos propios de tablas de datos",
+          "Comprobación" : "Se comprueba que una tabla utilizada para maquetar no emplee elementos CAPTION, TH, THEAD, TBODY, TFOOT o los atributos summary, title, scope, headers o axis."
+        },
+        "1.6.3": {
+          "Tests" : "Se verifica que no se empleen elementos desaconsejados con carácter presentacional",
+          "Comprobación" : "Se comprueba que no se estén empleando elementos que tengan carácter presentacional y que además estén desaconsejados (deprecated). Estos elementos son FONT, BASEFONT, CENTER, S, STRIKE y U."
+        },
+        "1.6.4": {
+          "Tests" : "Se verifica que no se incluya contenido que transmita información desde las hojas de estilo con los pseudoelementos :before o :after.",
+          "Comprobación" : "Se comprueba que no se esté incluyendo contenido desde las hojas de estilo con los pseudoelementos :before o :after y la propiedad content cuyo valor sea un texto de más de un carácter alfanumérico, considerando que si se hace dicho texto está transmitiendo información que no está en el contenido de la página. A la hora de cuantificar los caracteres se tendrá en cuenta que las entidades HTML y los caracteres Unicode son en realidad un único carácter."
+        }
+      }
+    },
+    { 
+      "Identificador" : "1.7. Identificación del idioma principal",
+      "Explicación" : "En este punto se comprueba que un documento especifique correctamente el idioma principal, asignando el valor 1 con modalidad pasa si es así; o el valor 0 con modalidad falla si no se especifica o se hace de forma incorrecta. Para verificar este punto se utiliza la lista de lenguajes que proporciona la Agencia de Asignación de Números de Internet (IANA).",
+      "Nivel" : "A",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "Los idiomas están bien identificados",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "Los idiomas no están bien identificados",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "1.7.1": {
+          "Tests" : "Se verifica que el documento especifique un idioma de forma correcta a través del atributo lang",
+          "Comprobación" : "Se verifica que el documento identifique su idioma principal a través del atributo lang del elemento HTML. Además se comprueba que dicho lenguaje sea válido según la lista proporcionada por IANA."
+        },
+        "1.7.2": {
+          "Tests" : "Se verifica que el idioma de la página coincide con el identificado",
+          "Comprobación" : "<p>Se comprueba que el idioma que se especifica en el atributo lang o xml:lang del elemento HTML efectivamente coincide con el idioma principal usado en el texto del documento.</p><p>La identificación del idioma de una página se realiza mediante la técnica de detección de trigrams (n-gramas de tres caracteres). Un n-grama es una secuencia de caracteres de longitud n que representa las principales combinaciones de letras que se producen para un determinado idioma con un valor que identifica la frecuencia o probabilidad de aparición en dicho idioma. A partir del texto de una página, que no esté marcado con un idioma diferente al de la página, se comprueba contra los trigrams de cada uno de los lenguajes y mediante uso estadístico se obtiene que idioma es más probable. Este algoritmo obtiene resultados acertados a partir de textos de al menos 15 palabras, siendo poco precisas las detecciones de textos de menor longitud. Este método, o variación, es ampliamente utilizado por diversas herramientas para la detección del idioma de un texto y detecta más de 60 idiomas diferentes (incluidas las diferentes lenguas co-oficiales del territorio español).</p>"
+        }
+      }
+    },
+    { 
+      "Identificador" : "1.8. Navegación con Javascript accesible y control de usuario",
+      "Explicación" : "En este punto se verifica que ninguna página proporcione alguna interacción a través de JavaScript que no sea accesible e independiente de dispositivo así como que no existan elementos que puedan alterar el contenido de la página de forma independiente a la voluntad del usuario. Si los scripts son independientes de dispositivo y no existen elementos que impidan el control del usuario entonces se le asigna el valor 1 y la modalidad pasa, si alguna de las verificaciones se incumple entonces se le asigna el valor 0 y la modalidad falla.",
+      "Nivel" : "A",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "Los elementos con interacción mediante scripts son accesibles con teclado y el usuario tiene control sobre los movimientos de contenido, parpadeos, actualizaciones y redirecciones de página",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "Los elementos con interacción mediante scripts no son accesibles con teclado o bien el usuario no tiene control sobre movimientos de contenido, parpadeos, actualizaciones o redirecciones de página",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "1.8.1": {
+          "Tests" : "Se verifica que no se usen eventos dependientes de dispositivo o que estos estén duplicados",
+          "Comprobación" : "<p>Se buscan todos los eventos dependientes de dispositivo que hay en la página, excepto onclick, y en caso de que exista alguno se comprueba que se proporcione a su vez un evento lógico independiente (por ejemplo, onmouseover con onfocus y onmouseout con onblur) o bien uno para otro dispositivo de entrada (por ejemplo, si un elemento contiene el evento onmousedown deberá tener también el evento onkeydown).</p><p>Como el elemento onclick, a pesar de ser un evento de ratón, es interpretado por todos los navegadores como el evento de acción por defecto y se invoca tanto con el clic del ratón como con el teclado, no es necesario replicarlo. Al contrario, esta verificación considera como problema el uso conjunto de onclick junto con onkeypress ya que puede generar problemas al tabular con el teclado (p. ej. activar enlaces al tabular, sin intervenir la voluntad del usuario).</p>"
+        },
+        "1.8.2": {
+          "Tests" : "Se verifica que los elementos que tienen manejadores de eventos son elementos de interacción estándar o bien emplean los atributos tabindex y role para hacerlos accesibles y compatibles con los lectores de pantalla",
+          "Comprobación" : "<p>Se verifica que los elementos que tienen manejadores de evento onclick u onkeypress son elementos de interacción estándar tabulables con teclado de forma nativa o, en caso contrario, tienen asignado un atributo tabindex y un atributo role con un valor dentro de un subconjunto de valores posibles relativos a widgets.</p><p>A continuación se listan los elementos de interacción (enlaces, botones y campos de formulario) tabulables de forma nativa:</p><ul><li>Enlaces:</li><ul><li>A</li></ul><li>Botones:</li><ul><li>BUTTON</li><li>INPUT de tipo “button”, “submit”, “reset” o “image”</li></ul><li>Campos de formulario para introducción de datos</li><ul><li>INPUT de tipo “text”, “file”, “password”, “radio”, “checkbox”</li><li>SELECT</li><li>TEXTAREA</li></ul><li>Nuevos tipos de campos de formulario de HTML5:</li><ul><li>INPUT de tipo “search”, “email”, “url”, “tel”, “number”, “range”, “date”, “month”, “week”, “time”, “datetime”, “datetime-local”, “color”</li></ul></ul><p>A continuación se detallan los valores para el atributo role relativos a widgets:</p><ul><li><p>Roles para elementos que actúan como widgets independientes del interfaz de usuario o como parte de otros widgets complejos:</p><p>alert, alertdialog, button, checkbox, dialog, gridcell, link, log, marquee, menuitem, menuitemcheckbox, menuitemradio, option, progressbar, radio, scrollbar, slider, spinbutton, status, tab, tabpanel, textbox, timer, tooltip, treeitem.</p></li><li><p>Roles para elementos que actúan como widgets complejos. Estos roles generalmente se corresponden con contenedores que albergan y gestionan otros widgets internos:</p><p>combobox, grid, listbox, menu, menubar, radiogroup, tablist, tree, treegrid.</p></li></ul>"
+        },
+        "1.8.3": {
+          "Tests" : "Se verifica que no se empleen etiquetas que generen movimiento automático del contenido",
+          "Comprobación" : "Se verifica que no se empleen las etiquetas BLINK ni MARQUEE."
+        },
+        "1.8.4": {
+          "Tests" : "Se verifica que no se empleen redirecciones de página que no sean transparentes para los usuarios.",
+          "Comprobación" : "Se verifica que la página no redirija automáticamente con el elemento META y el atributo http-equiv con un tiempo mayor de 0 segundos."
+        },
+        "1.8.5": {
+          "Tests" : "Se verifica que no se actualiza la página de forma automática con el elemento meta",
+          "Comprobación" : "Se comprueba que la página no se actualice de forma automática con el elemento META y el atributo http-equiv."
+        },
+        "1.8.6": {
+          "Tests" : "Se verifica que no se emplee la propiedad de CSS text- decoration: blink",
+          "Comprobación" : "Se comprueba que en la las hojas de estilo no se esté empleando la propiedad text-decoration: blink para hacer que el elemento parpadee."
+        }
+      }
+    },
+    { 
+      "Identificador" : "1.9. Formularios y etiquetas",
+      "Explicación" : "En este punto se verifica que la asociación de los controles de formulario con sus respectivas etiquetas y con su nombre accesible se haga de forma correcta y se identifiquen los campos obligatorios, asignándole el valor 1 y la modalidad pasa si es así; el valor 0 y la modalidad falla en caso de que no se haga de forma correcta; y este punto no se tendrá en cuenta (No Aplica y pasa) en caso de que no existan formularios en el documento.",
+      "Nivel" : "A",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "La página no tiene controles de formulario",
+          "Valor" : "No aplica",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "La página tiene controles y están etiquetados correctamente",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "C": {
+          "Resultado" : "La página tiene controles pero no todos están etiquetados correctamente",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "1.9.1": {
+          "Tests" : "Comprobación de etiqueta asociada",
+          "Comprobación" : "<p>Se considera que un control tiene una etiqueta asociada si se cumple alguna de las siguientes condiciones:</p><ul><li>Dispone de un elemento LABEL no vacío (con texto) que está asociado explícitamente</li><li>Dispone de un atributo aria-labeledby con un valor correspondiente a un id de un elemento con contenido textual. Como se pueden indicar varios id diferentes (separados por comas) se verifica que al menos uno de los valores indicados se corresponda con el id de un elemento con contenido presente en la página.</li><li>Dispone de un atributo aria-label no vacío (con texto)</li><li>Dispone de un atributo title no vacío (con texto)</li></ul><p>Esta verificación no es un error por sí misma, solo se usará como condición de otras verificaciones sobre formularios.</p>"
+        },
+        "1.9.2": {
+          "Tests" : "Se verifica que todos los elementos INPUT empleados para la introducción de datos tengan una etiqueta asociada.",
+          "Comprobación" : "<p>Se comprueba que dentro de un formulario, a cada campo de formulario para la introducción de datos que posea el atributo id le corresponde al menos una etiqueta LABEL (pueden ser varias) asociada al mismo a través del atributo for o bien dispone de los atributos aria-labeledby, aria-label o title.</p><p>Los campos de formulario para la introducción de datos para los que se realiza esta verificación son:</p><ul><li>INPUT de tipo “text”, “file”, “password”, “radio”, “checkbox”</li><li>Y los nuevos tipos de INPUT de HTML5: “search”, “email”, “url”, “tel”, “number”, “range”, “date”, “month”, “week”, “time”, “datetime”, “datetime- local”, “color”</li></ul>"
+        },
+        "1.9.3": {
+          "Tests" : "Se verifica que todos los controles de formulario de tipo SELECT tengan una etiqueta asociada.",
+          "Comprobación" : "Se comprueba que dentro de un formulario, a cada control de tipo SELECT que posea el atributo id le corresponda al menos una etiqueta LABEL (pueden ser varias) asociada al mismo a través del atributo for o bien dispone de los atributos aria-labeledby, aria-label o title."
+        },
+        "1.9.4": {
+          "Tests" : "Se verifica que todos los controles de formulario de tipo TEXTAREA tengan una etiqueta asociada.",
+          "Comprobación" : "Se comprueba que dentro de un formulario, a cada control de tipo TEXTAREA que posea el atributo id le corresponda al menos etiqueta LABEL (pueden ser varias) asociada al mismo a través del atributo for o bien dispone de los atributos aria-labeledby, aria-label o title."
+        },
+        "1.9.5": {
+          "Tests" : "Se verifica que los atributos for de una etiqueta se corresponden con algún control de formulario",
+          "Comprobación" : "Se comprueba que el valor de los atributos for de los elementos LABEL se corresponden efectivamente con un identificador id de algún control de formulario usado en la página."
+        },
+        "1.9.6": {
+          "Tests" : "Se verifica que los elementos LABEL asociados explícitamente, siendo la única etiqueta asociada, no están ocultos con CSS.",
+          "Comprobación" : "Se comprueba que todos los elementos LABEL que están asociados explícitamente y son la única etiqueta asociada a un control (no tiene title, aria-label o aria-labeledby) no están ocultos con CSS (display: none o visibility: hidden)."
+        },
+        "1.9.7": {
+          "Tests" : "Se verifica que en los formularios con más de 5 campos de introducción de datos se identifican los campos obligatorios (presencia del texto “obligatorio”, “opcional” o equivalentes)",
+          "Comprobación" : "<p>Se comprueba que se identifican los campos obligatorios en los formularios con más de 5 campos de introducción de datos. Los grupos de botones de radio se contabilizan como un único campo de formulario. Los grupos de casillas de verificación se contabilizan también como un único campo de formulario.</p><p>Se busca, en sus diferentes versiones idiomáticas, la presencia de los términos “obligatorio” y “opcional” o términos equivalentes en el texto, alternativas o títulos presentes dentro del elemento contenedor del formulario FORM (elemento padre del formulario y dentro del formulario).</p><p>Las cadenas a buscar, en los diferentes idiomas, son las siguientes:</p><ul><li>Es: obligatorio, obligado, exigido, preciso, requerido, necesario, indispensable, imprescindible, imperativo, opcional, voluntario</li><li>En: obligatory, obliged, mandatory, compulsory, requisite, required, requested, necessary, needed, indispensable, essential, imperative, optional, voluntary</li><li>Fr: obligatoire, exigé, précis, requis, nécessaire, indispensable, essential, impératif, option, bénévoles</li><li>Ca: obligatori, obligat, exigit, requerit, necessari, indispensable, imprescindible, imperatiu, opcional, voluntari</li><li>Gl: obrigatorio, obrigado, esixido, preciso, requirido, necesario, indispensable, imprescindible, imperativo, opcional, voluntario</li><li>Eu: nahitaezkoa, betebeharpekoa, eskatuta, beharrezkoa, errekeritua, ezinbestekoa, agindua, aukerakoa, boluntarioa</li></ul><p>Los campos de formulario para la introducción de datos que se tienen en cuenta en esta verificación son:</p><ul><li>INPUT de tipo “text”, “file”, “password”, “radio”, “checkbox”</li><li>SELECT</li><li>TEXTAREA</li><li>Y los nuevos tipos de INPUT de HTML5: “search”, “email”, “url”, “tel”, “number”, “range”, “date”, “month”, “week”, “time”, “datetime”, “datetime- local”, “color”</li></ul>"
+        },
+        "1.9.8": {
+          "Tests" : "Se verifica que el nombre accesible a través de los atributos aria-label y aria-labeledby es igual o contiene la etiqueta visible del campo",
+          "Comprobación" : "Se comprueba que todos los elementos de la página que tienen un nombre accesible a través de los atributos aria-label y aria-labeledby coinciden o contienen la etiqueta visible del campo. La comprobación no es aplicable cuando el contenido accesible o el contenido visible sólo contenga caracteres Unicode, o sólo contenga caracteres de puntuación (:, ;, ., /, \\, |,...) , o sólo contenga emojis."
+        }
+      }
+    },
+    { 
+      "Identificador" : "1.10. Formularios y estructura",
+      "Explicación" : "En este punto se verifica que la agrupación de controles y otros elementos de formulario se haga de forma correcta, asignándole el valor 1 y la modalidad pasa si es así; el valor 0.5 y la modalidad pasa si los controles de formulario se usan correctamente pero hay 8 o más y menos de 12 campos de introducción de datos sin agrupar; el valor 0 y la modalidad falla en caso de que no se haga de forma correcta la estructuración o agrupación de los campos de formulario; y este punto no se tendrá en cuenta (No Aplica y pasa) en caso de que no existan formularios en el documento.",
+      "Nivel" : "A",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "La página no tiene controles de formulario",
+          "Valor" : "No aplica",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "La página tiene controles y su estructura es correcta",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "C": {
+          "Resultado" : "La página tiene controles, las opciones en los “select” se agrupan correctamente, pero hay 8 o más y menos de 12 campos de introducción de datos sin unque los agrupe.",
+          "Valor" : "0.5",
+          "Modalidad" : "Pasa"
+        },
+        "D": {
+          "Resultado" : "La página tiene controles y las opciones en los “select” no se agrupan correctamente o hay 12 o más campos de introducción de datos sin un “fieldset” que los agrupe.",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "1.10.1": {
+          "Tests" : "Se verifica que si hay grupos de botones de radio o casillas de verificación en un formulario éstos estén debidamente agrupados e identificados.",
+          "Comprobación" : "<p>Se comprueba que si hay grupos de dos o más botones de radio o de cinco o más casillas de verificación (con el mismo name) entonces cada uno de ellos se agrupa bajo su correspondiente elemento FIELDSET o bajo un elementos que tenga un atributo role (WAI-ARIA) con valor “group” (para las casillas de verificación) o “radiogroup” (para los botones de radio).</p><p>Esta comprobación sólo se realizará sobre los grupos de dos o más botones de radio y de cinco o más casillas de verificación.</p>"
+        },
+        "1.10.2": {
+          "Tests" : "Se verifica que no se empleen elementos de encabezado para agrupar los controles de formulario en lugar de usar el elemento FIELDSET",
+          "Comprobación" : "Se comprueba que no existan más elementos de encabezado dentro de un formulario (FORM) que el número de elementos FIELDSET ya existentes en el mismo, considerando que se están usando estos encabezados para dividir los controles de formulario en grupos en lugar de usar el elemento FIELDSET correspondiente."
+        },
+        "1.10.3": {
+          "Tests" : "Se verifica que se empleen grupos de controles de formulario cuando un formulario tiene 8 o más campos de introducción de datos",
+          "Comprobación" : "<p>Se comprueba que existan elementos FIELDSET, o elementos que tenga un atributo role (WAI-ARIA) con valor “group”, en aquellos formularios que contengan 8 o más campos de introducción de datos.</p><p>Si hay 8 o más campos pero menos de 12 sin haber un elemento FIELDSET entonces la comprobación se evalúa a 0.5 y la modalidad pasa. Si hay 12 o más campos entonces se le asigna el valor 0 y la modalidad falla.</p><p>Los campos de formulario para la introducción de datos que se tienen en cuenta en esta verificación son:</p><ul><li>INPUT de tipo “text”, “file”, “password” (*)</li><li>SELECT</li><li>TEXTAREA</li><li>Y los nuevos tipos de INPUT de HTML5: “search”, “email”, “url”, “tel”, “number”, “range”, “date”, “month”, “week”, “time”, “datetime”, “datetime- local”, “color”</li></ul><p>(*) No se tienen en cuenta los botones de radio o casillas de verificación porque ya se han tratado en una comprobación anterior (4.13.1).</p>"
+        },
+        "1.10.4": {
+          "Tests" : "Se verifica que todo fieldset tenga su correspondiente etiqueta legend",
+          "Comprobación" : "Se comprueba que todo elemento FIELDSET tenga un único elemento LEGEND con contenido y que este sea el primer elemento semántico hijo (ignorando los DIV)."
+        },
+        "1.10.5": {
+          "Tests" : "Se verifica que todo grupo de controles de formulario definido mediante WAI-ARIA tenga su correspondiente etiqueta",
+          "Comprobación" : "Se comprueba que todo elemento con role=”group” o role=”radiogroup” tenga un atributo aria-label o un atributo aria-labelledby que haga referencia a algún elemento de la página con contenido."
+        },
+        "1.10.6": {
+          "Tests" : "Severificaqueenlosselectconmásde24opciones(100en el caso de números consecutivos) se empleen elemento optgroup",
+          "Comprobación" : "Se comprueba que no existan elementos SELECT con más de 24 opciones sin que se estén agrupando con algún elemento OPTGROUP. Este límite se amplía hasta 100 en el caso que las opciones sean números consecutivos."
+        },
+        "1.10.7": {
+          "Tests" : "Severificaquenoexistanselectconopcionesderellenoque simulen agrupaciones en lugar de optgroup",
+          "Comprobación" : "Se comprueba que no existan elementos SELECT con opciones que comiencen por sucesiones de 3 o más caracteres repetidos no alfanuméricos (P. ej.: “----”, “----texto”, “___”, “***”, “......”, etc.)."
+        },
+        "1.10.8": {
+          "Tests" : "Se verifica que los elementos “optgroup” tienen un atributo “label” con contenido.",
+          "Comprobación" : "Se comprueba que los elementos OPTGROUP disponen de una etiqueta que identifique su contenido en forma de atributo label no vacío (con texto)."
+        }
+      }
+    },
+    { 
+      "Identificador" : "1.11. Título de página y marcos",
+      "Explicación" : "Esta verificación comprueba que la página disponga de un título válido que no esté vacío o sea un texto de relleno. También se verifica que una página no utilice marcos para presentar la información, o, en caso de que los utilice, que lo haga de forma correcta proporcionando información acerca de los mismos. Si un documento especifica un título válido y no tiene marcos se le asignará el valor 1 con modalidad pasa; si especifica un título válido pero hay marcos correctos con título se le asignará un valor 0.5 (por usar marcos) con la modalidad pasa; finalmente, si no se especifica un título correcto o hay marcos que carecen de título se le asignará el valor 0 con modalidad falla.",
+      "Nivel" : "A",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "La página tiene un título de página válido y no tiene marcos",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "La página tiene un título de página válido y hay presencia de marcos que sí tienen título",
+          "Valor" : "0.5",
+          "Modalidad" : "Pasa"
+        },
+        "C": {
+          "Resultado" : "La página carece de un título válido o hay marcos sin título",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "1.11.1": {
+          "Tests" : "Se verifica que en el documento haya título",
+          "Comprobación" : "Se comprueba que exista el elemento TITLE dentro del elemento HEAD del documento."
+        },
+        "1.11.2": {
+          "Tests" : "Se verifica que el contenido del título sea válido",
+          "Comprobación" : "Se comprueba que el texto del título no sea vacío, ni que se empleen los textos que los editores HTML añaden por defecto: “Título del documento”, “Title”, “Untitled document”..."
+        },
+        "1.11.3": {
+          "Tests" : "Se verifica que todos los frames e iframes tengan un título.",
+          "Comprobación" : "Se buscan todos los elementos FRAME o IFRAME del documento y se verifica que posean el atributo title para proporcionar información sobre el contenido del marco."
+        },
+        "1.11.4": {
+          "Tests" : "Se verifica que el texto del atributo title de los FRAME e IFRAME no esté vacío.",
+          "Comprobación" : "Se buscan todos los elementos FRAME o IFRAME del documento y se verifica que no posean el atributo title vacío."
+        },
+        "1.11.5": {
+          "Tests" : "Se verifica que el título no sea idéntico que el resto de títulos de la muestra (para tamaños de muestra >= 10).",
+          "Comprobación" : "<p>En las muestras de 10 o más páginas se comprueba que no sean iguales todos los títulos. Se pueden repetir títulos, pero si en una muestra de 10 son todos iguales entonces la comprobación falla (para todas las páginas de la muestra) considerando que no se está identificando correctamente el contenido de los documentos al repetir el mismo título en todo la muestra.</p><p>Si la muestra es menor de 10 páginas esta verificación no es aplicable.</p>"
+        }
+      }
+    },
+    { 
+      "Identificador" : "1.12. Enlaces descriptivos",
+      "Explicación" : "En este punto se verifica que se proporcione información acerca de los vínculos de una página hacia otros documentos. Si se hace de forma correcta se le asigna el valor 1 y la modalidad pasa, si algún enlace no es correcto se le asigna el valor 0 y la modalidad falla, y este punto no puntuará en caso de que no haya enlaces en la página.",
+      "Nivel" : "A",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "La página no tiene enlaces",
+          "Valor" : "No aplica",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "La página tiene enlaces y todos son correctos",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "C": {
+          "Resultado" : "La página tiene enlaces y alguno no es correcto",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "1.12.1": {
+          "Tests" : "Se verifica que no haya enlaces con textos poco descriptivos (del tipo “pinche aquí”).",
+          "Comprobación" : "Se buscan los enlaces de una página y se verifica que no usen los típicos textos no descriptivos “aquí”, “pinche aquí” “haga click aquí”, “haga clic aquí”, “pincha aquí”, “pulse aquí”, “haz click aquí”, “haz clic aquí”..."
+        },
+        "1.12.2": {
+          "Tests" : "Se verifica que no haya enlaces sin un texto que indique su finalidad",
+          "Comprobación" : "Se buscan aquellos enlaces con atributo href sin contenido textual en su interior, bien en forma de texto o como alternativas textuales, y que además carezcan de un atributo aria-label o un atributo aria-labelledby que haga referencia a algún elemento de la página con contenido. Es decir, que tengan contenido vacío debido a que no hay texto entre las etiquetas de apertura y cierre de enlace, haya espacio en blanco, haya imágenes sin alternativa o con alternativa vacía, o una combinación de ellos, y además carezcan de otros atributos (WAI- ARIA) que indiquen su finalidad."
+        },
+        "1.12.3": {
+          "Tests" : "Se verifica que no haya enlaces demasiado largos con más de 250 caracteres (salvo excepciones)",
+          "Comprobación" : "Se buscan los enlaces de una página y se comprueba que su texto no supere los 250 caracteres. Debido a que se pueden analizar algunas páginas con contenido de tipo legal en las que el nombre de una ley puede utilizarse como texto para el enlace, se añaden algunas excepciones. Así, no se considerarán enlaces problemáticos aquellos que empiecen por textos como Constitución, Convención, Decreto, Decreto Foral, Decreto Foral Legislativo, Decreto Legislativo, Decreto-ley, Directiva, Enmienda, Estatuto, Instrumento de Aceptación, Instrumento de Adhesión, Instrumento de Aprobación, Instrumento de Ratificación, Ley, Ley Foral, Ley Orgánica, Nota Diplomática, Orden Foral, Posición Común, Real Decreto, Real Decreto Legislativo, Real Decreto-ley, Resolución-Circular... o por acrónimos como R.D."
+        },
+        "1.12.4": {
+          "Tests" : "Se verifica que la alternativa textual de las imágenes incluidas dentro de enlaces no es igual al resto del contenido textual del enlace",
+          "Comprobación" : "Se comprueba que no se producen redundancias de contenido innecesarias entre el texto de los enlaces y el texto alternativo de las imágenes incluidas dentro de enlaces. Para ello se verifica que las alternativas textuales de las imágenes incluidas dentro de enlaces no es igual que el resto del contenido textual del enlace."
+        },
+        "1.12.5": {
+          "Tests" : "Se verifica que los enlaces o botones definidos mediante WAI-ARIA tengan su correspondiente etiqueta",
+          "Comprobación" : "Se comprueba que todo elementos con role=”link” o role=”button” tenga un contenido textual, un atributo aria-label o un atributo aria-labelledby que haga referencia a algún elemento de la página con contenido."
+        }
+      }
+    },
+    { 
+      "Identificador" : "1.13. Cambios de contexto",
+      "Explicación" : "<p>En este punto se verifica que no se realicen cambios de contexto sin que se realicen como respuesta a una acción de los usuarios como pulsar un enlace o botón. Si los cambios de contexto se realizan de forma correcta se le asigna el valor 1 y la modalidad pasa, si por el contrario se produce algún cambio de contexto nada más cargarse la página, cuando cambia el foco del teclado o cuando se selecciona una opción de un SELECT entonces se le asigna el valor 0 y la modalidad falla.</p><p>Se entiende por cambio de contexto una nueva página, ventana, pestaña o aplicación, o cambio de foco (window.location, window.history, window.open, window.focus).</p>",
+      "Nivel" : "A",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "Las validaciones son correctas",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "Alguna de las validaciones es incorrecta",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "1.13.1": {
+          "Tests" : "Se verifica que no se produzca ningún cambio de contexto en los eventos onfocus u onblur.",
+          "Comprobación" : "Se comprueba que no haya elementos en la página que empleen eventos onfocus u onblur en los que se realice algún cambio de contexto."
+        },
+        "1.13.2": {
+          "Tests" : "Se verifica que no se produzca ningún cambio de contexto nada más cargarse la página (onload).",
+          "Comprobación" : "Se comprueba que no se esté usando en evento onload en el que se realice un cambio de contexto nada más cargarse la página"
+        },
+        "1.13.3": {
+          "Tests" : "Se verifica que no se produzca ningún cambio de contexto en el evento onchange de los elementos SELECT",
+          "Comprobación" : "Se verifica que no haya elementos SELECT en los que se esté usando el evento onchange para provocar un cambio de contexto nada más seleccionar alguna de sus opciones."
+        }
+      }
+    },
+    { 
+      "Identificador" : "1.14. Compatibilidad",
+      "Explicación" : "En este punto se verifica que el documento posea una gramática HTML correcta según la definición de tipo de documento (DTD) que presente. Asimismo, se comprueba que ni en el código HTML ni en el código CSS existan errores que impidan que se pueda procesar correctamente por todos los navegadores (errores de parseo) afectando a su compatibilidad. Si el documento tiene un DTD válido y tanto el código HTML como el CSS es procesable (parseable) entonces se le asigna el valor 1 y la modalidad pasa. Si, por el contrario, el documento carece de un DTD válido, tiene errores que afectan a su correcto procesamiento (parseo) o bien las hojas de estilo no son sintácticamente correctas entonces se le asignará el valor 0 y la modalidad falla.",
+      "Nivel" : "A",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "El documento tiene un DTD válido y tanto el código HTML como el CSS es procesable (parseable)",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "El documento carece de un DTD válido, tiene errores que afectan a su correcto procesamiento (parseo) o bien las hojas de estilo no son sintácticamente correctas",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "1.14.1": {
+          "Tests" : "Se verifica que el documento tenga un DTD válido.",
+          "Comprobación" : "Se comprueba que el documento tenga una declaración de tipo, y que además ésta sea válida. Para ello se verifica contra la lista de DTDs recomendados por la W3C, teniendo en cuenta que la parte de la URL en la declaración del DTD es opcional, por lo que no se penalizará cuando no aparezca en caso de que el resto esté bien. En caso de que la URL se especifique, deberá estar correcta también."
+        },
+        "1.14.2": {
+          "Tests" : "Se verifica que el código HTML no tiene errores que afecten a su correcto procesamiento por todos los navegadores",
+          "Comprobación" : "<p>Se comprueba que el código HTML no tenga errores de validación que afecten al correcto procesamiento del mismo. Es decir, se considera que falla si se produce algún error que pueda impedir que todos los navegadores interpreten el código de forma consistente. Estos errores son:</p><ul><li>Apertura y cierre de etiquetas y anidamiento incorrecto de elementos</li><li>Atributos repetidos con diferente valor en el mismo elemento</li><li>Valores de atributos sin entrecomillar</li><li>Valores repetidos en la misma página en atributos que deben tener un valor único (id, accesskey)</li></ul>"
+        }
+      }
+    },
+    { 
+      "Identificador" : "2.1. Identificación de los cambios de idioma",
+      "Explicación" : "En este punto se comprueba que un documento especifique correctamente los cambios de idioma que se producen en el contenido, asignando el valor 1 con modalidad pasa si es así; o el valor 0 con modalidad falla si no se especifican los cambios de idioma más habituales o si se hace de forma incorrecta. Para verificar este punto se utiliza la lista de lenguajes que proporciona la Agencia de Asignación de Números de Internet (IANA).",
+      "Nivel" : "AA",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "Los idiomas están bien identificados",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "Los idiomas no están bien identificados",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "2.1.1": {
+          "Tests" : "Se verifica que todos los idiomas especificados por los elementos sean válidos.",
+          "Comprobación" : "Se comprueba que el código de lenguaje que especifica un elemento sea válido según la lista que proporciona IANA."
+        },
+        "2.1.2": {
+          "Tests" : "Se verifica que los cambios de idioma más habituales encontrados en un documento se marquen adecuadamente.",
+          "Comprobación" : "Se buscan los enlaces con cambios de idioma más frecuentes (textos “bienvenido”, “welcome”, “castellano”, “english”...) y se comprueba que utilicen el atributo lang con el idioma correspondiente."
+        },
+        "2.1.3": {
+          "Tests" : "Se verifica que los textos en inglés encontrados en un documento se marquen adecuadamente",
+          "Comprobación" : "<p>Se buscan los textos que están en inglés y se comprueba que se esté utilizando el atributo lang con la identificación de dicho idioma. Se busca en el texto del documento, alternativas textuales y títulos. Para la identificación de textos en inglés se busca la ocurrencia de las palabras más usadas del inglés que no existen en las lenguas cooficiales de España.</p><p>A continuación se indica el listado de palabras usadas para la identificación del idioma inglés:</p><p>The Have Did Am Had Doing Is Having At Was It This Were For But Being Not By Been On From Of With They And You We That Does Say She What Or Up An Out Will If My About One Who All Get Would Which There Go Their When Make Good Its Like Some Over Just Could Think Way Us Him Them Also Even Know See Back New Take Other After Want People Than Two Because Into Then How Any Year Now Our These Your Only Work Give First Day Well Most</p><p>Este listado se ha obtenido a partir de las cien palabras más usadas en inglés según estudios del Oxford English Dictionary y de las diferentes formas conjugadas de los verbos más usados de esa lista (“be”, “have”, “do”). Se estima que estas palabras suponen casi la mitad del material escrito en inglés. De dicha lista se han eliminado aquellas palabras que existen en castellano u otras lenguas cooficiales para evitar generar falsos positivos (“I”, “he”, “has”, “as”, “do”, “so”, “me” “can”, “look”, “come”, “use”, etc.). Se considera que un texto está en idioma inglés si se detecta el uso de al menos cuatro palabras diferentes del listado anterior.</p><p>Al comprobar la presencia de estas palabras no se tendrán en cuenta aquellas que en el contenido de la página se estén identificando en algún sitio de esta como abreviaturas o acrónimos (ABBR o ACRONYM) para evitar confundir ciertas siglas como palabras en inglés.</p>"
+        }
+      }
+    },
+    { 
+      "Identificador" : "2.2. Legibilidad y Contraste",
+      "Explicación" : "En este punto de verifica que el color del primer plano y el color de fondo de los elementos tengan un contraste suficiente según el nuevo algoritmo de luminosidad de las WCAG 2.1 junto con la comprobación de la utilización correcta de los estilos para las propiedades de espaciado de texto siguientes: 'line-height', 'letter-spacing', 'word-spacing'. Si todos los elementos evaluables cumplen se le asigna el valor 1 y la modalidad pasa, si alguno no cumple se le asigna el valor 0 y la modalidad falla.",
+      "Nivel" : "AA",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "El contraste es suficiente en todos los casos evaluables y no se utilizan los estilos en línea para espaciado de texto con ¡important",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "Algún elemento presenta un contraste insuficiente o se emplean estilos en línea para espaciado de texto con ¡important",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "2.2.1": {
+          "Tests" : "Se verifica que las combinaciones de color de primer plano y de color de fondo en una misma regla de las hojas de estilo tienen el contraste suficiente",
+          "Comprobación" : "Se comprueba que las combinaciones de color de primer plano (color) y de color de fondo (background-color o background) en una misma regla de las hojas de estilo tiene el contraste suficiente. Se tienen en cuenta los diferentes umbrales según el tamaño del texto cuando éste es conocido. En caso contrario, se emplea el umbral más permisivo de 3:1."
+        },
+        "2.2.2": {
+          "Tests" : "Se verifica que no se establezcan valores fijos de espaciado",
+          "Comprobación" : "Se comprueba en el modelo CSS de la página la no aplicación de una o varias de las propiedades 'line-height', 'letter-spacing', 'word- spacing' fijadas mediante la clave !important."
+        }
+      }
+    },
+    { 
+      "Identificador" : "2.3. Maquetación adaptable",
+      "Explicación" : "Se verifica que el documento analizado permita realizar zoom sobre el mismo y posea una maquetación adaptable a diferentes tamaños de ventana del navegador. Si no se bloquea la posibilidad de hacer zoom y se emplea alguna característica de CSS necesaria para obtener una maquetación adaptable (media-queries, CSS grid, CSS Flexbox) entonces se le asignará el valor 1 con modalidad pasa; si se detecta el bloqueo del zoom en el navegador o no se emplea ninguna característica de CSS para maquetación adaptable se le asignará el valor 0 con modalidad falla.",
+      "Nivel" : "AA",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "Se emplean algunas características de CSS para maquetación adaptable y no se bloquea al zoom.",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "No se emplea ninguna característica de CSS para maquetación adaptable o se bloquea el zoom.",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "2.3.1": {
+          "Tests" : "Se verifica que no se está bloqueando la posibilidad de hacer zoom en el navegador",
+          "Comprobación" : "<p>Se comprueba que no se están empleando elementos META de tipo viewport cuyo content defina la propiedad user-scalable=no o user- scalable=0 y/o los valores de initial-scale y maximum-scale coincidan entre sí.</p><p>Por ejemplo:</p><pre><code><meta name='viewport' content='width=device-width, initial-scale=1.0, maximum- scale=1.0, user-scalable=0'/></code><pre>"
+        },
+        "2.3.2": {
+          "Tests" : "Se verifica que se esté empleando alguna característica de CSS propia de media-queries, CSS grid o Flexbox",
+          "Comprobación" : "<p>Se analizan las hojas de estilo en busca de la presencia media-queries para diferentes anchos de pantalla (tipo @media (max-width: XXX), @media (min-width: XXX)), o de alguna propiedad específica de CSS Grid o de Flexbox.</p><p>Propiedades de CSS Grid a buscar:</p><ul><li>grid-area</li><li>grid-auto-columns</li><li>grid-auto-flow</li><li>grid-auto-rows</li><li>grid-column-end</li><li>grid-column-gap</li><li>grid-column-start</li><li>grid-column</li><li>grid-gap</li><li>grid-row-end</li><li>grid-row-gap</li><li>grid-row-start</li><li>grid-row</li><li>grid-template-areas</li><li>grid-template-columns</li><li>grid-template-rows</li><li>grid-template</li><li>grid</li></ul><p>Propiedades de CSS Flexbox a buscar:</p><ul><li>flex-direction</li><li>flex-wrap</li><li>flex-flow</li><li>justify-content</li><li>align-items</li><li>align-content</li><li>order</li><li>flex-grow</li><li>flex-shrink</li><li>flex-basis</li><li>flex</li><li>align-self</li></ul>"
+        }
+      }
+    },
+    { 
+      "Identificador" : "2.4. Múltiples vías de navegación",
+      "Explicación" : "En este punto se verifica que en el sitio web se estén proporcionando diferentes mecanismos para que los usuarios puedan localizar los contenidos dentro del sitio. Se tiene que proporcionar o bien un mapa web o una función de búsqueda. Si se proporciona un enlace al mapa web o un buscador en el sitio entonces se le asigna valor 1 y la modalidad pasa. Por el contrario, si no se proporciona ni un enlace al mapa web ni una función de búsqueda entonces se le asigna el valor 0 y la modalidad falla.",
+      "Nivel" : "AA",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "En el documento hay un enlace al mapa web o una función de búsqueda",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "El documento carece tanto de un enlace a un mapa web como de una función de búsqueda",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "2.4.1": {
+          "Tests" : "Se verifica que se proporciona un mapa del sitio o una función de búsqueda dentro del sitio web.",
+          "Comprobación" : "<p>Se comprueba si existe un enlace al mapa web. Para ello se extraen los enlaces del documento y se verifica que alguno contenga uno de los siguientes textos (ID 135):</p><ul><li>mapa web</li><li>mapa</li><li>gunearen mapa</li><li>site map</li><li>plan du site</li><li>mapa del sitio</li><li>mapa del portal</li><li>mapa del web</li><li>mapa de la web</li><li>mapa de web</li><li>mapa do sitio</li><li>mapa do portal</li><li>mapa da web</li><li>web mapa</li><li>plan de site web</li><li>plan</li><li>map</li><li>map of the website</li><li>Webgunearen mapa</li></ul><p>ya sea en su texto o su atributo title.</p><p>Si no se encuentra un enlace al mapa web entonces se comprueba contra el título de la página (elemento TITLE) si estamos en la propia página del mapa web buscando las mismas cadenas.</p><p>Por otra parte, se comprueba si existe algún campo INPUT de tipo “search” o si en el contenido de los formularios (texto, alternativas textuales y títulos) se está usando alguna de las palabras indicadas a continuación.</p><ul><li>Buscar</li><li>Búsqueda </li><li>Buscador</li><li>Search</li><li>Rechercher</li><li>Cercar</li><li>Cerca</li><li>Cercador</li><li>Bilaketa</li><li>Bilatzailea</li><li>Bilatu</li><li>Busca</li></ul>"
+        }
+      }
+    },
+    { 
+      "Identificador" : "2.5. Independencia de dispositivo",
+      "Explicación" : "<p>En ese punto se verifica que los estilos no eliminan el indicador visual del foco del teclado y no se abusa del atributo tabindex (hasta 3) para modificar el orden de tabulación, además de no utilizar reglas @media con orientation y con uso de valores del atributo autocomplete correctos asignándole el valor 1 y la modalidad pasa si es así.</p><p>Se asignará un valor 0.5 y la modalidad pasa en caso de que se cumplan las condiciones con un uso moderado de tabindex (entre 4 y 10). Se le da un valor de 0 y la modalidad falla en caso de incumplirse algunas de las condiciones indicadas.</p>",
+      "Nivel" : "AA",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "No se emplean estilos que eliminen el indicador visual del foco del teclado y no se abusa del atributo tabindex (hasta 3) para modificar el orden de tabulación y además No se utilizan reglas @media con orientation y los valores del atributo autocomplete son correctos.",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "No se emplean estilos que eliminen el indicador del foco del teclado, se emplean entre 4 y 10 atributos tabindex además de cumplirse las condiciones de orientación y autocompletado",
+          "Valor" : "0.5",
+          "Modalidad" : "Pasa"
+        },
+        "C": {
+          "Resultado" : "Se emplean estilos para eliminar el indicador visual del foco del teclado o bien se emplean más de 10 atributos tabindex para modificar el orden de tabulación por defecto o se incumplen las condiciones de autocompletado u orientación.",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "2.5.1": {
+          "Tests" : "Se verifica que en las hojas de estilo no se emplee la propiedad outline con valor “0” o “none” en elementos de interacción.",
+          "Comprobación" : "<p>Se comprueba que no se están empleando estilos para eliminar el indicador visual del foco del teclado usado por defecto en los navegadores. Para ello se comprueba que en los elementos de interacción (enlaces, botones y campos de formulario) no se esté empleando la propiedad outline con un valor “0” o “none” sin emplear también otras propiedades para definir un borde o un color de fondo (sobre el mismo selector con el pseudoelemento :focus) que puedan servir para mejorar la visibilidad del indicador del foco por defecto.</p><p>A continuación se listan los elementos de interacción (enlaces, botones y campos de formulario) que se tienen en cuenta para esta comprobación:</p><ul><li>Enlaces:</li><ul><li>A</li></ul><li>Botones:</li><ul><li>BUTTTON</li><li>INPUT de tipo “button”, “submit”, “reset” o “image”</li></ul><li>Campos de formulario para introducción de datos</li><ul><li>INPUT de tipo “text”, “file”, “password”, “radio”, “checkbox”</li><li>SELECT</li><li>TEXTAREA</li></ul><li>Nuevos tipos de campos de formulario de HTML5:</li><ul><li>INPUT de tipo “search”, “email”, “url”, “tel”, “number”, “range”, “date”, “month”, “week”, “time”, “datetime”, “datetime-local”, “color”</li></ul>"
+        },
+        "2.5.2": {
+          "Tests" : "Se verifica que no se esté abusando del atributo tabindex para modificar el orden de tabulación por defecto",
+          "Comprobación" : "Se comprueba que no se esté abusando del atributo tabindex con valor positivo (>0) para modificar el orden de tabulación por defecto, considerándolo como mala práctica dado los problemas de tabulación que puede generar y por no emplear el orden de tabulación por defecto. Si admite el uso de hasta 3 atributos tabindex en el documento. Si se emplean entre 4 y 10 tabindex se considera una mala práctica que puntuará como 0.5, aunque con la modalidad pasa. Por el contrario, si se emplean más de 10 atributos tabindex la comprobación da como resultado falla al considerar que el orden de tabulación por defecto no es correcto al depender en exceso de dicho atributo."
+        },
+        "2.5.3": {
+          "Tests" : "Se verifica la no aplicación de reglas CSS de tipo rotate que bloqueen la orientación del contenido",
+          "Comprobación" : "Se comprueba en el modelo CSS de la página la no existencia de sentencias que fijen la posición del contenido. Para ello se verifica que no existan reglas CSS tipo @media que defina la propiedad orientation que a su vez incluyan sentencias Transform con valores 90degr o 270deg."
+        },
+        "2.5.4": {
+          "Tests" : "Se verifica que los campos de formulario con autocomplete sean correctos",
+          "Comprobación" : "<p>Se buscan aquellos campos de formulario compatibles con atributo autocomplete y se verifica que los valores sean correctos según los tipos descritos en HTML 5.2.</p><p>Los campos de formulario en los que es de aplicación el atributo autocomplete son los siguientes:</p><ul><li>INPUT, en concreto con los siguientes type = “text, hidden, search, password, url, e-mail, telephone, number, month, date”</li><li>SELECT</li><li>TEXTAREA</li></ul><p>Los valores válidos pueden deben formar parte de las cadenas siguientes:</p><ul><li>on, off,</li><li>shipping, billing, name, honorific-prefix, given-name, additional-name, family-name, honorific-suffix, nickname, username, new-password, current- password, organization-title, organization, street-address, address-line1, address-line2, address-line3, address-level4, address-level3, address-level2, address-level1, country, country-name, postal-code, cc-name, cc-given- name, cc-additional-name, cc-family-name, cc-number, cc-exp, cc-exp- month, cc-exp-year, cc-csc, cc-type, transaction-currency, transaction- amount, language, bday, bday-day, bday-month, bday-year, sex, url, photo,</li><li>home, work, mobile, fax, pager,</li><li>tel, tel-country-code, tel-national, tel-area-code, tel-local, tel-local-prefix, tel-local-suffix, tel-extension, email, impp</li></ul>"
+        }
+      }
+    },
+    { 
+      "Identificador" : "2.6. Navegación consistente",
+      "Explicación" : "Se verifica que el documento analizado posea una navegación consistente, ayudando a que el usuario sepa en todo momento cómo acceder a la información que desea. Si se considera que la navegación es consistente, se le asignará el valor 1 con modalidad pasa; si se detecta algún problema menor en la página, se le asignará un valor 0.5 con modalidad pasa; mientras que si se considera que la navegación no es consistente, se le asignará el valor 0 con modalidad falla. Si la página no tiene elementos de navegación, esta verificación no puntuará.",
+      "Nivel" : "AA",
+      "Resultados" : {
+        "A": {
+          "Resultado" : "No hay enlaces",
+          "Valor" : "No aplica",
+          "Modalidad" : "Pasa"
+        },
+        "B": {
+          "Resultado" : "La navegación es correcta (todas las verificaciones son adecuadas)",
+          "Valor" : "1",
+          "Modalidad" : "Pasa"
+        },
+        "C": {
+          "Resultado" : "La navegación es correcta aunque en la página hay como mucho 1 enlace roto dentro del dominio o hasta 2 enlaces externos rotos",
+          "Valor" : "0.5",
+          "Modalidad" : "Pasa"
+        },
+        "D": {
+          "Resultado" : "La navegación es inconsistente",
+          "Valor" : "0",
+          "Modalidad" : "Falla"
+        }
+      }, 
+      "Comprobaciones": {
+        "2.6.1": {
+          "Tests" : "Se verifica que los enlaces no estén rotos",
+          "Comprobación" : "<p>Se verifica que los enlaces de la página realmente funcionen, y no nos lleven a páginas que devuelvan el código 404. Los distintos casos considerados son:</p><p>Página sin enlaces rotos o con hasta un enlace externo roto:</p><p>puntuación 1, modalidad pasa.</p><p>Página con un enlace dentro del dominio o más de uno y menos de 4 enlaces externos rotos:</p><p>puntuación 0.5, modalidad pasa.</p><p>Página con dos o más enlaces dentro del dominio o cuatro o más enlaces externos rotos:</p><p>puntuación 0, modalidad falla.</p>"
+        },
+        "2.6.2": {
+          "Tests" : "Se verifica que no haya dos enlaces adyacentes que apuntan al mismo destino.",
+          "Comprobación" : "<p>Se buscan los enlaces de la página y se verifica que no tengan un enlace justo a continuación que apunte a la misma localización remota. Se consideran enlaces adyacentes aquellos que están separados por un carácter y/o un conjunto de espacios en blanco (sin tener en cuenta el marcado de las etiquetas de HTML).</p><p>No se tienen en cuenta aquellos enlaces que apunten al destino “#”.</p>"
+        }
+      }
+    }
+  ]
+}  
