@@ -184,6 +184,11 @@ const temas =  {
           'nombre' : 'anexob',
         },
         {
+          'tituloSubtema' : 'Metodología informe',
+          'ruta' : 'assets/une/',
+          'nombre' : 'metodologia',
+        },
+        {
           'tituloSubtema' : 'Muestra',
           'ruta' : 'assets/une/',
           'nombre' : 'muestra',
