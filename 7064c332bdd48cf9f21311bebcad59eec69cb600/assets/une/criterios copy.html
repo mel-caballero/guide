@@ -6,14 +6,12 @@
     <table id="table" class="table table-responsive table-light pt-5" width="100%">
       <thead class="table-dark">
         <tr>
-          <th scope="col">Proyecto</th>
-          <th scope="col">ID Caso</th>
-          <th scope="col">Test Type</th>
-          <th scope="col">Resumen</th>
-          <th scope="col">Descripción</th>
-          <th scope="col">Acción</th>
-          <th scope="col">Datos</th>
-          <th scope="col">Herramientas</th>
+          <th scope="col">Criterio</th>
+          <th scope="col">Tipo de evaluación</th>
+          <th scope="col">Condición</th>
+          <th scope="col">Precondiciones</th>
+          <th scope="col">Procedimiento</th>
+          <th scope="col">Resultado</th>
         </tr>
       </thead>
     </table>
@@ -46,14 +44,26 @@
         'copy', 'csv', 'excel', 'pdf', 'print'
       ],
       columns: [
-        { data: 'Proyecto' },
-        { data: 'ID Caso' },
-        { data: 'Test Type' },
-        { data: 'Resumen' },
-        { data: 'Descripción' },
-        { data: 'Acción' },
-        { data: 'Datos' },
-        { data: 'Herramientas' }
+        { data: 'criterio' },
+        { data: 'tipoEv' },
+        { data: 'condicion' },
+        { data: 'precondicion' },
+        { data: 'procedimiento' },
+        { data: 'resultado',
+          defaultContent: '',
+          render: function (data, type, row, meta) {
+            if (!(data == null || data['Superado'] == "")) {
+              let result = '<ul>'
+              for (const key in data) {
+                if (Object.hasOwnProperty.call(data, key)) {
+                  result += '<li>' + key + ' : ' + data[key] + '</li>';
+                  
+                }
+              }
+              return result += '</ul>'
+            }
+          },
+        }
       ],
     });
     table.on('draw', function() {
