@@ -6,7 +6,7 @@ const year = date.getFullYear();
 
 $(document).ready(function() {
   createMenu();
-  createFooterText();
+  //createFooterText();
   let param = new URLSearchParams(window.location.search).get('param');
   refreshContent(param);
 });

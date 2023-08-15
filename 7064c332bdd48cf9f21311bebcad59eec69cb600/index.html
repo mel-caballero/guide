@@ -18,24 +18,31 @@
   <link rel="shortcut icon" href="img/favicon.ico">
   <title>Guía de Accesibilidad</title>
 </head>
-<body class="container-fluid p-0">
-  <header id="header" class="row m-0">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Menú">
-          <span class="navbar-toggler-icon"></span>
+<body class="">
+  <header class="row main-color">
+    <nav id="header-nav" aria-label="Menú principal" class="navbar navbar-expand-md main-color">
+      <div class="container"><h1>Guía de accesibilidad</h1>
+        <button class="navbar-toggler" aria-label="Menú desplegable" type="button" aria-controls="menuprincipal" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#menuprincipal">
+          <svg role="img" class="bi bi-list text-white" aria-hidden="true" width="40" height="40" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg>
         </button>
-        <h1 class="navbar-brand text-white">Guía de accesibilidad</h1>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div id="menuprincipal" class="collapse navbar-collapse">
           <ul id="menu" class="navbar-nav me-auto mb-2 mb-lg-0">
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <main id="content" class="m-0 px-3 py-5">
+  <main id="content" class="row p-5">
   </main>
-  <footer id="footer" class="row m-0 p-2 text-center"></footer>
+  <footer>
+		<svg role="img" class="separator" aria-hidden="true" viewBox="0 0 500 40">
+			<path d="M 0,0 C 150,70 250,-20 500,25 L 500,0 L 0,0" fill="#ADA2FF"></path>
+			<path d="M 0,0 C 150,60 250,-30 500,25 L 500,0 L 0,0" fill="#554994"></path>
+			<path d="M 0,0 C 150,50 250,-40 500,25 L 500,0 L 0,0" fill="#2b1154"></path>
+		</svg>
+	</footer>
 
   <!-- jQuery Core 3.6.0 -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
