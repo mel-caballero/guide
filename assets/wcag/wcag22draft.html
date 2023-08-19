@@ -42,8 +42,8 @@
 			<label for="enlaces" class="btn btn-secondary">Enlaces</label>
 
     </div>
-    <table id="table" class="table table-responsive table-light pt-5" width="100%">
-      <thead class="table-dark">
+    <table id="table" class="table table-responsive pt-5" width="100%">
+      <thead class="main-color">
         <tr>
           <th scope="col">Criterio</th>
           <th scope="col">Nivel</th>
@@ -131,7 +131,7 @@
 
     function format(data) {
       if(data.tests !== null){
-        var table = "<table class=\"table table-light\">";
+        var table = "<table class=\"table\">";
         $.each(data.tests, function(k, v){
             table += "<tr><td>" + k + "</td><td>" + v.verificacion + "</td><td>" + v.herramientas + "</td></tr>";
         });

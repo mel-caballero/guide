@@ -149,11 +149,6 @@ const temas =  {
           'nombre' : 'wcag21',
         },
         {
-          'tituloSubtema' : 'WCAG 2.1. Tests',
-          'ruta' : 'assets/wcag/',
-          'nombre' : 'wcag21tests',
-        },
-        {
           'tituloSubtema' : 'WCAG 2.2. Draft',
           'ruta' : 'assets/wcag/',
           'nombre' : 'wcag22draft',
@@ -165,45 +160,6 @@ const temas =  {
         }
       ]
     },
-    {
-      'tituloTema' : 'UNE',
-      'subtema' : [
-        {
-          'tituloSubtema' : 'Criterios UNE EN-301 549',
-          'ruta' : 'assets/une/',
-          'nombre' : 'criterios',
-        },
-        {
-          'tituloSubtema' : 'Árbol de decisiones',
-          'ruta' : 'assets/une/',
-          'nombre' : 'arboldecisiones',
-        },
-        {
-          'tituloSubtema' : 'Anexo B',
-          'ruta' : 'assets/une/',
-          'nombre' : 'anexob',
-        },
-        {
-          'tituloSubtema' : 'Muestra',
-          'ruta' : 'assets/une/',
-          'nombre' : 'muestra',
-        },
-        {
-          'tituloSubtema' : 'Tabla detallada',
-          'ruta' : 'assets/une/',
-          'nombre' : 'tabladetallada',
-        }
-      ]
-    },
-    {
-      'tituloTema' : 'Testing',
-      'subtema' : [
-        {
-          'tituloSubtema' : 'Enlaces de interés',
-          'ruta' : 'assets/testing/',
-          'nombre' : 'enlacesTesting',
-        }
-      ]
-    },
+    
   ]
 }
