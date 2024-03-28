@@ -144,14 +144,9 @@ const temas =  {
           'nombre' : 'wcag-principios',
         },
         {
-          'tituloSubtema' : 'WCAG 2.1.',
+          'tituloSubtema' : 'WCAG 2.2.',
           'ruta' : 'assets/wcag/',
-          'nombre' : 'wcag21',
-        },
-        {
-          'tituloSubtema' : 'WCAG 2.2. Draft',
-          'ruta' : 'assets/wcag/',
-          'nombre' : 'wcag22draft',
+          'nombre' : 'wcag22',
         },
         {
           'tituloSubtema' : 'WCAG 3.0. Draft',
@@ -160,6 +155,35 @@ const temas =  {
         }
       ]
     },
-    
+    {
+      'tituloTema' : 'UNE',
+      'subtema' : [
+        {
+          'tituloSubtema' : 'Árbol de decisiones',
+          'ruta' : 'assets/une/',
+          'nombre' : 'arboldecisiones',
+        },
+        {
+          'tituloSubtema' : 'Anexo B',
+          'ruta' : 'assets/une/',
+          'nombre' : 'anexob',
+        },
+        {
+          'tituloSubtema' : 'Metodología informe',
+          'ruta' : 'assets/une/',
+          'nombre' : 'metodologia',
+        },
+        {
+          'tituloSubtema' : 'Muestra',
+          'ruta' : 'assets/une/',
+          'nombre' : 'muestra',
+        },
+        {
+          'tituloSubtema' : 'Tabla detallada',
+          'ruta' : 'assets/une/',
+          'nombre' : 'tabladetallada',
+        }
+      ]
+    },
   ]
 }
