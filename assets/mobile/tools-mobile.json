@@ -1,0 +1,256 @@
+{
+  "data": [
+    { 
+      "herramienta" : "Colour Contrast Analyser (CCA)",
+      "enlace" : "https://developer.paciellogroup.com/resources/contrastanalyser/", 
+      "plataforma" : "Escritorio",
+      "tipo" : ["Manual", "Tiempo de desarrollo", "Tiempo de ejecución"],
+      "descripcion" : "<p>Se trata de una herramienta de escritorio que permite medir el nivel de contraste de los elementos visuales y controles gráficos (textos, botones, etc.). Está disponible para Windows y Mac en múltiples idiomas.</p><p>Para ello ofrece:</p><ul><li>Una funcionalidad que determina el cumplimiento o incumplimiento del nivel de contraste requerido por las directrices de WCAG 2.1, que coincide con lo solicitado en la norma UNE-EN 301 549:2019 (ya que se basa en el nivel de conformidad AA de WCAG 2.1).</li><li>Un simulador que permite recrear las condiciones visuales de perfiles muy diferentes, como el de aquellas personas con daltonismo (Protanopia, Deuteranopia, Tritanopia) o cataratas. También permite visualizar la interfaz gráfica en escala de grises o con los colores invertidos. Gracias a esta funcionalidad el desarrollador puede ponerse en la piel de usuarios con capacidades diversas.</li></ul><p>Puede ser utilizada sobre capturas de pantalla de la aplicación móvil para valorar la legibilidad de los textos y componentes de la interfaz mostrados al usuario (según los ratios del WCAG 2.1), así como para evaluar cómo ven dicha aplicación las personas con las formas de discapacidad visual que permite simular.</p>"
+    },
+    { 
+      "herramienta" : "ColorTester",
+      "enlace" : "http://alfasado.net/apps/colortester.html", 
+      "plataforma" : "Escritorio",
+      "tipo" : ["Manual", "Tiempo de desarrollo", "Tiempo de ejecución"],
+      "descripcion" : ""
+    },
+    { 
+      "herramienta" : "Accessibility Color Wheel",
+      "enlace" : "https://www.giacomo.page/en/colorwheel/wheel.php", 
+      "plataforma" : "Online",
+      "tipo" : ["Manual", "Tiempo de desarrollo", "Tiempo de ejecución"],
+      "descripcion" : ""
+    },
+    { 
+      "herramienta" : "Accessible Brand Colors",
+      "enlace" : "https://abc.useallfive.com/", 
+      "plataforma" : "Online",
+      "tipo" : ["Manual", "Tiempo de desarrollo", "Tiempo de ejecución"],
+      "descripcion" : ""
+    },
+    { 
+      "herramienta" : "Accessible Colour Evaluator",
+      "enlace" : "http://daprlab.com/ace/", 
+      "plataforma" : "Online",
+      "tipo" : ["Manual", "Tiempo de desarrollo", "Tiempo de ejecución"],
+      "descripcion" : ""
+    },
+    { 
+      "herramienta" : "Color Contrast Checker",
+      "enlace" : "https://image-color.com/color-contrast.html", 
+      "plataforma" : "Online",
+      "tipo" : ["Manual", "Tiempo de desarrollo", "Tiempo de ejecución"],
+      "descripcion" : ""
+    },
+    { 
+      "herramienta" : "Contrast Checker",
+      "enlace" : ["http://contrastchecker.com/"], 
+      "plataforma" : "Online",
+      "tipo" : ["Manual", "Tiempo de desarrollo", "Tiempo de ejecución"],
+      "descripcion" : ""
+    },
+    { 
+      "herramienta" : "Contrast-Finder",
+      "enlace" : "http://contrast-finder.tanaguru.com/", 
+      "plataforma" : "Online",
+      "tipo" : ["Manual", "Tiempo de desarrollo", "Tiempo de ejecución"],
+      "descripcion" : ""
+    },
+    { 
+      "herramienta" : "WhoCanUse",
+      "enlace" : "https://whocanuse.com", 
+      "plataforma" : "Online",
+      "tipo" : ["Manual", "Tiempo de desarrollo", "Tiempo de ejecución"],
+      "descripcion" : "También tiene un simulador de diferentes tipos de problemas visuales"
+    },
+    { 
+      "herramienta" : "Contrasts",
+      "enlace" : "https://apps.apple.com/de/app/contrasts/id1515015989", 
+      "plataforma" : "iOS",
+      "tipo" : ["Manual", "Tiempo de desarrollo", "Tiempo de ejecución"],
+      "descripcion" : ""
+    },
+    { 
+      "herramienta" : "Mobile Accessibility plugin [PhoneGap]",
+      "enlace" : "https://github.com/phonegap/phonegap-mobile-accessibility", 
+      "plataforma" : "",
+      "tipo" : ["Manual", "Tiempo de desarrollo"],
+      "descripcion" : "<p>Plugin de PhoneGap que brinda información de estado relacionada con varias de las características de accesibilidad de los sistemas operativos para móviles, permitiendo saber, por ejemplo, si está activado el lector de pantalla, si se ha habilitado la inversión de colores o cuál es el tamaño preferido para el texto. Además, permite a una aplicación mandar cadenas para ser leídas por el lector de pantalla o ejecutar comandos para detener el funcionamiento de dicho servicio de accesibilidad.</p><p>Se puede utilizar a la hora de generar aplicaciones móviles accesibles híbridas, basadas en componentes web, para las plataformas soportadas: Amazon Fire OS, Android o iOS.</p>"
+    },
+    { 
+      "herramienta" : "Accessibility Tools Framework (ACTF) [Eclipse IDE]",
+      "enlace" : "http://www.eclipse.org/actf/", 
+      "plataforma" : "",
+      "tipo" : ["Automática", "Manual", "Tiempo de desarrollo"],
+      "descripcion" : "<p>ACTF es un framework con el que los desarrolladores pueden construir herramientas para evaluar y mejorar la accesibilidad de las aplicaciones y contenidos, de modo que puedan ser utilizados sin dificultad por las personas con discapacidad. Ofrece un conjunto de herramientas de ejemplo muy diversas, generadas a partir del framework, como herramientas de validación, aplicaciones de simulación de tecnologías de apoyo, herramientas de visualización de la usabilidad, herramientas de pruebas unitarias e interfaces alternativas accesibles para las aplicaciones. Todo ello se encuentra definido sobre el propio entorno provisto por Eclipse, lo que facilita su integración en el flujo de trabajo y favorece la creación de aplicaciones y contenidos accesibles de forma asequible.</p>"
+    },
+    { 
+      "herramienta" : "Accessibility Scanner",
+      "enlace" : "https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor", 
+      "plataforma" : "Android",
+      "tipo" : ["Automática", "Tiempo de ejecución"],
+      "descripcion" : "<p>Esta herramienta de análisis automático se instala como una aplicación y se integra en las opciones de accesibilidad del dispositivo. Una vez hecho esto, podemos ejecutarla sobre una pantalla de cualquier aplicación. El resultado será una lista de sugerencias que podemos poner en práctica para mejorar la accesibilidad de la misma.</p>"
+    },
+    { 
+      "herramienta" : "Accessibility Test Framework for Android",
+      "enlace" : "https://github.com/google/Accessibility-Test-Framework-for-Android", 
+      "plataforma" : "Android",
+      "tipo" : ["Automática","Tiempo de desarrollo"],
+      "descripcion" : "<p>Se trata de una API que da acceso a las propiedades de accesibilidad de las pantallas de la aplicación. Con ella podemos incluir criterios de accesibilidad en nuestros test automáticos.</p>"
+    },
+    { 
+      "herramienta" : "Node Tree Debugging",
+      "enlace" : "https://developer.android.com/guide/topics/ui/accessibility/node-tree-debugging.html", 
+      "plataforma" : "Android",
+      "tipo" : ["Manual", "Tiempo de desarrollo"],
+      "descripcion" : "<p>Esta herramienta está incluida dentro del lector de pantalla TalkBack. Permite visualizar la jerarquía de elementos de la interfaz tal y como se expone de cara a la capa de accesibilidad, por lo que puede ser útil para fases de desarrollo y debugging.</p>"
+    },
+    { 
+      "herramienta" : "UI Automator Viewer",
+      "enlace" : "https://developer.android.com/training/testing/ui-automator", 
+      "plataforma" : "Android",
+      "tipo" : ["Manual", "Tiempo de desarrollo"],
+      "descripcion" : "<p>Herramienta que permite inspeccionar los elementos de la interfaz gráfica (GUI), obteniendo las propiedades de la capa de accesibilidad. Es útil para encontrar dónde se encuentran los errores que se hayan podido detectar mediante otras formas de testing. La aplicación se encuentra en el directorio %android-sdk%/tools/.</p>"
+    },
+    { 
+      "herramienta" : "Lint",
+      "enlace" : "http://tools.android.com/tips/lint", 
+      "plataforma" : "Android",
+      "tipo" : ["Automática", "Tiempo de desarrollo"],
+      "descripcion" : "<p>Lint es una herramienta integrada en Android Studio. Muestra advertencias sobre posibles problemas de accesibilidad localizados en el código fuente. Con ella, se puede acceder rápidamente al fragmento que presenta el inconveniente y resolverlo, ofreciéndonos un mensaje descriptivo del fallo.</p>"
+    },
+    { 
+      "herramienta" : "Espresso",
+      "enlace" : "https://developer.android.com/training/testing#Espresso", 
+      "plataforma" : "Android",
+      "tipo" : ["Automática", "Tiempo de desarrollo"],
+      "descripcion" : "<p><a href=\"https://developer.android.com/training/testing/espresso\">Espresso</a> <a href=\"https://developer.android.com/reference/androidx/test/espresso/accessibility/AccessibilityChecks?hl=es-419\">URL Librería</a></p><p>Espresso es una librería de tests orientada a proporcionar una manera rápida y sencilla de realizar test automatizados. Además, permite comprobar si ciertos comportamientos o condiciones se cumplen.</p><p>A Espresso se le pueden añadir una librería de tests de accesibilidad (AccessibilityChecksfor Espresso) permite agregar verificaciones de accesibilidad a las pruebas de Espresso existentes sobre una determinada pantalla de la aplicación.</p>"
+    },
+    { 
+      "herramienta" : "Robolectric",
+      "enlace" : "http://robolectric.org/", 
+      "plataforma" : "Android",
+      "tipo" : ["Automática", "Tiempo de desarrollo"],
+      "descripcion" : "<p><a href=\" http://robolectric.org/javadoc/3.1/org/robolectric/util/AccessibilityUtil.html\">URL Librería</a></p><p>Se trata de una librería que permite ejecutar test de aplicaciones Android directamente sobre una JVM (Java Virtual Machine), en lugar de requerir de un emulador.</p><p>A través de una librería de accesibilidad (AccessibilityUtil for robolectric) permite comprobar si existen problemas de accesibilidad en una determinada pantalla de la aplicación.</p>"
+    },
+    { 
+      "herramienta" : "Remote Debugging WebViews",
+      "enlace" : "https://developers.google.com/web/tools/chrome-devtools/remote-debugging/webviews", 
+      "plataforma" : "Android",
+      "tipo" : ["Manual", "Tiempo de desarrollo"],
+      "descripcion" : "<p>Se trata de una herramienta que permite depurar el contenido de WebView en las APPs de Android nativas a través de depuración remota en Chrome DevTools.</p>"
+    },
+    { 
+      "herramienta" : "Accessibility Engine (axe) for Android",
+      "enlace" : "https://play.google.com/store/apps/details?id=com.deque.axe.android", 
+      "plataforma" : "",
+      "tipo" : ["Automática", "Tiempo de desarrollo"],
+      "descripcion" : "<p>Se trata de una herramienta que permite realizar test automáticos de accesibilidad tanto en aplicaciones nativas como híbridas en Android. Permite realizar análisis automatizado de secuencia de eventos y jerarquía de pantallas. Entre las reglas que permite comprobar están el análisis del contraste, el etiquetado de los elementos, así como el de las imágenes y la gestión del foco.</p><p>Permite generar informes de las pruebas realizadas y mostrarlos en un cuadro de mandos. Además, en el informe de errores, se muestran posibles soluciones de cómo arreglar los problemas de accesibilidad detectados.</p>"
+    },
+    { 
+      "herramienta" : "Accessibility Insights for Android",
+      "enlace" : "https://accessibilityinsights.io/docs/en/android/overview/", 
+      "plataforma" : "Android",
+      "tipo" : ["Automática", "Tiempo de desarrollo", "Tiempo de ejecución"],
+      "descripcion" : "<p>Se trata de una herramienta que permite realizar test automáticos de accesibilidad. Permite generar informes de las pruebas realizadas donde se muestran posibles soluciones de cómo arreglar los problemas de accesibilidad detectados. Además, el informe permite mostrar la captura de la pantalla que se esté probando, resaltando aquellos objetos dentro de la pantalla donde se hayan dado fallos de accesibilidad.</p>"
+    },
+    { 
+      "herramienta" : "A11y Ally",
+      "enlace" : "https://play.google.com/store/apps/details?id=com.quittle.a11yally", 
+      "plataforma" : "Android",
+      "tipo" : ["Automática", "Tiempo de ejecución"],
+      "descripcion" : "<p><a href=\"https://github.com/quittle/a11y-ally\">Repositorio Github A11y Ally</a></p><p>A11y Ally es una herramienta para ayudar a los desarrolladores a analizar la accesibilidad de aplicaciones Android. Proporciona información de la aplicación sobre lo que experimentan los usuarios con la tecnología de asistencia del dispositivo móvil cuando la usan. Adicionalmente, A11y Ally puede proporcionar informes de las pruebas automatizadas que se realicen.</p><p>Entre sus principales características se encuentran, filtrado de los indicadores visuales que se desean probar y feedback visual de los problemas de accesibilidad encontrados.</p><p>Actualmente se encuentra en desarrollo la comprobación de los problemas de color para diferentes tipos de problemas visuales.</p>"
+    },
+    { 
+      "herramienta" : "Accessibility Inspector",
+      "enlace" : "https://developer.apple.com/library/archive/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityiniOSSimulatorwithAccessibilityInspector/TestAccessibilityiniOSSimulatorwithAccessibilityInspector.html", 
+      "plataforma" : "iOS",
+      "tipo" : ["Manual", "Tiempo de desarrollo"],
+      "descripcion" : "Accessibility Inspector es una herramienta integrada en el entorno de desarrollo XCode. Permite observar las propiedades de accesibilidad de los componentes de la interfaz, sus acciones asociadas y su posición en la jerarquía de accesibilidad."
+    },
+    { 
+      "herramienta" : "Accessibility Verifier",
+      "enlace" : "https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html", 
+      "plataforma" : "iOS",
+      "tipo" : ["Automática", "Tiempo de ejecución"],
+      "descripcion" : "<p>Esta herramienta ofrece la generación de un informe con los problemas de accesibilidad detectados de manera automática sobre la aplicación al ejecutar los tests de prueba que se hayan seleccionado.</p>"
+    },
+    { 
+      "herramienta" : "AccessibilitySnapshot",
+      "enlace" : "https://github.com/cashapp/AccessibilitySnapshot", 
+      "plataforma" : "iOS",
+      "tipo" : ["Automática", "Tiempo de desarrollo"],
+      "descripcion" : "<p>Esta herramienta ofrece la posibilidad de incorporar pruebas de accesibilidad en el entorno de desarrollo de iOS. Entre sus características principales destaca la posibilidad de realizar capturas de pantalla, además de mostrar indicadores de aquellos puntos en los que se activan características de accesibilidad.</p>"
+    },
+    { 
+      "herramienta" : "A11yUITests",
+      "enlace" : "https://github.com/rwapp/A11yUITests", 
+      "plataforma" : "iOS",
+      "tipo" : ["Automática", "Tiempo de desarrollo"],
+      "descripcion" : "<p>Esta herramienta ofrece la posibilidad de incorporar pruebas de accesibilidad en el entorno de desarrollo de iOS. Entre los test que se pueden realizar el de tamaño mínimo de interacción, el de etiquetado de imágenes o elementos interactivos.</p>"
+    },
+    { 
+      "herramienta" : "Google Scanner for A11y (GSCX)",
+      "enlace" : "https://github.com/google/GSCXScanner", 
+      "plataforma" : "iOS",
+      "tipo" : ["Automática", "Tiempo de desarrollo"],
+      "descripcion" : "<p>Esta herramienta es un framework para el desarrollo de aplicaciones iOS que permite analizar una aplicación para buscar fallos de accesibilidad y capturarlos y poder programar las pruebas necesarias de accesibilidad para hacer pruebas de regresión. El framework permite añadir comprobaciones (checks) adicionales en la búsqueda de fallos de accesibilidad.</p>"
+    },
+    { 
+      "herramienta" : "Google Toolbox for Accessibility for the iOS platform (GTXiLib)",
+      "enlace" : "https://github.com/google/GTXiLib", 
+      "plataforma" : "iOS",
+      "tipo" : ["Automática", "Tiempo de desarrollo"],
+      "descripcion" : "<p>Esta herramienta es un framework para la realización de pruebas de accesibilidad de aplicaciones iOS. Se integra con la librería de pruebas XCTest. En las pruebas permite añadir checks para comprobar las características de accesibilidad y tiene una API para crear test de accesibilidad específicos.</p>"
+    },
+    { 
+      "herramienta" : "UBKAccessibilityKit",
+      "enlace" : "https://github.com/NAB/UBKAccessibilityKit", 
+      "plataforma" : "iOS",
+      "tipo" : ["Automática", "Tiempo de desarrollo"],
+      "descripcion" : "<p>Esta herramienta permite auditar una APP de iOS comprobando los fallos de accesibilidad que presenta, sin la necesidad tener que parar e inspeccionar cada elemento vía Xcode. Entre las características de accesibilidad que permite comprobar se encuentra el contraste de los colores de la aplicación, validaciones y advertencias, problemas en el etiquetado de imágenes, y elementos de la interfaz.</p>"
+    },
+    { 
+      "herramienta" : "xiblint",
+      "enlace" : "https://github.com/lyft/xiblint", 
+      "plataforma" : "",
+      "tipo" : ["Automática", "Tiempo de desarrollo"],
+      "descripcion" : "<p>Permite realizar pruebas sobre la interfaz de usuario de una aplicación iOS para comprobar que cumple con las políticas de accesibilidad. Entre las características de accesibilidad que permite comprobar se encuentra los problemas en el etiquetado de imágenes, y elementos de la interfaz, identificadores de accesibilidad de las pantallas de la aplicación, tamaño del texto. Tiene en cuenta las métricas de la pantalla para el iPhone SE.</p>"
+    },
+    { 
+      "herramienta" : "UI Accessibility Checker (AccChecker)",
+      "enlace" : "https://docs.microsoft.com/es-es/windows/win32/winauto/ui-accessibility-checker", 
+      "plataforma" : "Windows",
+      "tipo" : ["Automática", "Manual", "Tiempo de desarrollo", "Tiempo de ejecución"],
+      "descripcion" : "<p>Permite probar diferentes escenarios, verificar la exactitud de la información accesible y descubrir problemas de accesibilidad en tiempo de ejecución. También es conocida como AccChecker. Se trata de una herramienta multipropósito que engloba tres funcionalidades diferentes:</p><ul><li>Una aplicación gráfica (GUI) que permite el testing manual, servicio de logging y generación de supresión.</li><li>Una API para usar en frameworks de testing automatizados.</li><li>Una aplicación de consola que soporta escenarios de test no gestionados en los que la API no puede utilizarse.</li></ul><p>Guía de accesibilidad de aplicaciones móviles (APPS) - versión 2 73</p><p>Es compatible con las dos capas de accesibilidad de Windows, MSAA y UIA.</p>"
+    },
+    { 
+      "herramienta" : "AccScope",
+      "enlace" : "https://docs.microsoft.com/es-es/windows/win32/winauto/accscope", 
+      "plataforma" : "Windows",
+      "tipo" : ["Manual", "Tiempo de desarrollo"],
+      "descripcion" : "AccScope es una herramienta pensada para chequear la accesibilidad de nuestra aplicación en las etapas de diseño y desarrollo de la misma. Gracias a ella, podemos ver las propiedades que se expondrán a un lector de pantalla y añadir información si lo consideramos necesario."
+    },
+    { 
+      "herramienta" : "Inspect",
+      "enlace" : "https://docs.microsoft.com/es-es/windows/win32/winauto/inspect-objects", 
+      "plataforma" : "Windows",
+      "tipo" : ["Manual", "Tiempo de ejecución"],
+      "descripcion" : "<p>Inspect expone los datos de accesibilidad de los componentes de la aplicación, así como los patrones de control (concretamente propiedades y patrones de control de Microsoft UI Automation y propiedades de Microsoft Active Accessibility). También nos permite examinar la jerarquía de elementos y saber aquellos que estarán incluidos en la capa de accesibilidad, con lo que se puede verificar la estructura de navegación de elementos de automatización en árbol de UI Automation y objetos accesibles en jerarquía de Microsoft Active Accessibility.</p><p>Su funcionamiento se asemeja a AccScope, aunque en este caso nos encontramos una estructura de navegación en forma de árbol, lo que lo convierte también en una herramienta accesible de por sí.</p>"
+    },
+    { 
+      "herramienta" : "Accessible Event Watcher (AccEvent)",
+      "enlace" : "https://docs.microsoft.com/es-es/windows/win32/winauto/accessible-event-watcher", 
+      "plataforma" : "Windows",
+      "tipo" : ["Manual", "Tiempo de desarrollo"],
+      "descripcion" : "AccEvent permite comprobar los eventos generados dentro de la interfaz de usuario de una aplicación y comprobar que son adecuados a la automatización de la interfaz de usuario con la capa de accesibilidad activa de Microsoft."
+    },
+    { 
+      "herramienta" : "Accessibility Insights",
+      "enlace" : "https://accessibilityinsights.io/docs/en/windows/overview/", 
+      "plataforma" : "Windows",
+      "tipo" : ["Manual", "Automática", "Tiempo de desarrollo", "Tiempo de ejecución"],
+      "descripcion" : "<p>Es una herramienta que ayuda a los desarrolladores a corregir problemas de accesibilidad. Tiene 3 características principales</p><ul><li>Live Inspect: permite comprobar que los elementos de una APP están correctamente diseñados para cumplir con los requisitos de accesibilidad cuando se selecciona el elemento en concreto o se le pasa el foco del teclado.</li><li>FastPass: Permite realizar tests automatizados para comprobar que se cumplen los requisitos de accesibilidad, además posee una ayuda visual que permite identificar errores críticos de accesibilidad relativos al acceso por teclado.</li><li>Troubleshooting: Permite el diagnóstico de los siguientes problemas de accesibilidad: comprobación del contraste, grabación de los eventos generados de la aplicación para ver si se comportan como se esperaba y comprobación de un control de la aplicación en concreto para ver si responde correctamente a la entrada del usuario.</li></ul>"
+    }
+  ]
+}
