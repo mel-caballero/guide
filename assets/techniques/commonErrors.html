@@ -6,8 +6,8 @@
     <table id="table" class="table table-responsive pt-5" width="100%">
       <thead class="main-color">
         <tr>
-          <th scope="col">Error</th>
           <th scope="col">Criterio</th>
+          <th scope="col">Error</th>
           <th scope="col">Técnica</th>
         </tr>
       </thead>
@@ -28,8 +28,8 @@
       language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
       ajax: './assets/techniques/commonErrors.json',
       columns: [
-        { data: 'error' },
         { data: 'criterio_wcag' },
+        { data: 'error' },
         { data: 'tecnicas' }
       ],
     });
