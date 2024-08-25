@@ -156,6 +156,46 @@ const temas =  {
       ]
     },
     {
+      'tituloTema' : 'Techniques',
+      'subtema' : [
+        {
+          'tituloSubtema' : 'Wcag Quickref',
+          'ruta' : 'assets/techniques/',
+          'nombre' : 'success_criteria',
+        },
+        {
+          'tituloSubtema' : 'Errores comunes',
+          'ruta' : 'assets/techniques/',
+          'nombre' : 'commonErrors',
+        },
+        {
+          'tituloSubtema' : 'PDF Techniques',
+          'ruta' : 'assets/techniques/',
+          'nombre' : 'pdf-techniques',
+        },
+        {
+          'tituloSubtema' : 'ARIA Techniques',
+          'ruta' : 'assets/techniques/',
+          'nombre' : 'wcag_aria_techniques',
+        },
+        {
+          'tituloSubtema' : 'Client Side Script Techniques',
+          'ruta' : 'assets/techniques/',
+          'nombre' : 'wcag_client-side-script_techniques',
+        },
+        {
+          'tituloSubtema' : 'CSS Techniques',
+          'ruta' : 'assets/techniques/',
+          'nombre' : 'wcag_css_techniques',
+        },
+        {
+          'tituloSubtema' : 'Failures Techniques',
+          'ruta' : 'assets/techniques/',
+          'nombre' : 'wcag_failures_techniques',
+        }
+      ]
+    },
+    {
       'tituloTema' : 'UNE Web',
       'subtema' : [
         {
