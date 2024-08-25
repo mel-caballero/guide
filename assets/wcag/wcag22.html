@@ -74,89 +74,19 @@
           {
             header: 'Categoría',
             options: [
-              { label: 'Contenido',
-                value: function(rowData, rowIdx){
-                  if(rowData !== undefined) {
-                    return rowData['category'].includes('Contenido'); 
-                  }
-                  return true;
-                }
-              },
-              { label: 'Audio-Vídeo',
-                value: function(rowData, rowIdx){
-                  if(rowData !== undefined) {
-                    return rowData['category'].includes('Audio-Vídeo'); 
-                  }
-                  return true;
-                }
-              },
-              { label: 'Formularios',
-                value: function(rowData, rowIdx){
-                  if(rowData !== undefined) {
-                    return rowData['category'].includes('Formularios'); 
-                  }
-                  return true;
-                }
-              },
-              { label: 'UI',
-                value: function(rowData, rowIdx){
-                  if(rowData !== undefined) {
-                    return rowData['category'].includes('UI'); 
-                  }
-                  return true;
-                }
-              },
-              { label: 'Color',
-                value: function(rowData, rowIdx){
-                  if(rowData !== undefined) {
-                    return rowData['category'].includes('Color'); 
-                  }
-                  return true;
-                }
-              },
-              { label: 'Tamaño',
-                value: function(rowData, rowIdx){
-                  if(rowData !== undefined) {
-                    return rowData['category'].includes('Tamaño'); 
-                  }
-                  return true;
-                }
-              },
-              { label: 'Contenido Dinámico',
-                value: function(rowData, rowIdx){
-                  if(rowData !== undefined) {
-                    return rowData['category'].includes('Contenido Dinámico'); 
-                  }
-                  return true;
-                }
-              },
-              { label: 'Mecanismos entrada',
-                value: function(rowData, rowIdx){
-                  if(rowData !== undefined) {
-                    return rowData['category'].includes('Mecanismos entrada'); 
-                  }
-                  return true;
-                }
-              },
-              { label: 'Controles Personalizados',
-                value: function(rowData, rowIdx){
-                  if(rowData !== undefined) {
-                    return rowData['category'].includes('Controles Personalizados'); 
-                  }
-                  return true;
-                }
-              },
-              { label: 'Enlaces',
-                value: function(rowData, rowIdx){
-                  if(rowData !== undefined) {
-                    return rowData['category'].includes('Enlaces'); 
-                  }
-                  return true;
-                }
-              },
-
-              
-
+              { label: 'Adaptabilidad', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Adaptabilidad'); } return true; } },
+              { label: 'Botones', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Botones'); } return true; } },
+              { label: 'Color', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Color'); } return true; } },
+              { label: 'Componentes', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Componentes'); } return true; } },
+              { label: 'Contenido Dinámico', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Contenido Dinámico'); } return true; } },
+              { label: 'Enlaces', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Enlaces'); } return true; } },
+              { label: 'Formularios', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Formularios'); } return true; } },
+              { label: 'Imágenes', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Imágenes'); } return true; } },
+              { label: 'Multimedia', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Multimedia'); } return true; } },
+              { label: 'Navegación', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Navegación'); } return true; } },
+              { label: 'Semántica', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Semántica'); } return true; } },
+              { label: 'Sensorial', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Sensorial'); } return true; } },
+              { label: 'Teclado', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Teclado'); } return true; } },
             ],
           }
         ],
