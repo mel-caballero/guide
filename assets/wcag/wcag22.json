@@ -221,7 +221,7 @@
       "examples": "https://www.w3.org/WAI/WCAG21/Understanding/sign-language-prerecorded.html#examples",
       "techniques": "https://www.w3.org/WAI/WCAG21/Understanding/sign-language-prerecorded.html#techniques",
       "category": [
-        "Audio-Vídeo"
+        "Multimedia"
       ],
       "tests": {
         "A": {
@@ -242,7 +242,7 @@
       "examples": "https://www.w3.org/WAI/WCAG21/Understanding/extended-audio-description-prerecorded.html#examples",
       "techniques": "https://www.w3.org/WAI/WCAG21/Understanding/extended-audio-description-prerecorded.html#techniques",
       "category": [
-        "Audio-Vídeo"
+        "Multimedia"
       ],
       "tests": {
         "A": {
@@ -263,7 +263,7 @@
       "examples": "https://www.w3.org/WAI/WCAG21/Understanding/media-alternative-prerecorded.html#examples",
       "techniques": "https://www.w3.org/WAI/WCAG21/Understanding/media-alternative-prerecorded.html#techniques",
       "category": [
-        "Audio-Vídeo"
+        "Multimedia"
       ],
       "tests": {
         "A": {
@@ -280,7 +280,7 @@
       "objetivo": "Proporcionar una alternativa para los medios basados en el tiempo que presenta información equivalente al contenido de solo audio en vivo.",
       "goal": "Se proporciona una alternativa para los medios basados en el tiempo que presenta información equivalente al contenido de solo audio en vivo.",
       "intent": "La intención de este Criterio de Conformidad es hacer que la información transmitida por audio en vivo, como videoconferencias, discursos en vivo y transmisiones por Internet de radio, sea accesible mediante el uso de una alternativa de texto. Un servicio de subtítulos de texto en vivo permitirá que el audio en vivo sea accesible para las personas sordas o con problemas de audición, o que de otra manera no pueden escuchar el audio. Dichos servicios utilizan un operador humano capacitado que escucha lo que se dice y usa un teclado especial para ingresar el texto con solo un pequeño retraso. Pueden capturar un evento en vivo con un alto grado de fidelidad, y también insertar notas en cualquier audio no hablado que es esencial para comprender el evento. Una transcripción es a veces una posibilidad si el audio en vivo sigue un guión establecido; pero se prefiere un servicio de subtítulos en vivo porque se reproduce al mismo ritmo que el audio y puede adaptarse a cualquier desviación del guión que pueda ocurrir. No se considerará que cumple con este Criterio de cumplimiento. # Este criterio de cumplimiento se diseñó para aplicarse a la transmisión de audio y no requiere que las llamadas de audio bidireccionales entre dos o más personas a través de aplicaciones web deban estar subtituladas independientemente de las necesidades de los usuarios. La responsabilidad de proporcionar subtítulos recaería en los proveedores de contenido (las personas que llaman) o en la persona que llama 'anfitriona', y no en la aplicación.",
-      "benefits": "Audio-Vídeo",
+      "benefits": "Multimedia",
       "examples": "https://www.w3.org/WAI/WCAG21/Understanding/audio-only-live.html#examples",
       "techniques": "https://www.w3.org/WAI/WCAG21/Understanding/audio-only-live.html#techniques",
       "category": [
@@ -716,7 +716,7 @@
       "examples": "",
       "techniques": "https://www.w3.org/WAI/WCAG21/Understanding/low-or-no-background-audio.html#techniques",
       "category": [
-        "Audio-Vídeo"
+        "Multimedia"
       ],
       "tests": {
         "A": {
