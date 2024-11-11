@@ -1,0 +1,73 @@
+<section id="card" class="card">
+  <header class="card-header text-center">
+    <h2>WCAG Técnicas y Fallos</h2>
+  </header>
+  <article class="card-body">
+    <table id="wcag-table" class="table table-responsive pt-5" width="100%">
+      <thead class="main-color">
+        <tr>
+          <th scope="col">Criterio</th>
+          <th scope="col">Técnica</th>
+          <th scope="col">Cumple</th>
+        </tr>
+      </thead>
+    </table>
+  </article>
+</section>
+
+<script>
+  $(document).ready(function () {
+    let table = $('#wcag-table').DataTable({
+      info: true,
+      paging: false,
+      ordering: true,
+      searching: true,
+      searchPanes: {
+        cascadePanes: true,
+        columns: [0, 1],
+        layout: 'columns-2',
+        controls: false,
+      },
+      dom:  '<"row py-3" <"col-sm-12 col-md-6" i> <"col-sm-12 col-md-6" f> >' +
+            '<"row" <"col-sm-12" P> >' +
+            '<"row" <"col-sm-12" t> >' +
+            '<"row py-3" <"col-sm-12 col-md-6" i> >',
+      language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
+      ajax: {
+        url: './assets/techniques/wcag_quickref.json',
+        dataSrc: function (json) {
+          let data = [];
+          json.data.forEach(function(principle) {
+            principle.guidelines.forEach(function(guideline) {
+              guideline.success_criteria.forEach(function(criterion) {
+                criterion.techniques.forEach(function(technique) {
+                  data.push({
+                    criterio: criterion.title,
+                    tecnica_fallo: technique.title,
+                    url: technique.url
+                  });
+                });
+              });
+            });
+          });
+          return data;
+        }
+      },
+      columns: [
+        { data: 'criterio' }, // Columna para el nombre o número del criterio
+        { 
+          data: 'tecnica_fallo',
+          render: function (data, type, row) {
+            return '<a href="' + row.url + '">' + data + '</a>';
+          },
+        },
+        { 
+          data: null,
+          render: function () {
+            return '<input type="checkbox">';
+          },
+        },
+      ],
+    });
+  });
+</script>
