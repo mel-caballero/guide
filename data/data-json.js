@@ -192,7 +192,37 @@ const temas =  {
           'tituloSubtema' : 'Failures Techniques',
           'ruta' : 'assets/techniques/',
           'nombre' : 'wcag_failures_techniques',
-        }
+        },
+        {
+          'tituloSubtema' : 'General Techniques',
+          'ruta' : 'assets/techniques/',
+          'nombre' : 'wcag_general_techniques',
+        },
+        {
+          'tituloSubtema' : 'HTML Techniques',
+          'ruta' : 'assets/techniques/',
+          'nombre' : 'wcag_html_techniques',
+        },
+        {
+          'tituloSubtema' : 'PDF Techniques',
+          'ruta' : 'assets/techniques/',
+          'nombre' : 'wcag_pdf_techniques',
+        },
+        {
+          'tituloSubtema' : 'Server Side Script Techniques',
+          'ruta' : 'assets/techniques/',
+          'nombre' : 'wcag_server-side-script_techniques',
+        },
+        {
+          'tituloSubtema' : 'SMIL Techniques',
+          'ruta' : 'assets/techniques/',
+          'nombre' : 'wcag_smil_techniques',
+        },
+        {
+          'tituloSubtema' : 'Text Techniques',
+          'ruta' : 'assets/techniques/',
+          'nombre' : 'wcag_text_techniques',
+        },
       ]
     },
     {
@@ -240,5 +270,15 @@ const temas =  {
         }
       ]
     },
+    {
+      'tituloTema' : 'Talleres',
+      'subtema' : [
+        {
+          'tituloSubtema' : 'Creando Equipos Inclusivos',
+          'ruta' : 'assets/talleres/',
+          'nombre' : 'creando-equipos-inclusivos',
+        }
+      ]
+    }
   ]
 }
