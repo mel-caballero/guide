@@ -240,5 +240,15 @@ const temas =  {
         }
       ]
     },
+    {
+      'tituloTema' : 'Talleres',
+      'subtema' : [
+        {
+          'tituloSubtema' : 'Creando Equipos Inclusivos',
+          'ruta' : 'assets/talleres/',
+          'nombre' : 'creando-equipos-inclusivos',
+        }
+      ]
+    }
   ]
 }
