@@ -933,35 +933,45 @@
 </section>
 
 <script>
-  $(document).ready(function() {
-    $(':input[value = false]').attr('checked', 'true')
+  document.addEventListener("DOMContentLoaded", function () {
+    function checkJQuery() {
+      if (typeof jQuery !== "undefined") {
+        console.log("jQuery cargado correctamente. Ejecutando DataTables...");
 
-    for (i=2; i<=37; i++) {
-      $('#ques' + i ).hide();
-    }
-    $('#ques7').show();
-    $('#ques9').show();
-    $('#ques14').show();
-    $('#ques18').show();
-    $('#ques28').show();
-    $('#ques29').show();
-    $('#ques30').show();
-    $('#ques35').show();
-    $('#ques36').show();
-    $('#ques37').show();
+        $(':input[value = false]').attr('checked', 'true')
 
-    for (i=1; i<=9; i++) {
-      $('.bloque' + i).hide();
-    }
+      for (i=2; i<=37; i++) {
+        $('#ques' + i ).hide();
+      }
+      $('#ques7').show();
+      $('#ques9').show();
+      $('#ques14').show();
+      $('#ques18').show();
+      $('#ques28').show();
+      $('#ques29').show();
+      $('#ques30').show();
+      $('#ques35').show();
+      $('#ques36').show();
+      $('#ques37').show();
 
-    for (i=1; i<=37; i++) {
-      $('#q' + i + 'true').hide();
-      $('#q' + i + 'false').hide();
-    }
+      for (i=1; i<=9; i++) {
+        $('.bloque' + i).hide();
+      }
 
-    $('input[type=radio]').on('change', inputChange);
+      for (i=1; i<=37; i++) {
+        $('#q' + i + 'true').hide();
+        $('#q' + i + 'false').hide();
+      }
 
-  });
+      $('input[type=radio]').on('change', inputChange);
+
+        } else {
+          console.log("jQuery aún no está cargado. Reintentando en 50ms...");
+          setTimeout(checkJQuery, 50);
+        }
+      }   
+      checkJQuery();
+    });
 
   function inputChange() {
     let inputs = [''];

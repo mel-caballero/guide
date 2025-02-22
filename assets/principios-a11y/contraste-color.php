@@ -64,8 +64,11 @@
 </section>
 
 <script>
-  $(document).ready(function() {
-    contrastCheck();
+  document.addEventListener("DOMContentLoaded", function () {
+    function checkJQuery() {
+      if (typeof jQuery !== "undefined") {
+        console.log("jQuery cargado correctamente. Ejecutando DataTables...");
+        contrastCheck();
     linkContrastChecker();
 
     $('#texto').on('input change', contrastCheck);
@@ -76,6 +79,12 @@
     $('#bcolor').on('input change', linkContrastChecker);
     $('#lcolor').on('input change', linkContrastChecker);
     $('#underline').on('input change', linkContrastChecker);
+      } else {
+        console.log("jQuery aún no está cargado. Reintentando en 50ms...");
+        setTimeout(checkJQuery, 50);
+      }
+    }   
+    checkJQuery();
   });
 
   function contrastCheck() {
@@ -179,7 +188,7 @@
     if(res == 'pass') {
       return 'Correcto <span class="fs-3 text-success" aria-hidden="true">&#10003;</span>'
     } else {
-      return 'Incorrecto <span class="fs-1 text-danger" aria-hidden="true">&#65794;</span'
+      return 'Incorrecto <span class="fs-1 text-danger" aria-hidden="true">&#65794;</span>'
     }
   }
 </script>

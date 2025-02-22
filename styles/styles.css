@@ -212,3 +212,9 @@ a {
 
   & path { filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4)); }
 }
+
+ol.alpha  {
+  counter-reset: list;
+  list-style-type: lower-alpha;
+  list-style-position: outside;
+}

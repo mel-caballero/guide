@@ -6,11 +6,9 @@
     <p class="pb-4">NOTA: El contenido se basa en la UNE 301549 y se presenta de manera estructurada y simplificada. Cualquier error es inadvertido. Si necesita aclaraciones sobre el contenido, no dude en contactarme.</p>
     <div class="accordion" id="accordionExample">
       <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Abreviaturas
-          </button>
-        </h2>
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Abreviaturas
+        </button>
         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
           <div class="accordion-body">
             <p>SV = 4.2.1 Uso sin visión</p>
@@ -66,7 +64,6 @@
 			<input type="checkbox" class="btn-check" data-column="11" id="privacidad" aria-describedby="btnGroupAddon" autocomplete="off">
 			<label class="btn btn-secondary" for="privacidad"><abbr title="4.2.11. Privacidad">P</abbr></label>
     </div>
-    <div id="filtro2" class="col-12 btn-group p-3" role="group"></div>
 		<table id="table" class="display" style="width:100%">
 			<thead>
 					<tr>
@@ -105,88 +102,88 @@
 </section>
 
 <script>
-  $(document).ready(function () {
-    let table = $('#table').DataTable({
-      info: true,
-      paging: false,
-      ordering: false,
-      searching: true,
-      language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
-      ajax: './assets/une/criterios copy.json',
-      columns: [
-          { data: 'criterio' },
-          { data: 'beneficia', 
-            render: function (data, type, row, meta) {
-              return data.SV
-            }
-          },
-          { data: 'beneficia', 
-            render: function (data, type, row, meta) {
-              return data.VL
-            }
-          },
-          { data: 'beneficia', 
-            render: function (data, type, row, meta) {
-              return data.SPC
-            }
-          },
-          { data: 'beneficia', 
-            render: function (data, type, row, meta) {
-              return data.SA
-            }
-          },
-          { data: 'beneficia', 
-            render: function (data, type, row, meta) {
-              return data.AL
-            }
-          },
-          { data: 'beneficia', 
-            render: function (data, type, row, meta) {
-              return data.SCV
-            }
-          },
-          { data: 'beneficia', 
-            render: function (data, type, row, meta) {
-              return data.MFL
-            }
-          },
-          { data: 'beneficia', 
-            render: function (data, type, row, meta) {
-              return data.ALL
-            }
-          },
-          { data: 'beneficia', 
-            render: function (data, type, row, meta) {
-              return data.DCF
-            }
-          },
-          { data: 'beneficia', 
-            render: function (data, type, row, meta) {
-              return data.CL
-            }
-          },
-          { data: 'beneficia', 
-            render: function (data, type, row, meta) {
-              return data.P
-            }
-          },
-      ],
-    });
-    $('#filtro1 input').on('click', function () {
-      var column = table.column($(this).attr('data-column'));
-      column.visible(!column.visible());
-    });
+  document.addEventListener("DOMContentLoaded", function () {
+    function checkJQuery() {
+      if (typeof jQuery !== "undefined") {
+        console.log("jQuery cargado correctamente. Ejecutando DataTables...");
 
-    $('#filtro2').append('<div class="input-group-text" id="btnGroupAddon">Capítulos :</div>')
-    for (i=5; i<=13; i++) {
-      $('#filtro2').append('<input type="checkbox" class="btn-check" id=capitulo"' + i + '" aria-describedby="btnGroupAddon" autocomplete="off">');
-      $('#filtro2').append('<label class="btn btn-secondary" for=capitulo"' + i + '">' + i + '</label>')
-    }
-    $('#filtro2 input').on('click', function () {
-      table
-        .columns(0)
-        .search(this.id)
-        .draw();
-    });
+        let table = $('#table').DataTable({
+          info: true,
+          paging: false,
+          ordering: false,
+          searching: true,
+          language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
+          ajax: './assets/une-web/anexo-b_data.php',
+          columns: [
+              { data: 'criterio' },
+              { data: 'beneficia', 
+                render: function (data, type, row, meta) {
+                  return data.SV
+                }
+              },
+              { data: 'beneficia', 
+                render: function (data, type, row, meta) {
+                  return data.VL
+                }
+              },
+              { data: 'beneficia', 
+                render: function (data, type, row, meta) {
+                  return data.SPC
+                }
+              },
+              { data: 'beneficia', 
+                render: function (data, type, row, meta) {
+                  return data.SA
+                }
+              },
+              { data: 'beneficia', 
+                render: function (data, type, row, meta) {
+                  return data.AL
+                }
+              },
+              { data: 'beneficia', 
+                render: function (data, type, row, meta) {
+                  return data.SCV
+                }
+              },
+              { data: 'beneficia', 
+                render: function (data, type, row, meta) {
+                  return data.MFL
+                }
+              },
+              { data: 'beneficia', 
+                render: function (data, type, row, meta) {
+                  return data.ALL
+                }
+              },
+              { data: 'beneficia', 
+                render: function (data, type, row, meta) {
+                  return data.DCF
+                }
+              },
+              { data: 'beneficia', 
+                render: function (data, type, row, meta) {
+                  return data.CL
+                }
+              },
+              { data: 'beneficia', 
+                render: function (data, type, row, meta) {
+                  return data.P
+                }
+              },
+          ],
+        });
+        $('#filtro1 input').on('click', function () {
+          var column = table.column($(this).attr('data-column'));
+          column.visible(!column.visible());
+        });
+
+
+      } else {
+        console.log("jQuery aún no está cargado. Reintentando en 50ms...");
+        setTimeout(checkJQuery, 50);
+      }
+    }   
+    checkJQuery();
   });
 </script>

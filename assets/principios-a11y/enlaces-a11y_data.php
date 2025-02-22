@@ -1,7 +1,7 @@
 <?php
   header('Content-Type: application/json');
 
-  $jsonFile = __DIR__ . '/contactos.json';
+  $jsonFile = __DIR__ . '/enlaces-a11y.json';
 
   // Verificar si el archivo existe
   if (file_exists($jsonFile)) {

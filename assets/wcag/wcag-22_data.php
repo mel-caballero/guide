@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 
 // Ruta del archivo JSON dentro de `assets/intro/`
-$jsonFile = __DIR__ . '/wcag22.json';
+$jsonFile = __DIR__ . '/wcag-22.json';
 
 // Verificar si el archivo existe
 if (file_exists($jsonFile)) {

@@ -204,16 +204,6 @@
               layout: 'columns-3',
               controls: false,
             },
-            /*
-              l - length changing input control
-              f - filtering input
-              t - The table!
-              i - Table information summary
-              p - pagination control
-              r - processing display element
-
-              dom: 'Pfrtip'
-            */
             dom: '<"row py-3" <"col-sm-12 col-md-6" i> <"col-sm-12 col-md-6" f> >' +
               '<"row" <"col-sm-12" P> >' +
               '<"row" <"col-sm-12" t> >' +
@@ -221,7 +211,7 @@
             language: {
               url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json'
             },
-            ajax: 'assets/wcag/wcag22_data.php',
+            ajax: 'assets/wcag/wcag-22_data.php',
             columns: [{
                 data: null,
                 className: 'dt-controls',

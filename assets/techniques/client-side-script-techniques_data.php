@@ -1,7 +1,7 @@
 <?php
   header('Content-Type: application/json');
 
-  $jsonFile = __DIR__ . '/contactos.json';
+  $jsonFile = __DIR__ . '/client-side-script-techniques.json';
 
   // Verificar si el archivo existe
   if (file_exists($jsonFile)) {

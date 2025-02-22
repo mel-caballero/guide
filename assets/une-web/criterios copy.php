@@ -26,21 +26,11 @@
       paging: false, //true
       ordering: false,
       searching: true,
-      /*
-        l - length changing input control
-        f - filtering input
-        t - The table!
-        i - Table information summary
-        p - pagination control
-        r - processing display element
-
-        dom: 'Pfrtip'
-      */
       dom : '<"row py-3" <"col-sm-12 col-md-6" B> <"col-sm-12 col-md-6" f> >' +
             '<"row" <"col-sm-12" t> >' +
             '<"row py-3" <"col-sm-12 col-md-6" i> >',
       language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
-      ajax: './assets/une/criterios.json',
+      ajax: './assets/une-web/criterios copy_data.json',
       buttons: [
         'copy', 'csv', 'excel', 'pdf', 'print'
       ],
