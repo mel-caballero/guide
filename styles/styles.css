@@ -57,10 +57,9 @@ body {
   }
 }
 
-h1 a {
+h1 {
   font-size: 1.6rem;
   color: var(--white);
-  text-decoration: none;
 }
 
 h2 {
@@ -211,10 +210,4 @@ a {
 	left: 50%;
 
   & path { filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4)); }
-}
-
-ol.alpha  {
-  counter-reset: list;
-  list-style-type: lower-alpha;
-  list-style-position: outside;
 }

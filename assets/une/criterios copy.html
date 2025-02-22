@@ -1,0 +1,74 @@
+<section id="card" class="card">
+  <header class="card-header text-center">
+    <h2>Criterios UNE EN-301 549</h2>
+  </header>
+  <article class="card-body">
+    <p class="pb-4">NOTA: El contenido se basa en la UNE 301549 y se presenta de manera estructurada y simplificada. Cualquier error es inadvertido. Si necesita aclaraciones sobre el contenido, no dude en contactarme.</p>
+    <table id="table" class="table table-responsive table-light pt-5" width="100%">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Criterio</th>
+          <th scope="col">Tipo de evaluación</th>
+          <th scope="col">Condición</th>
+          <th scope="col">Precondiciones</th>
+          <th scope="col">Procedimiento</th>
+          <th scope="col">Resultado</th>
+        </tr>
+      </thead>
+    </table>
+  </article>
+</section>
+
+<script>
+  $(document).ready(function () {
+    let table = $('#table').DataTable({
+      info: true,
+      paging: false, //true
+      ordering: false,
+      searching: true,
+      /*
+        l - length changing input control
+        f - filtering input
+        t - The table!
+        i - Table information summary
+        p - pagination control
+        r - processing display element
+
+        dom: 'Pfrtip'
+      */
+      dom : '<"row py-3" <"col-sm-12 col-md-6" B> <"col-sm-12 col-md-6" f> >' +
+            '<"row" <"col-sm-12" t> >' +
+            '<"row py-3" <"col-sm-12 col-md-6" i> >',
+      language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
+      ajax: './assets/une/criterios.json',
+      buttons: [
+        'copy', 'csv', 'excel', 'pdf', 'print'
+      ],
+      columns: [
+        { data: 'criterio' },
+        { data: 'tipoEv' },
+        { data: 'condicion' },
+        { data: 'precondicion' },
+        { data: 'procedimiento' },
+        { data: 'resultado',
+          defaultContent: '',
+          render: function (data, type, row, meta) {
+            if (!(data == null || data['Superado'] == "")) {
+              let result = '<ul>'
+              for (const key in data) {
+                if (Object.hasOwnProperty.call(data, key)) {
+                  result += '<li>' + key + ' : ' + data[key] + '</li>';
+                  
+                }
+              }
+              return result += '</ul>'
+            }
+          },
+        }
+      ],
+    });
+    table.on('draw', function() {
+      $('.externalLink').attr({title: 'Abre una ventana nueva', target: '_blank'});
+    });
+  });
+</script>
