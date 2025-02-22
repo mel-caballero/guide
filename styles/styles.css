@@ -57,9 +57,10 @@ body {
   }
 }
 
-h1 {
+h1 a {
   font-size: 1.6rem;
   color: var(--white);
+  text-decoration: none;
 }
 
 h2 {
