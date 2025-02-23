@@ -28,6 +28,16 @@ const temas =  {
           'ruta' : 'assets/intro/',
           'nombre' : 'biblioteca',
         },
+        {
+          'tituloSubtema' : 'Derechos Humanos',
+          'ruta' : 'assets/intro/',
+          'nombre' : 'derechos-humanos',
+        },
+        {
+          'tituloSubtema' : 'Derechos de Personas con Discapacidad',
+          'ruta' : 'assets/intro/',
+          'nombre' : 'derechos-personas-discapacidad',
+        },
       ],
     },
     {
@@ -35,98 +45,98 @@ const temas =  {
       'subtema' : [
         {
           'tituloSubtema' : 'DTD',
-          'ruta' : 'assets/principiosA11Y/',
+          'ruta' : 'assets/principios-a11y/',
           'nombre' : 'dtd',
         },
         {
           'tituloSubtema' : 'Idioma',
-          'ruta' : 'assets/principiosA11Y/',
+          'ruta' : 'assets/principios-a11y/',
           'nombre' : 'idioma',
         },
         {
           'tituloSubtema' : 'Título',
-          'ruta' : 'assets/principiosA11Y/',
+          'ruta' : 'assets/principios-a11y/',
           'nombre' : 'titulo',
         },
         {
           'tituloSubtema' : 'Viewport',
-          'ruta' : 'assets/principiosA11Y/',
+          'ruta' : 'assets/principios-a11y/',
           'nombre' : 'viewport',
         },
         {
           'tituloSubtema' : 'Semántica',
-          'ruta' : 'assets/principiosA11Y/',
+          'ruta' : 'assets/principios-a11y/',
           'nombre' : 'semantica',
         },
         {
           'tituloSubtema' : 'Imágenes',
-          'ruta' : 'assets/principiosA11Y/',
+          'ruta' : 'assets/principios-a11y/',
           'nombre' : 'imagenes',
         },
         {
           'tituloSubtema' : 'Características sensoriales',
-          'ruta' : 'assets/principiosA11Y/',
-          'nombre' : 'caracteristicasSensoriales',
+          'ruta' : 'assets/principios-a11y/',
+          'nombre' : 'caracteristicas-sensoriales',
         },
         {
           'tituloSubtema' : 'Uso del color',
-          'ruta' : 'assets/principiosA11Y/',
-          'nombre' : 'usoColor',
+          'ruta' : 'assets/principios-a11y/',
+          'nombre' : 'uso-color',
         },
         {
           'tituloSubtema' : 'Contraste de color',
-          'ruta' : 'assets/principiosA11Y/',
-          'nombre' : 'contrasteColor',
+          'ruta' : 'assets/principios-a11y/',
+          'nombre' : 'contraste-color',
         },
         {
           'tituloSubtema' : 'Configuración personalizada',
-          'ruta' : 'assets/principiosA11Y/',
-          'nombre' : 'configuracionPersonalizada',
+          'ruta' : 'assets/principios-a11y/',
+          'nombre' : 'configuracion-personalizada',
         },
         {
           'tituloSubtema' : 'Orientación',
-          'ruta' : 'assets/principiosA11Y/',
+          'ruta' : 'assets/principios-a11y/',
           'nombre' : 'orientacion',
         },
         {
           'tituloSubtema' : 'Navegación por teclado',
-          'ruta' : 'assets/principiosA11Y/',
-          'nombre' : 'navegacionTeclado',
+          'ruta' : 'assets/principios-a11y/',
+          'nombre' : 'navegacion-teclado',
         },
         {
           'tituloSubtema' : 'Gestos',
-          'ruta' : 'assets/principiosA11Y/',
+          'ruta' : 'assets/principios-a11y/',
           'nombre' : 'gestos',
         },
         {
           'tituloSubtema' : 'Hover y Focus',
-          'ruta' : 'assets/principiosA11Y/',
-          'nombre' : 'hoverFocus',
+          'ruta' : 'assets/principios-a11y/',
+          'nombre' : 'hover-focus',
         },
         {
           'tituloSubtema' : 'Mensajes de estado',
-          'ruta' : 'assets/principiosA11Y/',
-          'nombre' : 'mensajesEstado',
+          'ruta' : 'assets/principios-a11y/',
+          'nombre' : 'mensajes-estado',
         },
         {
           'tituloSubtema' : 'Formularios',
-          'ruta' : 'assets/principiosA11Y/',
+          'ruta' : 'assets/principios-a11y/',
           'nombre' : 'formularios',
         },
         {
           'tituloSubtema' : 'Errores',
-          'ruta' : 'assets/principiosA11Y/',
+          'ruta' : 'assets/principios-a11y/',
           'nombre' : 'errores',
         },
         {
           'tituloSubtema' : 'Subtítulos',
-          'ruta' : 'assets/principiosA11Y/',
+          'ruta' : 'assets/principios-a11y/',
           'nombre' : 'subtitulos',
         },
         {
           'tituloSubtema' : 'Enlaces de interés',
-          'ruta' : 'assets/principiosA11Y/',
-          'nombre' : 'enlacesA11y',
+          'ruta' : 'assets/principios-a11y/',
+          'nombre' : 'enlaces-a11y',
         }
       ]
     },
@@ -146,12 +156,12 @@ const temas =  {
         {
           'tituloSubtema' : 'WCAG 2.2.',
           'ruta' : 'assets/wcag/',
-          'nombre' : 'wcag22',
+          'nombre' : 'wcag-22',
         },
         {
           'tituloSubtema' : 'WCAG 3.0. Draft',
           'ruta' : 'assets/wcag/',
-          'nombre' : 'wcag30draft',
+          'nombre' : 'wcag-30-draft',
         }
       ]
     },
@@ -159,14 +169,14 @@ const temas =  {
       'tituloTema' : 'Techniques',
       'subtema' : [
         {
-          'tituloSubtema' : 'Wcag Quickref',
+          'tituloSubtema' : 'Succes Criteria',
           'ruta' : 'assets/techniques/',
-          'nombre' : 'success_criteria',
+          'nombre' : 'success-criteria',
         },
         {
-          'tituloSubtema' : 'Errores comunes',
+          'tituloSubtema' : 'Common Errors',
           'ruta' : 'assets/techniques/',
-          'nombre' : 'commonErrors',
+          'nombre' : 'common-errors',
         },
         {
           'tituloSubtema' : 'PDF Techniques',
@@ -176,22 +186,22 @@ const temas =  {
         {
           'tituloSubtema' : 'ARIA Techniques',
           'ruta' : 'assets/techniques/',
-          'nombre' : 'wcag_aria_techniques',
+          'nombre' : 'aria-techniques',
         },
         {
           'tituloSubtema' : 'Client Side Script Techniques',
           'ruta' : 'assets/techniques/',
-          'nombre' : 'wcag_client-side-script_techniques',
+          'nombre' : 'client-side-script-techniques',
         },
         {
           'tituloSubtema' : 'CSS Techniques',
           'ruta' : 'assets/techniques/',
-          'nombre' : 'wcag_css_techniques',
+          'nombre' : 'css-techniques',
         },
         {
           'tituloSubtema' : 'Failures Techniques',
           'ruta' : 'assets/techniques/',
-          'nombre' : 'wcag_failures_techniques',
+          'nombre' : 'failures-techniques',
         }
       ]
     },
@@ -199,29 +209,24 @@ const temas =  {
       'tituloTema' : 'UNE Web',
       'subtema' : [
         {
-          'tituloSubtema' : 'Árbol de decisiones',
-          'ruta' : 'assets/une/',
-          'nombre' : 'arboldecisiones',
-        },
-        {
           'tituloSubtema' : 'Anexo B',
-          'ruta' : 'assets/une/',
-          'nombre' : 'anexob',
+          'ruta' : 'assets/une-web/',
+          'nombre' : 'anexo-b',
         },
         {
           'tituloSubtema' : 'Metodología informe',
-          'ruta' : 'assets/une/',
+          'ruta' : 'assets/une-web/',
           'nombre' : 'metodologia',
         },
         {
           'tituloSubtema' : 'Muestra',
-          'ruta' : 'assets/une/',
+          'ruta' : 'assets/une-web/',
           'nombre' : 'muestra',
         },
         {
           'tituloSubtema' : 'Tabla detallada',
-          'ruta' : 'assets/une/',
-          'nombre' : 'tabladetallada',
+          'ruta' : 'assets/une-web/',
+          'nombre' : 'tabla-detallada',
         }
       ]
     },
@@ -229,13 +234,8 @@ const temas =  {
       'tituloTema' : 'UNE Móvil',
       'subtema' : [
         {
-          'tituloSubtema' : 'Árbol de decisiones',
-          'ruta' : 'assets/mobile/',
-          'nombre' : 'arboldecisiones',
-        },
-        {
           'tituloSubtema' : 'Herramientas',
-          'ruta' : 'assets/mobile/',
+          'ruta' : 'assets/une-mobile/',
           'nombre' : 'tools-mobile',
         }
       ]

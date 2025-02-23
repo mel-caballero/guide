@@ -1,14 +1,14 @@
 <section id="card" class="card">
   <header class="card-header text-center">
-    <h2>Errores comunes</h2>
+    <h2>Client Side Script Techniques</h2>
   </header>
   <article class="card-body">
     <table id="table" class="table table-responsive pt-5" width="100%">
       <thead class="main-color">
         <tr>
-          <th scope="col">Criterio</th>
-          <th scope="col">Error</th>
           <th scope="col">Técnica</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Test</th>
         </tr>
       </thead>
     </table>
@@ -21,18 +21,17 @@
       info: true,
       paging: false,
       ordering: true,
-      searching: true,
+      searching: false,
       dom:  '<"row py-3" <"col-sm-12 col-md-6" i> <"col-sm-12 col-md-6" f> >' +
             '<"row" <"col-sm-12" t> >' +
             '<"row py-3" <"col-sm-12 col-md-6" i> >',
       language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
-      ajax: './assets/techniques/commonErrors.json',
+      ajax: './assets/techniques/client-side-script-techniques.json',
       columns: [
-        { data: 'criterio_wcag' },
-        { data: 'error' },
-        { data: 'tecnicas' }
+        { data: 'url', render: function (data, type, row, meta) { return '<a href="' + data + '">' + row.technique + '</a>'; }, },
+        { data: 'description' },
+        { data: 'tests' }
       ],
     });
-
   });
 </script>

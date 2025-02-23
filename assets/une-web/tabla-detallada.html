@@ -28,26 +28,11 @@
       searchPanes: {
         cascadePanes: true,
         columns: [3],
-        preSelect: [
-          {
-            rows: ['A', 'AA'],
-            column: 3,
-          }
-        ],
+        preSelect: [ { rows: ['A', 'AA'], column: 3, } ],
         layout: 'columns-2',
         controls: false,
         initCollapsed: true
       },
-      /*
-        l - length changing input control
-        f - filtering input
-        t - The table!
-        i - Table information summary
-        p - pagination control
-        r - processing display element
-
-        dom: 'Pfrtip'
-      */
       dom:  '<"row" <"col-sm-12" f> >' +
             '<"row py-3" ' +
               '<"col-sm-12 col-md-6" i> ' +
@@ -55,7 +40,7 @@
             '<"row" <"col-sm-12" t> >' +
             '<"row py-3" <"col-sm-12 col-md-6" i> >',
       language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
-      ajax: './assets/une/tabladetallada.json',
+      ajax: './assets/une/tabla-detallada.json',
       columns: [
         { data: null,
           className: 'dt-controls',

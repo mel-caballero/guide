@@ -27,19 +27,9 @@
   $(document).ready(function () {
     let table = $('#table').DataTable({
       info: true,
-      paging: false, //true
+      paging: false,
       ordering: false,
       searching: true,
-      /*
-        l - length changing input control
-        f - filtering input
-        t - The table!
-        i - Table information summary
-        p - pagination control
-        r - processing display element
-
-        dom: 'Pfrtip'
-      */
       dom : '<"row py-3" <"col-sm-12 col-md-6" B> <"col-sm-12 col-md-6" f> >' +
             '<"row" <"col-sm-12" t> >' +
             '<"row py-3" <"col-sm-12 col-md-6" i> >',

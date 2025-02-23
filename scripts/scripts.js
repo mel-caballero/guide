@@ -29,7 +29,7 @@ function refreshContent(param) {
       })
     })
   } else {
-    $('#content').load('assets/intro/introduccion.html');
+    $('#content').load('assets/intro/bienvenida.html');
   }
 }
 
