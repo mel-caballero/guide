@@ -202,6 +202,11 @@ const temas =  {
           'tituloSubtema' : 'Muestra',
           'ruta' : 'assets/une-web/',
           'nombre' : 'muestra',
+        },
+        {
+          'tituloSubtema' : 'Árbol decisiones',
+          'ruta' : 'assets/une-web/',
+          'nombre' : 'arbol-decisiones-web',
         }
       ]
     },
