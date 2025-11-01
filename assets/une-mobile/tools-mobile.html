@@ -1,0 +1,66 @@
+<section id="card" class="card">
+  <header class="card-header text-center">
+    <h2>Herramientas</h2>
+  </header>
+  <article class="card-body">
+    <p class="pb-4">NOTA: El contenido se basa en la UNE 301549 y se presenta de manera estructurada y simplificada. Cualquier error es inadvertido. Si necesita aclaraciones sobre el contenido, no dude en contactarme.</p>
+    <table id="table" class="table table-responsive pt-5" width="100%">
+      <thead class="main-color">
+        <tr>
+          <th scope="col">Herramienta</th>
+          <th scope="col">Plataforma</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Descripción</th>
+        </tr>
+      </thead>
+    </table>
+  </article>
+</section>
+
+<script>
+  $(document).ready(function () {
+    let table = $('#table').DataTable({
+      info: true,
+      paging: false,
+      ordering: false,
+      order: [[0, 'asc']],
+      searching: true,
+      columnDefs: [ { searchPanes: { show: false }, targets: [0, 2, 3] } ],
+      searchPanes: {
+        panes: [
+          {
+            header: 'Tipo',
+            options: [
+              { label: 'Automática', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['tipo'].includes('Automática'); } return true; } },
+              { label: 'Manual', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['tipo'].includes('Manual'); } return true; } },
+              { label: 'Tiempo de desarrollo', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['tipo'].includes('Tiempo de desarrollo'); } return true; } },
+              { label: 'Tiempo de ejecución', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['tipo'].includes('Tiempo de ejecución'); } return true; } },
+            ],
+          }
+        ],
+        controls: false,
+        initCollapsed: true
+      },
+      dom:  '<"row py-3" <"col-sm-12 col-md-6" i> <"col-sm-12 col-md-6" f> >' +
+            '<"row" <"col-sm-12" P> >' +
+            '<"row" <"col-sm-12" t> >' +
+            '<"row py-3" <"col-sm-12 col-md-6" i> >',
+      language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
+      ajax: './assets/une-mobile/tools-mobile.json',
+      columns: [
+        { data: 'herramienta',
+          render: function (data, type, row, meta) { return '<a href="' + row.enlace + '">' + data + '</a>'; },
+        },
+        { data: 'plataforma'},
+        { data: 'tipo',
+          render: function (data, type, row, meta) {
+            let badges = '';
+            data.forEach(element => { badges += '<span class="badge rounded-pill text-bg-primary">' + element + '</span> '; });
+            return badges
+          },
+        },
+        { data: 'descripcion' },
+      ],
+    });
+  });
+</script>

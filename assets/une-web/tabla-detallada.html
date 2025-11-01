@@ -1,0 +1,99 @@
+<section id="card" class="card">
+  <header class="card-header text-center">
+    <h2>Tabla detallada</h2>
+  </header>
+  <article class="card-body">
+    <p class="pb-4">NOTA: El contenido se basa en la UNE 301549 y se presenta de manera estructurada y simplificada. Cualquier error es inadvertido. Si necesita aclaraciones sobre el contenido, no dude en contactarme.</p>
+    <table id="table" class="table table-responsive table-light pt-5" width="100%">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Tests</th>
+          <th scope="col">Identificador</th>
+          <th scope="col">Explicación</th>
+          <th scope="col">Nivel</th>
+          <th scope="col">Resultados</th>
+        </tr>
+      </thead>
+    </table>
+  </article>
+</section>
+
+<script>
+  $(document).ready(function () {
+    let table = $('#table').DataTable({
+      info: true,
+      paging: false,
+      ordering: false,
+      searching: true,
+      searchPanes: {
+        cascadePanes: true,
+        columns: [3],
+        preSelect: [ { rows: ['A', 'AA'], column: 3, } ],
+        layout: 'columns-2',
+        controls: false,
+        initCollapsed: true
+      },
+      dom:  '<"row" <"col-sm-12" f> >' +
+            '<"row py-3" ' +
+              '<"col-sm-12 col-md-6" i> ' +
+              '<"col-sm-12 col-md-6" P> >' +
+            '<"row" <"col-sm-12" t> >' +
+            '<"row py-3" <"col-sm-12 col-md-6" i> >',
+      language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
+      ajax: './assets/une/tabla-detallada.json',
+      columns: [
+        { data: null,
+          className: 'dt-controls',
+          orderable: false,
+          defaultContent: '',
+          render: function (data, type, row, meta) {
+            if (!(data.Comprobaciones == null)) {
+              return '<button type="button" class="btn btn-dark bi bi-caret-up-fill" data-bs-toggle="button" title="Expandir"></button>';
+            }
+          },
+        },
+        { data: 'Identificador'},
+        { data: 'Explicación' },
+        { data: 'Nivel' },
+        { data: 'Resultados',
+          render: function (data, type, row, meta) {
+            var table = '<table class="table table-light">';
+            $.each(data, function (k, v) {
+              table += '<tr><td>' + k + '. ' + v.Resultado + '</td><td>' + v.Valor + '</td><td>' + v.Modalidad + '</td></tr>';
+            });
+            return table + "</table>";
+          },
+        },
+      ],
+    });
+
+    $('#table tbody').on('click', 'td.dt-controls', function () {
+      var tr = $(this).closest('tr');
+      var row = table.row(tr);
+
+      $(this).children('button').toggleClass('bi-caret-down-fill bi-caret-up-fill');
+
+      if (row.child.isShown()) {
+        // This row is already open - close it
+        row.child.hide();
+        tr.removeClass('shown');
+      } else {
+        // Open this row
+        row.child(format(row.data())).show();
+        tr.addClass('shown');
+      }
+    });
+
+    function format(data) {
+      if (data.Comprobaciones !== null) {
+        var table = '<table class="table table-light">';
+        $.each(data.Comprobaciones, function (k, v) {
+          table += '<tr><td>' + k + '</td><td>' + v.Tests + '</td><td>' + v.Comprobación + '</td></tr>';
+        });
+        return table + "</table>";
+      } else {
+        return "";
+      }
+    }
+  });
+</script>

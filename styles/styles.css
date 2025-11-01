@@ -1,0 +1,204 @@
+:root {
+  --body--background-color: white;
+  --body--color: #333;
+
+  --font-family--sans: 
+    "Verdana", 
+    "Tahoma", 
+    "Arial",
+    sans-serif;
+
+  --color--morado : #2b1154;
+  --color--violeta : #ADA2FF;
+  --color--lightblue : #C0DEFF;
+  --color--lightpink : #FFE5F1;
+  --color--cream : #FFF8E1;
+  --color--white : #FFF;
+  --color--black : #000;
+
+  --color1 : #554994;
+  --color2 : #F675A8;
+  --color3 : #F29393;
+  --color4 : #FFCCB3;
+}
+
+.main-color { background-color: var(--color--morado); color: var(--color--white); }
+.secondary-color { background-color: var(--color--violeta); color: var(--color--black); }
+
+body {
+  font-family: var(--font-family--sans);
+  background-color: var(--color--cream);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow-x: hidden;
+	border-color: var(--color1);
+	border-style: solid;
+	border-width: 0 10px;
+
+  & main {
+    flex: 1 auto; 
+    margin-bottom: 5rem;
+  }
+}
+
+h1 {
+  font-size: 1.6rem;
+  color: var(--white);
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  margin: 3px;
+  padding-bottom: 40px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%; 
+    bottom: 25px;
+    width: 150px;
+    height: 14px;
+    border-radius: 5px;
+    transform: skew(-12deg) translateX(-50%) rotate(-2deg);
+    background: rgba(109, 0, 172, 0.5);
+    filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.6));
+  }
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  position: relative;
+  margin: 1.4rem 0;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  margin: 1.4rem 0;
+  text-decoration: underline;
+}
+
+footer {
+	position: relative;
+	bottom: 0;
+}
+
+#header-nav {
+  padding: 20px 0;
+}
+
+#header-nav button, .nav-link {
+  color: var(--color--white);
+
+  &:hover, &:focus {
+    border: 2px solid var(--color1);
+    color: var(--color--violeta);
+    border-radius: 20px;
+  }
+}
+
+a {
+  color: var(--color--morado);
+}
+
+.btn {
+  background-color: var(--color--morado);
+  color: var(--color--white);
+
+  &:focus-visible {
+    box-shadow: none;
+  }
+}
+
+.btn-link {
+  &:hover, &:focus {
+    border: 2px solid var(--color1);
+    border-radius: 20px;
+    color: var(--color--violeta);
+  }
+}
+
+.colorList li {
+  float: left;
+  list-style-type: none;
+  padding: 0 20px;
+}
+
+.square {
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  border: solid 1px;
+}
+
+#table_length {
+  & label {
+    display: inline-flex;
+  }
+
+  & select {
+    margin: 0 10px;
+    padding: .375rem 2.25rem .375rem .75rem;
+  }
+}
+
+#table_filter {
+  & label {
+    display: inline-flex;
+  }
+
+  & input {
+    margin: 0 10px;
+  }
+}
+
+#table_wrapper {
+  & .paginate_button {
+    padding: 0;
+  }
+
+ & .disabled > a {
+    background-color: var(--color--violeta);
+    color: var(--color--black);
+  }
+
+  & .page-link {
+    background-color: var(--color--morado);
+    color: var(--color--white);
+  }
+
+
+}
+
+.externalLink:after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0px 0px 0px 10px;
+  text-decoration: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' class='bi bi-box-arrow-up-right' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+}
+
+/* Separator */
+.separator { 
+	transform: rotate(180deg) translateX(50%);
+	position: absolute;
+	width: 100vw;
+	bottom: 0;
+	left: 50%;
+
+  & path { filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4)); }
+}
+
+ol.alpha  {
+  counter-reset: list;
+  list-style-type: lower-alpha;
+  list-style-position: outside;
+}
